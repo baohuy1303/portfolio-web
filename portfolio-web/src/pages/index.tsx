@@ -7,7 +7,7 @@ import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
 import DefaultLayout from "@/layouts/default";
-import {Card, CardBody, Tabs} from "@heroui/react";
+import {Button, Card, CardBody, Tabs} from "@heroui/react";
 import {Avatar} from "@heroui/react";
 
 import { useState } from "react";
@@ -42,7 +42,8 @@ import { addToast } from "@heroui/react";
 
 import {Chip} from "@heroui/chip";
 import {Tab} from "@heroui/react";
-
+import {  Modal,  ModalContent,  ModalHeader,  ModalBody,  ModalFooter} from "@heroui/modal";
+import { useDisclosure } from "@heroui/react";
 
 export default function IndexPage() {
 
@@ -50,13 +51,14 @@ export default function IndexPage() {
   const [copied, setCopied] = useState(false);
   const [selected, setSelected] = useState<string>("experience");
   const email = "huynhbaohuy130333@gmail.com";
+  const {isOpen, onOpen, onOpenChange} = useDisclosure();
 
   const techSkills = [
     // Languages
     { name: "JavaScript", icon: faJs, textCol: "text-yellow-400" },
     { name: "TypeScript", icon: faJs, textCol: "text-blue-500" },
     { name: "Java", icon: faJava, textCol: "text-red-500" },
-    { name: "Python", icon: faPython, textCol: "text-green-400" },
+    { name: "Python", icon: faPython, textCol: "text-yellow-400" },
     { name: "C#", icon: faHashtag, textCol: "text-purple-500" }, // custom icon likely
     { name: "SQL", icon: faDatabase, textCol: "text-orange-400" },
       { name: "HTML", icon: faHtml5, textCol: "text-orange-500" },
@@ -235,9 +237,9 @@ export default function IndexPage() {
               <div className="flex flex-col">
                 {/* NaNi Kids */}
                 <Card className="rounded-t-2xl border-1 border-gray-600 hover:scale-105 transition-transform duration-200 py-3 px-1 z-3" radius="none"
-                isHoverable={true} isPressable={true} isBlurred={true}>
+                isHoverable={true} isPressable={true} isBlurred={true} onPress={onOpen}>
                 <CardBody className="grid grid-cols-3 justify-center items-center" >
-                  <Avatar size="lg" className="w-22 h-22 mb-5 justify-self-center" src="" />
+                  <img src="Logo_2_PNG.png" alt="" className="w-18 mb-5 justify-self-center"/>
                   <div className="col-span-2 flex flex-col justify-center">
                     <div className="flex flex-col mb-4">
                       <h2 className="text-gray-400 text-sm">July 2025 - Present</h2>
@@ -250,6 +252,50 @@ export default function IndexPage() {
                   </div>
                 </CardBody>
               </Card>
+              <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="4xl" backdrop="blur" placement="center">
+              <ModalContent>
+                {(onClose) => (
+                  <>
+                    <ModalHeader className="flex flex-row gap-4 items-center">
+                      <img src="Logo_2_PNG.png" alt="" className="w-8"/>
+                      NaNi Kids Futsal - Software Engineer</ModalHeader>
+                    <ModalBody>
+                      <div className="text-sm text-gray-400 flex flex-row justify-center items-center gap-10 mb-1">
+                        <div className="text-blue-500"><FontAwesomeIcon icon={faReact} /> React.js</div>
+                        <div className="text-green-500"><FontAwesomeIcon icon={faNode} /> Node.js</div>
+                        <div className="text-gray-500"><FontAwesomeIcon icon={faServer} /> Express.js</div>
+                        <div className="text-green-500"><FontAwesomeIcon icon={faLeaf} /> MongoDB</div>
+                      </div>
+                      <div className="flex flex-col gap-2 mb-5">
+                            <p>
+                            • Engineered and migrated legacy codebase to a MERN-stack website for 1200+ soccer students, reducing
+                            admin workload on attendance, tuition, and student management by 80% and saving $1000+ monthly.
+                            </p>
+                            <p>
+                          • Constructed 45+ RESTful APIs and JWT auth for 3 roles using Node.js and Express, led migration of 2.9k+
+                          documents to a new schema via scripting and algorithms, and integrated Cloudinary for secure media storage.
+                          </p>
+                          <p>
+                          • Automated daily attendance tracking via MongoDB aggregation pipelines, saving 25+ hours/month at 99.9%
+                          accuracy, and streamlined tuition reporting process by 90% via responsive and filterable dashboard.
+                          </p>
+                      </div>
+                      <div>
+                        <img src="" alt="" />
+                      </div>
+                    </ModalBody>
+                    <ModalFooter>
+                      <Button color="danger" variant="light" onPress={onClose}>
+                        Close
+                      </Button>
+                      <Button color="primary" onPress={onClose}>
+                        Action
+                      </Button>
+                    </ModalFooter>
+                  </>
+                )}
+              </ModalContent>
+            </Modal>
 
               {/* Google Student */}
               <Card className="border-1 border-gray-600 hover:scale-105 transition-transform duration-200 py-3 px-1 z-2" radius="none"
