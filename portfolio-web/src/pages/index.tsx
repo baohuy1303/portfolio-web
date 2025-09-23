@@ -7,8 +7,9 @@ import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
 import DefaultLayout from "@/layouts/default";
-import {Button, Card, CardBody, Tabs} from "@heroui/react";
+import {Button, Card, CardBody, Divider, Tabs} from "@heroui/react";
 import {Avatar} from "@heroui/react";
+import { Image } from "@heroui/react";
 
 import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -239,7 +240,9 @@ export default function IndexPage() {
                 <Card className="rounded-t-2xl border-1 border-gray-600 hover:scale-105 transition-transform duration-200 py-3 px-1 z-3" radius="none"
                 isHoverable={true} isPressable={true} isBlurred={true} onPress={onOpen}>
                 <CardBody className="grid grid-cols-3 justify-center items-center" >
-                  <img src="Logo_2_PNG.png" alt="" className="w-18 mb-5 justify-self-center"/>
+                  <div className="justify-self-center">
+                    <Image src="Logo_2_PNG.png" alt="" isBlurred width={80}/>
+                  </div>
                   <div className="col-span-2 flex flex-col justify-center">
                     <div className="flex flex-col mb-4">
                       <h2 className="text-gray-400 text-sm">July 2025 - Present</h2>
@@ -252,7 +255,7 @@ export default function IndexPage() {
                   </div>
                 </CardBody>
               </Card>
-              <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="4xl" backdrop="blur" placement="center">
+              <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="4xl" backdrop="blur" placement="center" scrollBehavior="inside">
               <ModalContent>
                 {(onClose) => (
                   <>
@@ -281,15 +284,23 @@ export default function IndexPage() {
                           </p>
                       </div>
                       <div>
-                        <img src="" alt="" />
+                        <p className="text-sm"><span className="font-bold">Skills learned and used: </span> System Design • Database Optimization • Process Automation • Cost Efficiency • Scalability • Problem-Solving with Algorithms • Project Leadership • Full-Stack Engineering • Corporate Collaboration</p>
                       </div>
+                      <Image src="/nanikids/TapThe.webp" alt="" isBlurred className="mb-4 w-full rounded-lg" />
+                      <div className="columns-1 md:columns-3 gap-4">
+                      <Image src="/nanikids/cup15.webp" alt="" isBlurred className="mb-4 w-full rounded-lg" />
+                      <Image src="/nanikids/DSC_4085.webp" alt="" isBlurred className="mb-4 w-full rounded-lg" />
+                      <Image src="/nanikids/dsc00257.webp" alt="" isBlurred className="mb-4 w-full rounded-lg" />
+                      <Image src="/nanikids/dsc08099.webp" alt="" isBlurred className="mb-4 w-full rounded-lg" />
+                      <Image src="/nanikids/full-field-3.webp" alt="" isBlurred className="mb-4 w-full rounded-lg" />
+                      <Image src="/nanikids/HY_00682.webp" alt="" isBlurred className="mb-4 w-full rounded-lg" />
+                      <Image src="/nanikids/DSC01331.webp" alt="" isBlurred className="mb-4 w-full rounded-lg" />
+                    </div>
+
                     </ModalBody>
                     <ModalFooter>
                       <Button color="danger" variant="light" onPress={onClose}>
                         Close
-                      </Button>
-                      <Button color="primary" onPress={onClose}>
-                        Action
                       </Button>
                     </ModalFooter>
                   </>
