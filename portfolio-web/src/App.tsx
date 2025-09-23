@@ -5,9 +5,11 @@ import DocsPage from "@/pages/docs";
 import PricingPage from "@/pages/pricing";
 import BlogPage from "@/pages/blog";
 import AboutPage from "@/pages/about";
+import DefaultLayout from "./layouts/default";
 
 function App() {
   return (
+    <DefaultLayout>
     <Routes>
       <Route element={<IndexPage />} path="/" />
       <Route element={<DocsPage />} path="/docs" />
@@ -15,6 +17,7 @@ function App() {
       <Route element={<BlogPage />} path="/blog" />
       <Route element={<AboutPage />} path="/about" />
     </Routes>
+    </DefaultLayout>
   );
 }
 

@@ -1,3 +1,9 @@
 @import "tailwindcss";
 
-@config "../../tailwind.config.js"
+@config "../../tailwind.config.js";
+
+
+html{
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}

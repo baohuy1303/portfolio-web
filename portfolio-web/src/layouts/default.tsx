@@ -13,7 +13,7 @@ export default function DefaultLayout({
     <div className="relative flex flex-col h-screen">
     {/* Prismatic Aurora Burst - Multi-layered Gradient */}
     <div
-      className="absolute inset-0"
+      className="fixed inset-0 -z-10"
       style={{
         background: `
           radial-gradient(ellipse 120% 80% at 70% 20%, rgba(255, 20, 147, 0.15), transparent 50%),
@@ -23,7 +23,7 @@ export default function DefaultLayout({
           #000000
         `,
       }}
-    >
+    />
       {/* <Navbar /> */}
       <Tabs aria-label="Tabs variants" variant="underlined" className="w-full justify-center items-center mt-10 " size="lg" 
       selectedKey={pathname} motionProps={{
@@ -37,11 +37,10 @@ export default function DefaultLayout({
         <Tab key="/projects" title="projects" href="/projects" className="hover:scale-110 ease-in-out transition-all duration-150"/>
         <Tab key="/contact" title="contact" href="/contact" className="hover:scale-110 ease-in-out transition-all duration-150"/>
       </Tabs>
+
       <main className="container mx-auto max-w-2xl px-6 flex-grow pt-16">
         {children}
       </main>
-
-    </div>
     </div>
   );
 }

@@ -7,12 +7,12 @@ import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
 import DefaultLayout from "@/layouts/default";
-import {Card, CardBody} from "@heroui/react";
+import {Card, CardBody, Tabs} from "@heroui/react";
 import {Avatar} from "@heroui/react";
 
 import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faHashtag, faLocationDot, faLocationPin, faMapPin, faServer,  } from '@fortawesome/free-solid-svg-icons'
+import { faBriefcase, faEnvelope, faGraduationCap, faHashtag, faLocationDot, faLocationPin, faMapPin, faServer,  } from '@fortawesome/free-solid-svg-icons'
 import {faCss, faHtml5, faSquareLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { 
   faJs, 
@@ -41,12 +41,14 @@ import {
 import { addToast } from "@heroui/react";
 
 import {Chip} from "@heroui/chip";
+import {Tab} from "@heroui/react";
 
 
 export default function IndexPage() {
 
   const [clicked, setClick] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [selected, setSelected] = useState<string>("experience");
   const email = "huynhbaohuy130333@gmail.com";
 
   const techSkills = [
@@ -103,7 +105,7 @@ export default function IndexPage() {
   };
 
   return (
-      <DefaultLayout>
+    <>
           <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
               {/* <div className="inline-block max-w-lg text-center justify-center">
           <span className={title()}>Make&nbsp;</span>
@@ -189,9 +191,9 @@ export default function IndexPage() {
               </Card>
           </section>
 
-          <section className="flex flex-col gap-4 py-8 md:py-10">
+          <section className="flex flex-col gap-4 py-8 md:py-10 z-10">
             <h1 className="text-3xl font-bold mb-2 self-baseline">Tech stack</h1>
-            <div className="flex flex-row flex-wrap gap-4">
+            <div className="flex flex-row flex-wrap justify-center items-center gap-4">
             {techSkills.map((skill, index) => (
               <Chip
                 key={index}
@@ -200,7 +202,7 @@ export default function IndexPage() {
                 size="lg"
                 classNames={{
                   base: "border-1 border-gray-600 hover:scale-105 transition-transform duration-200 py-4 px-1",
-                  content: `text-lg font-medium ${skill.textCol} group-hover:text-white`
+                  content: `text-md font-medium ${skill.textCol} group-hover:text-white`
                 }}
                 className="group hover:bg-opacity-80 transition-all duration-200"
                 style={{
@@ -215,6 +217,87 @@ export default function IndexPage() {
             ))}
             </div>
           </section>
-      </DefaultLayout>
+
+          <section className="flex flex-col gap-4 py-8 md:py-10">
+            <h1 className="text-3xl font-bold mb-3 self-baseline">Experience</h1>
+            
+            <Tabs aria-label="Tabs variants" variant="bordered" fullWidth={true}
+            onSelectionChange={(key) => setSelected(String(key))}
+             className="w-full justify-center items-center" size="md" radius="md" 
+             motionProps={{
+              initial: { opacity: 0, x: -10, scale: 0.9 },
+              animate: { opacity: 1, x: 0, scale: 1 },
+              exit: { opacity: 0, x: -10, scale: 0.9 },
+              transition: { duration: 0.3, ease: "easeInOut" }
+            }}
+            selectedKey={selected}>
+              <Tab key="experience" title={<><FontAwesomeIcon icon={faBriefcase} /> Experience & Activities</>}>
+              <div className="flex flex-col">
+                {/* NaNi Kids */}
+                <Card className="rounded-t-2xl border-1 border-gray-600 hover:scale-105 transition-transform duration-200 py-3 px-1 z-3" radius="none"
+                isHoverable={true} isPressable={true} isBlurred={true}>
+                <CardBody className="grid grid-cols-3 justify-center items-center" >
+                  <Avatar size="lg" className="w-22 h-22 mb-5 justify-self-center" src="" />
+                  <div className="col-span-2 flex flex-col justify-center">
+                    <div className="flex flex-col mb-4">
+                      <h2 className="text-gray-400 text-sm">July 2025 - Present</h2>
+                      <h1 className="text-xl font-bold">Software Engineer</h1>
+                      <h2 className="text-gray-400 text-sm">NaNi Kids Futsal - Soccer Academy</h2>
+                    </div>
+                    <div className="flex flex-col text-[0.8125rem] mb-2">
+                      <p>MERN Stack Web Development; API Design & Authentication; Database Migration & Automation; Admin Dashboard & Media Integration; Attendance & Tuition Management Optimization.</p>
+                    </div>
+                  </div>
+                </CardBody>
+              </Card>
+
+              {/* Google Student */}
+              <Card className="border-1 border-gray-600 hover:scale-105 transition-transform duration-200 py-3 px-1 z-2" radius="none"
+                isHoverable={true} isPressable={true} isBlurred={true}>
+                <CardBody className="grid grid-cols-3 justify-center items-center" >
+                  <Avatar size="lg" className="w-22 h-22 mb-5 justify-self-center" src="" />
+                  <div className="col-span-2 flex flex-col justify-center">
+                    <div className="flex flex-col mb-4">
+                      <h2 className="text-gray-400 text-sm">July 2025 - Present</h2>
+                      <h1 className="text-xl font-bold">Project Lead</h1>
+                      <h2 className="text-gray-400 text-sm">Google Student Developer Club</h2>
+                    </div>
+                    <div className="flex flex-col text-[0.8125rem] mb-2">
+                      <p>Project & Team Management; Technical Workshops & Mentorship for 40+ students; Web Development (HTML/CSS, React.js, Node.js); Real-world Project Guidance.</p>
+                    </div>
+                  </div>
+                </CardBody>
+              </Card>
+
+              <Card className="rounded-b-2xl border-1 border-gray-600 hover:scale-105 transition-transform duration-200 py-3 px-1 z-1" radius="none"
+                isHoverable={true} isPressable={true} isBlurred={true}>
+                <CardBody className="grid grid-cols-3 justify-center items-center" >
+                  <Avatar size="lg" className="w-22 h-22 mb-5 justify-self-center" src="" />
+                  <div className="col-span-2 flex flex-col justify-center">
+                    <div className="flex flex-col mb-4">
+                      <h2 className="text-gray-400 text-sm">June 2019 - Present</h2>
+                      <h1 className="text-xl font-bold">Founder - Developer</h1>
+                      <h2 className="text-gray-400 text-sm">BillyMan Game Dev</h2>
+                    </div>
+                    <div className="flex flex-col text-[0.8125rem] mb-2">
+                      <p>Game Development & Release (Unity, C#, GMS2, Blender); YouTube Tutorials & Community Growth; Competitive Game Jam Participation.</p>
+                    </div>
+                  </div>
+                </CardBody>
+              </Card>
+              </div>              
+              </Tab>
+              <Tab key="education" title={<><FontAwesomeIcon icon={faGraduationCap} /> Education</>}>
+              <div>
+                <Card>
+                  <CardBody>
+                    <h1>Education</h1>
+                  </CardBody>
+                </Card>
+              </div>
+              </Tab>
+            </Tabs>
+          </section>
+          </>
   );
 }
