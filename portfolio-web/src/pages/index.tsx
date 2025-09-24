@@ -13,8 +13,8 @@ import { Image } from "@heroui/react";
 
 import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBriefcase, faEnvelope, faGraduationCap, faHashtag, faLocationDot, faLocationPin, faMapPin, faServer,  } from '@fortawesome/free-solid-svg-icons'
-import {faCss, faHtml5, faSquareLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faBlender, faBriefcase, faCubes, faEnvelope, faGamepad, faGraduationCap, faHashtag, faLocationDot, faLocationPin, faMapPin, faServer, faVideo,  } from '@fortawesome/free-solid-svg-icons'
+import {faCss, faHtml5, faSquareLinkedin, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { 
   faJs, 
   faReact, 
@@ -355,20 +355,9 @@ export default function IndexPage() {
                             </p>
                       </div>
                       <div>
-                        <p className="text-sm"><span className="font-bold">Skills learned and used: </span> System Design • Database Optimization • Process Automation • Cost Efficiency • Scalability • Problem-Solving with Algorithms • Project Leadership • Full-Stack Engineering • Corporate Collaboration</p>
+                        <p className="text-sm"><span className="font-bold">Skills learned and used: </span>Cross-Functional Collaboration & Team Coordination • Project planning and execution • Team leadership • Technical mentoring • Workshop facilitation • Curriculum design</p>
                       </div>
-                      {/* <Image src="/nanikids/TapThe.webp" alt="" className="mb-4 w-full rounded-lg" />
-                      <div className="columns-1 md:columns-3 gap-4">
-                      <Image src="/nanikids/cup15.webp" alt="" className="mb-4 w-full rounded-lg" isBlurred />
-                      <Image src="/nanikids/DSC_4085.webp" alt="" className="mb-4 w-full rounded-lg" isBlurred />
-                      <Image src="/nanikids/dsc00257.webp" alt="" className="mb-4 w-full rounded-lg" isBlurred />
-                      <Image src="/nanikids/HY_00682.webp" alt="" className="mb-4 w-full rounded-lg" isBlurred />
-                      <Image src="/nanikids/dsc08099.webp" alt="" className="mb-4 w-full rounded-lg" isBlurred />
-                      <Image src="/nanikids/full-field-3.webp" alt="" className="mb-4 w-full rounded-lg" isBlurred />
-                      <Image src="/nanikids/DSC01331.webp" alt="" className="mb-4 w-full rounded-lg" isBlurred />
-                      <Image src="/nanikids/AdminWeb1.webp" alt="" className="mb-4 w-full rounded-lg" isBlurred />
-                      <Image src="/nanikids/AdminWeb2.webp" alt="" className="mb-4 w-full rounded-lg" isBlurred />
-                    </div> */}
+                      <Image src="/nanikids/TapThe.webp" alt="" className="mb-4 w-full rounded-lg" />
 
                     </ModalBody>
                     <ModalFooter>
@@ -382,9 +371,11 @@ export default function IndexPage() {
             </Modal>
 
               <Card className="rounded-b-2xl border-1 border-gray-600 hover:scale-105 transition-transform duration-200 py-3 px-1 z-1" radius="none"
-                isHoverable={true} isPressable={true} isBlurred={true}>
+                isHoverable={true} isPressable={true} isBlurred={true} onPress={() => setIsOpen("billy")}>
                 <CardBody className="grid grid-cols-3 justify-center items-center" >
-                  <Avatar size="lg" className="w-22 h-22 mb-5 justify-self-center" src="" />
+                <div className="justify-self-center">
+                  <Image src="billy150x150.png" alt="" isBlurred width={90} radius="full"/>
+                  </div>
                   <div className="col-span-2 flex flex-col justify-center">
                     <div className="flex flex-col mb-4">
                       <h2 className="text-gray-400 text-sm">June 2019 - Present</h2>
@@ -397,6 +388,48 @@ export default function IndexPage() {
                   </div>
                 </CardBody>
               </Card>
+              <Modal isOpen={isOpen === "billy"} onOpenChange={() => setIsOpen(null)} size="4xl" backdrop="blur" placement="center" scrollBehavior="inside">
+              <ModalContent>
+                {(onClose) => (
+                  <>
+                    <ModalHeader className="flex flex-row gap-4 items-center">
+                      <img src="billy150x150.png" alt="" className="w-8 rounded-full"/>
+                      BillyMan Game Dev - Founder & Developer</ModalHeader>
+                    <ModalBody>
+                      <div className="text-sm text-gray-400 flex flex-row justify-center items-center gap-10 mb-1">
+                        <div className="text-orange-500"><FontAwesomeIcon icon={faHashtag} /> C#</div>
+                        <div className="text-blue-500"><FontAwesomeIcon icon={faUnity} /> Unity</div>
+                        <div className="text-blue-500"><FontAwesomeIcon icon={faVideo} /> Premiere Pro</div>
+                        <div className="text-blue-500"><FontAwesomeIcon icon={faCubes} /> Blender</div>
+                        <div className="text-blue-500"><FontAwesomeIcon icon={faYoutube} /> Content Creation</div>
+                        <div className="text-green-500"><FontAwesomeIcon icon={faGamepad} /> Game Jams</div>
+                        
+                      </div>
+                      <div className="flex flex-col gap-2 mb-5">
+                            <p>
+                            • Built and scaled a game development channel by producing 30+ tutorials and development videos, attracting
+                            85k+ views, and growing a community of 700+ subscribers.
+                            </p>
+                            <p>
+                          • Designed and released multiple games on Itch.io using Unity, C#, GMS 2 and Blender, earning 4,800+ views and
+                          2,200+ plays and securing multiple Top-10 finishes in competitive international Game Jams.
+                            </p>
+                      </div>
+                      <div>
+                        <p className="text-sm"><span className="font-bold">Skills learned and used: </span> Game Design, Development & Testing • Collaborative Teamwork & Agile Development • High-Pressure Game Jam Experience (2–3 Day Sprints) • Content Creation & Video Production • Community Building & Engagement</p>
+                      </div>
+                      <Image src="/nanikids/TapThe.webp" alt="" className="mb-4 w-full rounded-lg" />
+                      
+                    </ModalBody>
+                    <ModalFooter>
+                      <Button color="danger" variant="light" onPress={onClose}>
+                        Close
+                      </Button>
+                    </ModalFooter>
+                  </>
+                )}
+              </ModalContent>
+            </Modal>
               </div>              
               </Tab>
               <Tab key="education" title={<><FontAwesomeIcon icon={faGraduationCap} /> Education</>}>
