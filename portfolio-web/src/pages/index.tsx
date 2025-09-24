@@ -44,7 +44,6 @@ import { addToast } from "@heroui/react";
 import {Chip} from "@heroui/chip";
 import {Tab} from "@heroui/react";
 import {  Modal,  ModalContent,  ModalHeader,  ModalBody,  ModalFooter} from "@heroui/modal";
-import { useDisclosure } from "@heroui/react";
 
 export default function IndexPage() {
 
@@ -52,7 +51,9 @@ export default function IndexPage() {
   const [copied, setCopied] = useState(false);
   const [selected, setSelected] = useState<string>("experience");
   const email = "huynhbaohuy130333@gmail.com";
-  const {isOpen, onOpen, onOpenChange} = useDisclosure();
+  const [isOpen, setIsOpen] = useState<string | null>(null);
+
+
 
   const techSkills = [
     // Languages
@@ -159,7 +160,7 @@ export default function IndexPage() {
                 setClick(true);
               }}>
                   <CardBody className="flex flex-col justify-center items-center">
-                    <Avatar size="lg" className="w-20 h-20 mb-5" src="" />
+                    <Avatar size="lg" className="w-20 h-20 mb-5" src="Avatar.jpg" />
                     <div className="flex flex-col gap-2 mb-5">
                       <h1 className="text-gray-400">
                       <FontAwesomeIcon icon={faLocationDot} /> Kirksville, MO</h1>
@@ -238,7 +239,7 @@ export default function IndexPage() {
               <div className="flex flex-col">
                 {/* NaNi Kids */}
                 <Card className="rounded-t-2xl border-1 border-gray-600 hover:scale-105 transition-transform duration-200 py-3 px-1 z-3" radius="none"
-                isHoverable={true} isPressable={true} isBlurred={true} onPress={onOpen}>
+                isHoverable={true} isPressable={true} isBlurred={true} onPress={() => setIsOpen("nanikids")}>
                 <CardBody className="grid grid-cols-3 justify-center items-center" >
                   <div className="justify-self-center">
                     <Image src="Logo_2_PNG.png" alt="" isBlurred width={80}/>
@@ -255,7 +256,7 @@ export default function IndexPage() {
                   </div>
                 </CardBody>
               </Card>
-              <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="4xl" backdrop="blur" placement="center" scrollBehavior="inside">
+              <Modal isOpen={isOpen === "nanikids"} onOpenChange={() => setIsOpen(null)} size="4xl" backdrop="blur" placement="center" scrollBehavior="inside">
               <ModalContent>
                 {(onClose) => (
                   <>
@@ -271,30 +272,32 @@ export default function IndexPage() {
                       </div>
                       <div className="flex flex-col gap-2 mb-5">
                             <p>
-                            • Engineered and migrated legacy codebase to a MERN-stack website for 1200+ soccer students, reducing
-                            admin workload on attendance, tuition, and student management by 80% and saving $1000+ monthly.
+                            • Engineered and <span className="font-bold bg-gradient-to-r from-teal-400 to-yellow-200 bg-clip-text text-transparent">migrated legacy codebase</span> to a MERN-stack website for <span className="font-bold bg-gradient-to-r from-pink-500 to-rose-500 bg-clip-text text-transparent">1200+ soccer students</span>, reducing
+                            admin workload on attendance, tuition, and student management by <span className="font-bold bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent">80%</span> and saving <span className="font-bold bg-gradient-to-r from-fuchsia-500 to-pink-500 bg-clip-text text-transparent">$1000+</span> monthly.
                             </p>
                             <p>
-                          • Constructed 45+ RESTful APIs and JWT auth for 3 roles using Node.js and Express, led migration of 2.9k+
-                          documents to a new schema via scripting and algorithms, and integrated Cloudinary for secure media storage.
+                          • Constructed <span className="font-bold bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent">45+</span> RESTful APIs and JWT auth for 3 roles using Node.js and Express, led migration of <span className="font-bold bg-gradient-to-r from-teal-200 to-teal-500 bg-clip-text text-transparent">2.9k+</span> documents to a new schema via scripting and algorithms, 
+                          and integrated <span className="font-bold bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent">Cloudinary</span> for secure media storage.
                           </p>
                           <p>
-                          • Automated daily attendance tracking via MongoDB aggregation pipelines, saving 25+ hours/month at 99.9%
-                          accuracy, and streamlined tuition reporting process by 90% via responsive and filterable dashboard.
+                          • Automated daily attendance tracking via MongoDB aggregation pipelines, saving <span className="font-bold bg-gradient-to-r from-lime-400 to-lime-500 bg-clip-text text-transparent">25+ hours/month</span> at <span className="font-bold bg-gradient-to-r from-fuchsia-500 to-pink-500 bg-clip-text text-transparent">99.9%</span> accuracy, 
+                          and streamlined tuition reporting process by <span className="font-bold bg-gradient-to-r from-fuchsia-500 to-cyan-500 bg-clip-text text-transparent">90%</span> via responsive and filterable dashboard.
                           </p>
                       </div>
                       <div>
                         <p className="text-sm"><span className="font-bold">Skills learned and used: </span> System Design • Database Optimization • Process Automation • Cost Efficiency • Scalability • Problem-Solving with Algorithms • Project Leadership • Full-Stack Engineering • Corporate Collaboration</p>
                       </div>
-                      <Image src="/nanikids/TapThe.webp" alt="" isBlurred className="mb-4 w-full rounded-lg" />
+                      <Image src="/nanikids/TapThe.webp" alt="" className="mb-4 w-full rounded-lg" />
                       <div className="columns-1 md:columns-3 gap-4">
-                      <Image src="/nanikids/cup15.webp" alt="" isBlurred className="mb-4 w-full rounded-lg" />
-                      <Image src="/nanikids/DSC_4085.webp" alt="" isBlurred className="mb-4 w-full rounded-lg" />
-                      <Image src="/nanikids/dsc00257.webp" alt="" isBlurred className="mb-4 w-full rounded-lg" />
-                      <Image src="/nanikids/dsc08099.webp" alt="" isBlurred className="mb-4 w-full rounded-lg" />
-                      <Image src="/nanikids/full-field-3.webp" alt="" isBlurred className="mb-4 w-full rounded-lg" />
-                      <Image src="/nanikids/HY_00682.webp" alt="" isBlurred className="mb-4 w-full rounded-lg" />
-                      <Image src="/nanikids/DSC01331.webp" alt="" isBlurred className="mb-4 w-full rounded-lg" />
+                      <Image src="/nanikids/cup15.webp" alt="" className="mb-4 w-full rounded-lg" isBlurred />
+                      <Image src="/nanikids/DSC_4085.webp" alt="" className="mb-4 w-full rounded-lg" isBlurred />
+                      <Image src="/nanikids/dsc00257.webp" alt="" className="mb-4 w-full rounded-lg" isBlurred />
+                      <Image src="/nanikids/HY_00682.webp" alt="" className="mb-4 w-full rounded-lg" isBlurred />
+                      <Image src="/nanikids/dsc08099.webp" alt="" className="mb-4 w-full rounded-lg" isBlurred />
+                      <Image src="/nanikids/full-field-3.webp" alt="" className="mb-4 w-full rounded-lg" isBlurred />
+                      <Image src="/nanikids/DSC01331.webp" alt="" className="mb-4 w-full rounded-lg" isBlurred />
+                      <Image src="/nanikids/AdminWeb1.webp" alt="" className="mb-4 w-full rounded-lg" isBlurred />
+                      <Image src="/nanikids/AdminWeb2.webp" alt="" className="mb-4 w-full rounded-lg" isBlurred />
                     </div>
 
                     </ModalBody>
@@ -310,9 +313,11 @@ export default function IndexPage() {
 
               {/* Google Student */}
               <Card className="border-1 border-gray-600 hover:scale-105 transition-transform duration-200 py-3 px-1 z-2" radius="none"
-                isHoverable={true} isPressable={true} isBlurred={true}>
+                isHoverable={true} isPressable={true} isBlurred={true} onPress={() => setIsOpen("gdsc")}>
                 <CardBody className="grid grid-cols-3 justify-center items-center" >
-                  <Avatar size="lg" className="w-22 h-22 mb-5 justify-self-center" src="" />
+                  <div className="justify-self-center">
+                  <Image src="GDSC.png" alt="" isBlurred width={90} radius="full"/>
+                  </div>
                   <div className="col-span-2 flex flex-col justify-center">
                     <div className="flex flex-col mb-4">
                       <h2 className="text-gray-400 text-sm">July 2025 - Present</h2>
@@ -325,6 +330,56 @@ export default function IndexPage() {
                   </div>
                 </CardBody>
               </Card>
+              <Modal isOpen={isOpen === "gdsc"} onOpenChange={() => setIsOpen(null)} size="4xl" backdrop="blur" placement="center" scrollBehavior="inside">
+              <ModalContent>
+                {(onClose) => (
+                  <>
+                    <ModalHeader className="flex flex-row gap-4 items-center">
+                      <img src="GDSC.png" alt="" className="w-8 rounded-full"/>
+                      Google Student Developer Club - Project Lead</ModalHeader>
+                    <ModalBody>
+                      <div className="text-sm text-gray-400 flex flex-row justify-center items-center gap-10 mb-1">
+                        <div className="text-orange-500"><FontAwesomeIcon icon={faHtml5} /> HTML</div>
+                        <div className="text-blue-500"><FontAwesomeIcon icon={faCss} /> CSS</div>
+                        <div className="text-blue-500"><FontAwesomeIcon icon={faReact} /> React.js</div>
+                        <div className="text-green-500"><FontAwesomeIcon icon={faNode} /> Node.js</div>
+                        
+                      </div>
+                      <div className="flex flex-col gap-2 mb-5">
+                            <p>
+                            • Led end-to-end planning and execution of software projects and tech initiatives and managed team workflows.
+                            </p>
+                            <p>
+                          • Facilitated technical workshops and guided 40+ students in mastering web technologies (HTML/CSS, React.js,
+                            Node.js), enabling them to build real-world projects and strengthen coding skills.
+                            </p>
+                      </div>
+                      <div>
+                        <p className="text-sm"><span className="font-bold">Skills learned and used: </span> System Design • Database Optimization • Process Automation • Cost Efficiency • Scalability • Problem-Solving with Algorithms • Project Leadership • Full-Stack Engineering • Corporate Collaboration</p>
+                      </div>
+                      {/* <Image src="/nanikids/TapThe.webp" alt="" className="mb-4 w-full rounded-lg" />
+                      <div className="columns-1 md:columns-3 gap-4">
+                      <Image src="/nanikids/cup15.webp" alt="" className="mb-4 w-full rounded-lg" isBlurred />
+                      <Image src="/nanikids/DSC_4085.webp" alt="" className="mb-4 w-full rounded-lg" isBlurred />
+                      <Image src="/nanikids/dsc00257.webp" alt="" className="mb-4 w-full rounded-lg" isBlurred />
+                      <Image src="/nanikids/HY_00682.webp" alt="" className="mb-4 w-full rounded-lg" isBlurred />
+                      <Image src="/nanikids/dsc08099.webp" alt="" className="mb-4 w-full rounded-lg" isBlurred />
+                      <Image src="/nanikids/full-field-3.webp" alt="" className="mb-4 w-full rounded-lg" isBlurred />
+                      <Image src="/nanikids/DSC01331.webp" alt="" className="mb-4 w-full rounded-lg" isBlurred />
+                      <Image src="/nanikids/AdminWeb1.webp" alt="" className="mb-4 w-full rounded-lg" isBlurred />
+                      <Image src="/nanikids/AdminWeb2.webp" alt="" className="mb-4 w-full rounded-lg" isBlurred />
+                    </div> */}
+
+                    </ModalBody>
+                    <ModalFooter>
+                      <Button color="danger" variant="light" onPress={onClose}>
+                        Close
+                      </Button>
+                    </ModalFooter>
+                  </>
+                )}
+              </ModalContent>
+            </Modal>
 
               <Card className="rounded-b-2xl border-1 border-gray-600 hover:scale-105 transition-transform duration-200 py-3 px-1 z-1" radius="none"
                 isHoverable={true} isPressable={true} isBlurred={true}>
