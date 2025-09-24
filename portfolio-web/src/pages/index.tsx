@@ -370,7 +370,8 @@ export default function IndexPage() {
               </ModalContent>
             </Modal>
 
-              <Card className="rounded-b-2xl border-1 border-gray-600 hover:scale-105 transition-transform duration-200 py-3 px-1 z-1" radius="none"
+                {/* BillyMan Game Dev */}
+              <Card className="border-1 border-gray-600 hover:scale-105 transition-transform duration-200 py-3 px-1 z-1" radius="none"
                 isHoverable={true} isPressable={true} isBlurred={true} onPress={() => setIsOpen("billy")}>
                 <CardBody className="grid grid-cols-3 justify-center items-center" >
                 <div className="justify-self-center">
@@ -430,18 +431,129 @@ export default function IndexPage() {
                 )}
               </ModalContent>
             </Modal>
+
+
+            <Card className="rounded-b-2xl border-1 border-gray-600 hover:scale-105 transition-transform duration-200 py-3 px-1 z-1" radius="none"
+                isHoverable={true} isPressable={true} isBlurred={true} onPress={() => setIsOpen("billy")}>
+                <CardBody className="grid grid-cols-3 justify-center items-center" >
+                <div className="justify-self-center">
+                  <Image src="63TRon.jpg" alt="" isBlurred width={90} radius="full"/>
+                  </div>
+                  <div className="col-span-2 flex flex-col justify-center">
+                    <div className="flex flex-col mb-4">
+                      <h2 className="text-gray-400 text-sm">October 2022 - May 2025</h2>
+                      <h1 className="text-xl font-bold">Co-Head of Media</h1>
+                      <h2 className="text-gray-400 text-sm">63 Cassette</h2>
+                    </div>
+                    <div className="flex flex-col text-[0.8125rem] mb-2">
+                      <p>Video Production & Photography (Team Leadership, Post-Production Workflow); Event Content Creation & Sponsorships; Social Media Growth & Analytics.</p>
+                    </div>
+                  </div>
+                </CardBody>
+              </Card>
+              <Modal isOpen={isOpen === "billy"} onOpenChange={() => setIsOpen(null)} size="4xl" backdrop="blur" placement="center" scrollBehavior="inside">
+              <ModalContent>
+                {(onClose) => (
+                  <>
+                    <ModalHeader className="flex flex-row gap-4 items-center">
+                      <img src="billy150x150.png" alt="" className="w-8 rounded-full"/>
+                      BillyMan Game Dev - Founder & Developer</ModalHeader>
+                    <ModalBody>
+                      <div className="text-sm text-gray-400 flex flex-row justify-center items-center gap-10 mb-1">
+                        <div className="text-orange-500"><FontAwesomeIcon icon={faHashtag} /> C#</div>
+                        <div className="text-blue-500"><FontAwesomeIcon icon={faUnity} /> Unity</div>
+                        <div className="text-blue-500"><FontAwesomeIcon icon={faVideo} /> Premiere Pro</div>
+                        <div className="text-blue-500"><FontAwesomeIcon icon={faCubes} /> Blender</div>
+                        <div className="text-blue-500"><FontAwesomeIcon icon={faYoutube} /> Content Creation</div>
+                        <div className="text-green-500"><FontAwesomeIcon icon={faGamepad} /> Game Jams</div>
+                        
+                      </div>
+                      <div className="flex flex-col gap-2 mb-5">
+                            <p>
+                            • Built and scaled a game development channel by producing 30+ tutorials and development videos, attracting
+                            85k+ views, and growing a community of 700+ subscribers.
+                            </p>
+                            <p>
+                          • Designed and released multiple games on Itch.io using Unity, C#, GMS 2 and Blender, earning 4,800+ views and
+                          2,200+ plays and securing multiple Top-10 finishes in competitive international Game Jams.
+                            </p>
+                      </div>
+                      <div>
+                        <p className="text-sm"><span className="font-bold">Skills learned and used: </span> Game Design, Development & Testing • Collaborative Teamwork & Agile Development • High-Pressure Game Jam Experience (2–3 Day Sprints) • Content Creation & Video Production • Community Building & Engagement</p>
+                      </div>
+                      <Image src="/nanikids/TapThe.webp" alt="" className="mb-4 w-full rounded-lg" />
+                      
+                    </ModalBody>
+                    <ModalFooter>
+                      <Button color="danger" variant="light" onPress={onClose}>
+                        Close
+                      </Button>
+                    </ModalFooter>
+                  </>
+                )}
+              </ModalContent>
+            </Modal>
               </div>              
               </Tab>
               <Tab key="education" title={<><FontAwesomeIcon icon={faGraduationCap} /> Education</>}>
               <div>
-                <Card>
-                  <CardBody>
-                    <h1>Education</h1>
-                  </CardBody>
-                </Card>
+              <Card className="rounded-t-2xl border-1 border-gray-600 py-3 px-1 z-2" radius="none"
+                 isBlurred={true} onPress={() => setIsOpen("gdsc")}>
+                <CardBody className="grid grid-cols-3 justify-center items-center" >
+                  <div className="justify-self-center">
+                  <Image src="truman.png" alt="" isBlurred width={90} radius="full"/>
+                  </div>
+                  <div className="col-span-2 flex flex-col justify-center">
+                    <div className="flex flex-col mb-4">
+                      <h2 className="text-gray-400 text-sm">August 2025 - May 2029</h2>
+                      <h1 className="text-xl font-bold">Truman State University</h1>
+                      <h2 className="text-gray-400 text-[0.8125rem]">Bachelor of Science in Computer Science, Minor in Data Science</h2>
+                    </div>
+                    <div className="flex flex-col text-[0.8125rem] mb-2 gap-2">
+                    <p>
+                            • Relevant courseworks: Foundations of CS I, Foundations of CS II (OOP, Data Structures), Computing
+                            Structures (Discrete Math, Algorithms), Calculus I, Calculus II
+                            </p>
+                            <p>
+                            • SAT: 1510/1600
+                            </p>
+                    </div>
+                  </div>
+                </CardBody>
+              </Card>
+              <Card className="rounded-b-2xl border-1 border-gray-600 py-3 px-1 z-2" radius="none"
+                 isBlurred={true} onPress={() => setIsOpen("gdsc")}>
+                <CardBody className="grid grid-cols-3 justify-center items-center" >
+                  <div className="justify-self-center">
+                  <Image src="truman.png" alt="" isBlurred width={90} radius="full"/>
+                  </div>
+                  <div className="col-span-2 flex flex-col justify-center">
+                    <div className="flex flex-col mb-4">
+                      <h2 className="text-gray-400 text-sm">August 2025 - May 2029</h2>
+                      <h1 className="text-xl font-bold">Truman State University</h1>
+                      <h2 className="text-gray-400 text-[0.8125rem]">Bachelor of Science in Computer Science, Minor in Data Science</h2>
+                    </div>
+                    <div className="flex flex-col text-[0.8125rem] mb-2 gap-2">
+                    <p>
+                            • Relevant courseworks: Foundations of CS I, Foundations of CS II (OOP, Data Structures), Computing
+                            Structures (Discrete Math, Algorithms), Calculus I, Calculus II
+                            </p>
+                            <p>
+                            • SAT: 1510/1600
+                            </p>
+                    </div>
+                  </div>
+                </CardBody>
+              </Card>
+              
               </div>
               </Tab>
             </Tabs>
+          </section>
+
+          <section className="flex flex-col gap-4 py-8 md:py-10 z-10">
+            <h1 className="text-3xl font-bold mb-2 self-baseline">Projects</h1>
+            
           </section>
           </>
   );
