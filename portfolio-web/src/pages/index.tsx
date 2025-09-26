@@ -24,8 +24,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faBlender,
     faBriefcase,
+    faCamera,
     faCubes,
     faEnvelope,
+    faExternalLinkAlt,
+    faFileImage,
+    faFilm,
     faGamepad,
     faGraduationCap,
     faHashtag,
@@ -190,7 +194,7 @@ export default function IndexPage() {
                       <Avatar
                           size="lg"
                           className="w-20 h-20 mb-5"
-                          src="Avatar.jpg"
+                          src="Avatar2.webp"
                       />
                       <div className="flex flex-col gap-2 mb-5">
                           <h1 className="text-gray-400">
@@ -574,8 +578,19 @@ export default function IndexPage() {
                                                   color="danger"
                                                   variant="light"
                                                   onPress={onClose}
+                                                  className="hover:scale-110 transition-transform duration-100"
+                                                  radius="sm"
                                               >
                                                   Close
+                                              </Button>
+                                              <Button
+                                                  color="primary"
+                                                  variant="solid"
+                                                  isDisabled
+                                                  radius="sm"
+                                                  className="cursor-not-allowed"
+                                              >
+                                                  Developing new landing page
                                               </Button>
                                           </ModalFooter>
                                       </>
@@ -683,16 +698,15 @@ export default function IndexPage() {
                                                   </p>
                                                   <p>
                                                       • Facilitated technical
-                                                      workshops and guided 40+
-                                                      students in mastering web
-                                                      technologies (HTML/CSS,
-                                                      React.js, Node.js),
+                                                      workshops and guided <span className="font-bold bg-gradient-to-r from-lime-400 to-lime-500 bg-clip-text text-transparent">40+</span> students in mastering web
+                                                      technologies <span className="font-bold bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent">(HTML/CSS,
+                                                      React.js, Node.js)</span>,
                                                       enabling them to build
                                                       real-world projects and
                                                       strengthen coding skills.
                                                   </p>
                                               </div>
-                                              <div>
+                                              <div className="mb-5 ">
                                                   <p className="text-sm">
                                                       <span className="font-bold">
                                                           Skills learned and
@@ -708,31 +722,44 @@ export default function IndexPage() {
                                                       Curriculum design
                                                   </p>
                                               </div>
-                                              <Image
-                                                  src="/nanikids/TapThe.webp"
-                                                  alt=""
-                                                  className="mb-4 w-full rounded-lg"
+                                              <div className="flex flex-col justify-center items-center">
+                                                  <Image
+                                                      src="/gdg/GDGTruman.webp"
+                                                      alt=""
+                                                      className="mb-4 rounded-lg"
+                                                  width={500}
                                               />
+                                              <Image
+                                                  src="/gdg/Sponsors.webp"
+                                                  alt=""
+                                                  className="mb-4 rounded-lg"
+                                                  width={500}
+                                              />
+                                              </div>
                                           </ModalBody>
                                           <ModalFooter>
                                               <Button
                                                   color="danger"
                                                   variant="light"
                                                   onPress={onClose}
+                                                  className="hover:scale-110 transition-transform duration-100"
+                                                  radius="sm"
                                               >
                                                   Close
                                               </Button>
                                               <Button
                                                   color="primary"
-                                                  variant="light"
+                                                  variant="solid"
                                                   onPress={() =>
                                                       window.open(
                                                           'https://gdg.community.dev/gdg-on-campus-truman-state-university-kirksville-united-states/',
                                                           '_blank'
                                                       )
                                                   }
+                                                  className="hover:scale-110 transition-transform duration-100"
+                                                  radius="sm"
                                               >
-                                                  GDG Website
+                                                  GDG Website <FontAwesomeIcon icon={faExternalLinkAlt} />
                                               </Button>
                                           </ModalFooter>
                                       </>
@@ -805,25 +832,25 @@ export default function IndexPage() {
                                           </ModalHeader>
                                           <ModalBody>
                                               <div className="text-sm text-gray-400 flex flex-row justify-center items-center gap-10 mb-1">
-                                                  <div className="text-orange-500">
+                                                  <div className="text-purple-500">
                                                       <FontAwesomeIcon
                                                           icon={faHashtag}
                                                       />{' '}
                                                       C#
                                                   </div>
-                                                  <div className="text-blue-500">
+                                                  <div className="text-gray-300">
                                                       <FontAwesomeIcon
                                                           icon={faUnity}
                                                       />{' '}
                                                       Unity
                                                   </div>
-                                                  <div className="text-blue-500">
+                                                  <div className="text-purple-400">
                                                       <FontAwesomeIcon
                                                           icon={faVideo}
                                                       />{' '}
                                                       Premiere Pro
                                                   </div>
-                                                  <div className="text-blue-500">
+                                                  <div className="text-orange-500">
                                                       <FontAwesomeIcon
                                                           icon={faCubes}
                                                       />{' '}
@@ -846,24 +873,20 @@ export default function IndexPage() {
                                                   <p>
                                                       • Built and scaled a game
                                                       development channel by
-                                                      producing 30+ tutorials
+                                                      producing <span className="font-bold bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent">30+</span> tutorials
                                                       and development videos,
-                                                      attracting 85k+ views, and
+                                                      attracting <span className="font-bold bg-gradient-to-r from-teal-400 to-yellow-200 bg-clip-text text-transparent">85k+</span> views, and
                                                       growing a community of
-                                                      700+ subscribers.
+                                                      <span className="font-bold bg-gradient-to-r from-amber-200 to-yellow-400 bg-clip-text text-transparent"> 700+ subscribers.</span>
                                                   </p>
                                                   <p>
                                                       • Designed and released
                                                       multiple games on Itch.io
                                                       using Unity, C#, GMS 2 and
-                                                      Blender, earning 4,800+
-                                                      views and 2,200+ plays and
-                                                      securing multiple Top-10
-                                                      finishes in competitive
-                                                      international Game Jams.
+                                                      Blender, earning <span className="font-bold bg-gradient-to-r from-fuchsia-500 to-pink-500 bg-clip-text text-transparent">4,800+ views and 2,200+ plays </span>and securing <span className="font-bold bg-gradient-to-r from-pink-500 to-rose-500 bg-clip-text text-transparent">multiple Top-10 finishes</span> in competitive international Game Jams.
                                                   </p>
                                               </div>
-                                              <div>
+                                              <div className="mb-5">
                                                   <p className="text-sm">
                                                       <span className="font-bold">
                                                           Skills learned and
@@ -881,19 +904,62 @@ export default function IndexPage() {
                                                       Building & Engagement
                                                   </p>
                                               </div>
-                                              <Image
-                                                  src="/nanikids/TapThe.webp"
-                                                  alt=""
-                                                  className="mb-4 w-full rounded-lg"
-                                              />
+                                              <div className="flex flex-col justify-center items-center gap-2">
+                                                  <Image
+                                                      src="/ytbgame/game1.webp"
+                                                      alt=""
+                                                      className="mb-4 w-full rounded-lg"
+                                                  />
+                                                  <Image
+                                                      src="/ytbgame/game2.webp"
+                                                      alt=""
+                                                      className="mb-4 w-full rounded-lg"
+                                                  />
+                                                    <Image
+                                                      src="/ytbgame/ytb1.webp"
+                                                      alt=""
+                                                      className="mb-4 w-full rounded-lg"
+                                                      
+                                                  />
+                                              </div>
                                           </ModalBody>
                                           <ModalFooter>
                                               <Button
                                                   color="danger"
                                                   variant="light"
+                                                  radius="sm"
                                                   onPress={onClose}
+                                                  className="hover:scale-110 transition-transform duration-100"
                                               >
                                                   Close
+                                              </Button>
+                                              <Button
+                                                  color="danger"
+                                                  variant="solid"
+                                                  onPress={() =>
+                                                      window.open(
+                                                          'https://www.youtube.com/@billyman',
+                                                          '_blank'
+                                                      )
+                                                  }
+                                                  className="hover:scale-110 transition-transform duration-100"
+                                                  radius="sm"
+                                              >
+                                                  YouTube <FontAwesomeIcon icon={faExternalLinkAlt} />
+                                              </Button>
+                                              <Button
+                                                  color="warning"
+                                                  variant="solid"
+                                                  onPress={() =>
+                                                      window.open(
+                                                          'https://billyman.itch.io/',
+                                                          '_blank'
+                                                      )
+                                                  }
+                                                  className="hover:scale-110 transition-transform duration-100"
+                                                  radius="sm"
+                                              >
+                                                  Games Page <FontAwesomeIcon icon={faExternalLinkAlt} />
                                               </Button>
                                           </ModalFooter>
                                       </>
@@ -907,7 +973,7 @@ export default function IndexPage() {
                               isHoverable={true}
                               isPressable={true}
                               isBlurred={true}
-                              onPress={() => setIsOpen('billy')}
+                              onPress={() => setIsOpen('63')}
                           >
                               <CardBody className="grid grid-cols-3 justify-center items-center">
                                   <div className="justify-self-center">
@@ -944,7 +1010,7 @@ export default function IndexPage() {
                               </CardBody>
                           </Card>
                           <Modal
-                              isOpen={isOpen === 'billy'}
+                              isOpen={isOpen === '63'}
                               onOpenChange={() => setIsOpen(null)}
                               size="4xl"
                               backdrop="blur"
@@ -956,28 +1022,15 @@ export default function IndexPage() {
                                       <>
                                           <ModalHeader className="flex flex-row gap-4 items-center">
                                               <img
-                                                  src="billy150x150.png"
+                                                  src="63TRon.jpg"
                                                   alt=""
                                                   className="w-8 rounded-full"
                                               />
-                                              BillyMan Game Dev - Founder &
-                                              Developer
+                                              63 Cassette - Co-Head of Media
                                           </ModalHeader>
                                           <ModalBody>
                                               <div className="text-sm text-gray-400 flex flex-row justify-center items-center gap-10 mb-1">
-                                                  <div className="text-orange-500">
-                                                      <FontAwesomeIcon
-                                                          icon={faHashtag}
-                                                      />{' '}
-                                                      C#
-                                                  </div>
-                                                  <div className="text-blue-500">
-                                                      <FontAwesomeIcon
-                                                          icon={faUnity}
-                                                      />{' '}
-                                                      Unity
-                                                  </div>
-                                                  <div className="text-blue-500">
+                                                  <div className="text-purple-500">
                                                       <FontAwesomeIcon
                                                           icon={faVideo}
                                                       />{' '}
@@ -985,45 +1038,34 @@ export default function IndexPage() {
                                                   </div>
                                                   <div className="text-blue-500">
                                                       <FontAwesomeIcon
-                                                          icon={faCubes}
+                                                          icon={faCamera}
                                                       />{' '}
-                                                      Blender
+                                                      Photoshop
                                                   </div>
-                                                  <div className="text-blue-500">
+                                                  <div className="text-gray-400">
                                                       <FontAwesomeIcon
-                                                          icon={faYoutube}
+                                                          icon={faFilm}
                                                       />{' '}
-                                                      Content Creation
+                                                      CapCut
                                                   </div>
-                                                  <div className="text-green-500">
+                                                  <div className="text-blue-300">
                                                       <FontAwesomeIcon
-                                                          icon={faGamepad}
+                                                          icon={faFileImage}
                                                       />{' '}
-                                                      Game Jams
+                                                      Lightroom
                                                   </div>
                                               </div>
                                               <div className="flex flex-col gap-2 mb-5">
                                                   <p>
-                                                      • Built and scaled a game
-                                                      development channel by
-                                                      producing 30+ tutorials
-                                                      and development videos,
-                                                      attracting 85k+ views, and
-                                                      growing a community of
-                                                      700+ subscribers.
+                                                      • Co-led video production and photography for school events, managing a student media team of <span className="font-bold bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent">5 members</span> and
+                                                      overseeing post-production workflow.
                                                   </p>
                                                   <p>
-                                                      • Designed and released
-                                                      multiple games on Itch.io
-                                                      using Unity, C#, GMS 2 and
-                                                      Blender, earning 4,800+
-                                                      views and 2,200+ plays and
-                                                      securing multiple Top-10
-                                                      finishes in competitive
-                                                      international Game Jams.
+                                                      • Secured <span className="font-bold bg-gradient-to-r from-fuchsia-500 to-cyan-500 bg-clip-text text-transparent">$3,000+</span> in sponsorships and grew Facebook to <span className="font-bold bg-gradient-to-r from-teal-200 to-teal-500 bg-clip-text text-transparent">11K+ followers</span> by producing strategic event content
+                                                      with Premiere Pro, Photoshop batch scripting, and content analytics.
                                                   </p>
                                               </div>
-                                              <div>
+                                              <div className="mb-5">
                                                   <p className="text-sm">
                                                       <span className="font-bold">
                                                           Skills learned and
@@ -1041,11 +1083,62 @@ export default function IndexPage() {
                                                       Building & Engagement
                                                   </p>
                                               </div>
-                                              <Image
-                                                  src="/nanikids/TapThe.webp"
-                                                  alt=""
-                                                  className="mb-4 w-full rounded-lg"
-                                              />
+                                              <div className="columns-1 md:columns-3 gap-4">
+                                                  <Image
+                                                      src="/63/48 Bchuyen.webp"
+                                                      alt=""
+                                                      className="mb-4 w-full rounded-lg"
+                                                      isBlurred
+                                                  />
+                                                  <Image
+                                                      src="/63/434743656_1254444939105967_7842720612555236667_n.webp"
+                                                      alt=""
+                                                      className="mb-4 w-full rounded-lg"
+                                                      isBlurred
+                                                  />
+                                                  <Image
+                                                      src="/63/316679587_896720738211724_6990299099548636146_n.webp"
+                                                      alt=""
+                                                      className="mb-4 w-full rounded-lg"
+                                                      isBlurred
+                                                  />
+                                                  <Image
+                                                      src="/63/DSC_4560.webp"
+                                                      alt=""
+                                                      className="mb-4 w-full rounded-lg"
+                                                      isBlurred
+                                                  />
+                                                  <Image
+                                                      src="/63/IMG_0119.webp"
+                                                      alt=""
+                                                      className="mb-4 w-full rounded-lg"
+                                                      isBlurred
+                                                  />
+                                                  <Image
+                                                      src="/63/IMG_4983.webp"
+                                                      alt=""
+                                                      className="mb-4 w-full rounded-lg"
+                                                      isBlurred
+                                                  />
+                                                  <Image
+                                                      src="/63/IMG_9506.webp"
+                                                      alt=""
+                                                      className="mb-4 w-full rounded-lg"
+                                                      isBlurred
+                                                  />
+                                                  <Image
+                                                      src="/63/IMG_9937.webp"
+                                                      alt=""
+                                                      className="mb-4 w-full rounded-lg"
+                                                      isBlurred
+                                                  />
+                                                  <Image
+                                                      src="/63/sports.webp"
+                                                      alt=""
+                                                      className="mb-4 w-full rounded-lg"
+                                                      isBlurred
+                                                  />
+                                              </div>
                                           </ModalBody>
                                           <ModalFooter>
                                               <Button
