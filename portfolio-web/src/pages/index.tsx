@@ -7,13 +7,35 @@ import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
 import DefaultLayout from "@/layouts/default";
-import {Button, Card, CardBody, Divider, Tabs} from "@heroui/react";
+import {
+    Button,
+    Card,
+    CardBody,
+    Divider,
+    Tabs,
+    CardFooter,
+    CardHeader,
+} from '@heroui/react';
 import {Avatar} from "@heroui/react";
 import { Image } from "@heroui/react";
 
 import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBlender, faBriefcase, faCubes, faEnvelope, faGamepad, faGraduationCap, faHashtag, faLocationDot, faLocationPin, faMapPin, faServer, faVideo,  } from '@fortawesome/free-solid-svg-icons'
+import {
+    faBlender,
+    faBriefcase,
+    faCubes,
+    faEnvelope,
+    faGamepad,
+    faGraduationCap,
+    faHashtag,
+    faLocationDot,
+    faLocationPin,
+    faMapPin,
+    faRobot,
+    faServer,
+    faVideo,
+} from '@fortawesome/free-solid-svg-icons';
 import {faCss, faHtml5, faSquareLinkedin, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { 
   faJs, 
@@ -109,7 +131,7 @@ export default function IndexPage() {
   };
 
   return (
-    <>
+      <>
           <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
               {/* <div className="inline-block max-w-lg text-center justify-center">
           <span className={title()}>Make&nbsp;</span>
@@ -153,408 +175,1092 @@ export default function IndexPage() {
             </span>
           </Snippet>
         </div> */}
-              <Card isBlurred={true} shadow="sm" isHoverable={!clicked} isPressable={true} 
-              className="border-1 focus:ring-0 focus:ring-offset-0 border-gray-600 md:grid md:grid-cols-[1fr_auto_2fr] flex flex-col 
+              <Card
+                  isBlurred={true}
+                  shadow="sm"
+                  isHoverable={!clicked}
+                  isPressable={true}
+                  className="border-1 focus:ring-0 focus:ring-offset-0 border-gray-600 md:grid md:grid-cols-[1fr_auto_2fr] flex flex-col 
               justify-center gap-5 p-5 md:w-xl"
-              onClick={() => {
-                setClick(true);
-              }}>
+                  onClick={() => {
+                      setClick(true);
+                  }}
+              >
                   <CardBody className="flex flex-col justify-center items-center">
-                    <Avatar size="lg" className="w-20 h-20 mb-5" src="Avatar.jpg" />
-                    <div className="flex flex-col gap-2 mb-5">
-                      <h1 className="text-gray-400">
-                      <FontAwesomeIcon icon={faLocationDot} /> Kirksville, MO</h1>
-                      <h1 className="text-gray-400">
-                      <FontAwesomeIcon icon={faLocationDot} /> San Jose, CA</h1>
-                    </div>
-                    <div className="flex flex-row gap-2 text-xl">
-
-                      <a href="mailto:huynhbaohuy130333@gmail.com" onClick={handleCopy}
-                      className="hover:scale-130 hover:text-red-300 ease-in-out transition-all duration-150">
-                      <FontAwesomeIcon icon={faEnvelope} /></a>
-                      <a href="https://github.com/baohuy1303" target="_blank"
-                      className="hover:scale-130 hover:text-gray-500 ease-in-out transition-all duration-150">
-                      <FontAwesomeIcon icon={faGithub} /></a>
-                      <a href="https://www.linkedin.com/in/hbhuy/" target="_blank"
-                      className="hover:scale-130 hover:text-blue-400 ease-in-out transition-all duration-150">
-                      <FontAwesomeIcon icon={faSquareLinkedin} /></a>
-                    
-                    </div>
+                      <Avatar
+                          size="lg"
+                          className="w-20 h-20 mb-5"
+                          src="Avatar.jpg"
+                      />
+                      <div className="flex flex-col gap-2 mb-5">
+                          <h1 className="text-gray-400">
+                              <FontAwesomeIcon icon={faLocationDot} />{' '}
+                              Kirksville, MO
+                          </h1>
+                          <h1 className="text-gray-400">
+                              <FontAwesomeIcon icon={faLocationDot} /> San Jose,
+                              CA
+                          </h1>
+                      </div>
+                      <div className="flex flex-row gap-2 text-xl">
+                          <a
+                              href="mailto:huynhbaohuy130333@gmail.com"
+                              onClick={handleCopy}
+                              className="hover:scale-130 hover:text-red-300 ease-in-out transition-all duration-150"
+                          >
+                              <FontAwesomeIcon icon={faEnvelope} />
+                          </a>
+                          <a
+                              href="https://github.com/baohuy1303"
+                              target="_blank"
+                              className="hover:scale-130 hover:text-gray-500 ease-in-out transition-all duration-150"
+                          >
+                              <FontAwesomeIcon icon={faGithub} />
+                          </a>
+                          <a
+                              href="https://www.linkedin.com/in/hbhuy/"
+                              target="_blank"
+                              className="hover:scale-130 hover:text-blue-400 ease-in-out transition-all duration-150"
+                          >
+                              <FontAwesomeIcon icon={faSquareLinkedin} />
+                          </a>
+                      </div>
                   </CardBody>
                   <div className="w-px bg-gray-300 mx-auto" />
                   <CardBody className="flex flex-col items-center">
-                    <h1 className="text-3xl font-bold mb-2">Huy B. Huynh</h1>
-                    <h2 className="text-lg italic">Fullstack - Backend - Frontend</h2>
-                    <h3 className="text-gray-400 text-sm italic mb-5">CS 29' Truman State University</h3>
-                    <div className="text-md">
-                      <p>• Aspiring <span className={`ease-in-out transition-all duration-250 ${clicked ? `bg-clip-text text-transparent bg-gradient-to-r from-amber-500 to-pink-500` : `text-white`}`}>Full Stack Software Engineer</span></p>
-                      <p>• Impactful <span className={`ease-in-out transition-all duration-250 ${clicked ? `bg-gradient-to-r from-fuchsia-500 to-cyan-500 bg-clip-text text-transparent` : `text-white`}`}>web apps</span> that brings <span className={`ease-in-out transition-all duration-250 ${clicked ? `bg-gradient-to-r from-teal-400 to-yellow-200 bg-clip-text text-transparent` : `text-white`}`}>value</span></p>
-                      <p>• Game dev & photography for the <span className={`ease-in-out transition-all duration-250 ${clicked ? `bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent` : `text-white`}`}>vibes :)</span></p>
-                    </div>
+                      <h1 className="text-3xl font-bold mb-2">Huy B. Huynh</h1>
+                      <h2 className="text-lg italic">
+                          Fullstack - Backend - Frontend
+                      </h2>
+                      <h3 className="text-gray-400 text-sm italic mb-5">
+                          CS 29' Truman State University
+                      </h3>
+                      <div className="text-md">
+                          <p>
+                              • Aspiring{' '}
+                              <span
+                                  className={`ease-in-out transition-all duration-250 ${clicked ? `bg-clip-text text-transparent bg-gradient-to-r from-amber-500 to-pink-500` : `text-white`}`}
+                              >
+                                  Full Stack Software Engineer
+                              </span>
+                          </p>
+                          <p>
+                              • Impactful{' '}
+                              <span
+                                  className={`ease-in-out transition-all duration-250 ${clicked ? `bg-gradient-to-r from-fuchsia-500 to-cyan-500 bg-clip-text text-transparent` : `text-white`}`}
+                              >
+                                  web apps
+                              </span>{' '}
+                              that brings{' '}
+                              <span
+                                  className={`ease-in-out transition-all duration-250 ${clicked ? `bg-gradient-to-r from-teal-400 to-yellow-200 bg-clip-text text-transparent` : `text-white`}`}
+                              >
+                                  value
+                              </span>
+                          </p>
+                          <p>
+                              • Game dev & photography for the{' '}
+                              <span
+                                  className={`ease-in-out transition-all duration-250 ${clicked ? `bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent` : `text-white`}`}
+                              >
+                                  vibes :)
+                              </span>
+                          </p>
+                      </div>
                   </CardBody>
               </Card>
           </section>
 
           <section className="flex flex-col gap-4 py-8 md:py-10 z-10">
-            <h1 className="text-3xl font-bold mb-2 self-baseline">Tech stack</h1>
-            <div className="flex flex-row flex-wrap justify-center items-center gap-4">
-            {techSkills.map((skill, index) => (
-              <Chip
-                key={index}
-                variant="shadow"
-                radius="sm"
-                size="lg"
-                classNames={{
-                  base: "border-1 border-gray-600 hover:scale-105 transition-transform duration-200 py-4 px-1",
-                  content: `text-md font-medium ${skill.textCol} group-hover:text-white`
-                }}
-                className="group hover:bg-opacity-80 transition-all duration-200"
-                style={{
-                  background: `linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.6))`,
-                }}
-              >
-                <div className="flex items-center gap-2 px-2">
-                  <FontAwesomeIcon icon={skill.icon} className="group-hover:scale-110 transition-transform duration-200" />
-                  <span>{skill.name}</span>
-                </div>
-              </Chip>
-            ))}
-            </div>
+              <h1 className="text-3xl font-bold mb-2 self-baseline">
+                  Tech stack
+              </h1>
+              <div className="flex flex-row flex-wrap justify-center items-center gap-4">
+                  {techSkills.map((skill, index) => (
+                      <Chip
+                          key={index}
+                          variant="shadow"
+                          radius="sm"
+                          size="lg"
+                          classNames={{
+                              base: 'border-1 border-gray-600 hover:scale-105 transition-transform duration-200 py-4 px-1',
+                              content: `text-md font-medium ${skill.textCol} group-hover:text-white`,
+                          }}
+                          className="group hover:bg-opacity-80 transition-all duration-200"
+                          style={{
+                              background: `linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.6))`,
+                          }}
+                      >
+                          <div className="flex items-center gap-2 px-2">
+                              <FontAwesomeIcon
+                                  icon={skill.icon}
+                                  className="group-hover:scale-110 transition-transform duration-200"
+                              />
+                              <span>{skill.name}</span>
+                          </div>
+                      </Chip>
+                  ))}
+              </div>
           </section>
 
           <section className="flex flex-col gap-4 py-8 md:py-10">
-            <h1 className="text-3xl font-bold mb-3 self-baseline">Experience</h1>
-            
-            <Tabs aria-label="Tabs variants" variant="bordered" fullWidth={true}
-            onSelectionChange={(key) => setSelected(String(key))}
-             className="w-full justify-center items-center" size="md" radius="md" 
-             motionProps={{
-              initial: { opacity: 0, x: -10, scale: 0.9 },
-              animate: { opacity: 1, x: 0, scale: 1 },
-              exit: { opacity: 0, x: -10, scale: 0.9 },
-              transition: { duration: 0.3, ease: "easeInOut" }
-            }}
-            selectedKey={selected}>
-              <Tab key="experience" title={<><FontAwesomeIcon icon={faBriefcase} /> Experience & Activities</>}>
-              <div className="flex flex-col">
-                {/* NaNi Kids */}
-                <Card className="rounded-t-2xl border-1 border-gray-600 hover:scale-105 transition-transform duration-200 py-3 px-1 z-3" radius="none"
-                isHoverable={true} isPressable={true} isBlurred={true} onPress={() => setIsOpen("nanikids")}>
-                <CardBody className="grid grid-cols-3 justify-center items-center" >
-                  <div className="justify-self-center">
-                    <Image src="Logo_2_PNG.png" alt="" isBlurred width={80}/>
-                  </div>
-                  <div className="col-span-2 flex flex-col justify-center">
-                    <div className="flex flex-col mb-4">
-                      <h2 className="text-gray-400 text-sm">July 2025 - Present</h2>
-                      <h1 className="text-xl font-bold">Software Engineer</h1>
-                      <h2 className="text-gray-400 text-sm">NaNi Kids Futsal - Soccer Academy</h2>
-                    </div>
-                    <div className="flex flex-col text-[0.8125rem] mb-2">
-                      <p>MERN Stack Web Development; API Design & Authentication; Database Migration & Automation; Admin Dashboard & Media Integration; Attendance & Tuition Management Optimization.</p>
-                    </div>
-                  </div>
-                </CardBody>
-              </Card>
-              <Modal isOpen={isOpen === "nanikids"} onOpenChange={() => setIsOpen(null)} size="4xl" backdrop="blur" placement="center" scrollBehavior="inside">
-              <ModalContent>
-                {(onClose) => (
-                  <>
-                    <ModalHeader className="flex flex-row gap-4 items-center">
-                      <img src="Logo_2_PNG.png" alt="" className="w-8"/>
-                      NaNi Kids Futsal - Software Engineer</ModalHeader>
-                    <ModalBody>
-                      <div className="text-sm text-gray-400 flex flex-row justify-center items-center gap-10 mb-1">
-                        <div className="text-blue-500"><FontAwesomeIcon icon={faReact} /> React.js</div>
-                        <div className="text-green-500"><FontAwesomeIcon icon={faNode} /> Node.js</div>
-                        <div className="text-gray-500"><FontAwesomeIcon icon={faServer} /> Express.js</div>
-                        <div className="text-green-500"><FontAwesomeIcon icon={faLeaf} /> MongoDB</div>
+              <h1 className="text-3xl font-bold mb-3 self-baseline">
+                  Experience
+              </h1>
+
+              <Tabs
+                  aria-label="Tabs variants"
+                  variant="bordered"
+                  fullWidth={true}
+                  onSelectionChange={(key) => setSelected(String(key))}
+                  className="w-full justify-center items-center"
+                  size="md"
+                  radius="md"
+                  motionProps={{
+                      initial: { opacity: 0, x: -10, scale: 0.9 },
+                      animate: { opacity: 1, x: 0, scale: 1 },
+                      exit: { opacity: 0, x: -10, scale: 0.9 },
+                      transition: { duration: 0.3, ease: 'easeInOut' },
+                  }}
+                  selectedKey={selected}
+              >
+                  <Tab
+                      key="experience"
+                      title={
+                          <>
+                              <FontAwesomeIcon icon={faBriefcase} /> Experience
+                              & Activities
+                          </>
+                      }
+                  >
+                      <div className="flex flex-col">
+                          {/* NaNi Kids */}
+                          <Card
+                              className="rounded-t-2xl border-1 border-gray-600 hover:scale-105 transition-transform duration-200 py-3 px-1 z-3"
+                              radius="none"
+                              isHoverable={true}
+                              isPressable={true}
+                              isBlurred={true}
+                              onPress={() => setIsOpen('nanikids')}
+                          >
+                              <CardBody className="grid grid-cols-3 justify-center items-center">
+                                  <div className="justify-self-center">
+                                      <Image
+                                          src="Logo_2_PNG.png"
+                                          alt=""
+                                          isBlurred
+                                          width={80}
+                                      />
+                                  </div>
+                                  <div className="col-span-2 flex flex-col justify-center">
+                                      <div className="flex flex-col mb-4">
+                                          <h2 className="text-gray-400 text-sm">
+                                              July 2025 - Present
+                                          </h2>
+                                          <h1 className="text-xl font-bold">
+                                              Software Engineer
+                                          </h1>
+                                          <h2 className="text-gray-400 text-sm">
+                                              NaNi Kids Futsal - Soccer Academy
+                                          </h2>
+                                      </div>
+                                      <div className="flex flex-col text-[0.8125rem] mb-2">
+                                          <p>
+                                              MERN Stack Web Development; API
+                                              Design & Authentication; Database
+                                              Migration & Automation; Admin
+                                              Dashboard & Media Integration;
+                                              Attendance & Tuition Management
+                                              Optimization.
+                                          </p>
+                                      </div>
+                                  </div>
+                              </CardBody>
+                          </Card>
+                          <Modal
+                              isOpen={isOpen === 'nanikids'}
+                              onOpenChange={() => setIsOpen(null)}
+                              size="4xl"
+                              backdrop="blur"
+                              placement="center"
+                              scrollBehavior="inside"
+                          >
+                              <ModalContent>
+                                  {(onClose) => (
+                                      <>
+                                          <ModalHeader className="flex flex-row gap-4 items-center">
+                                              <img
+                                                  src="Logo_2_PNG.png"
+                                                  alt=""
+                                                  className="w-8"
+                                              />
+                                              NaNi Kids Futsal - Software
+                                              Engineer
+                                          </ModalHeader>
+                                          <ModalBody>
+                                              <div className="text-sm text-gray-400 flex flex-row justify-center items-center gap-10 mb-1">
+                                                  <div className="text-blue-500">
+                                                      <FontAwesomeIcon
+                                                          icon={faReact}
+                                                      />{' '}
+                                                      React.js
+                                                  </div>
+                                                  <div className="text-green-500">
+                                                      <FontAwesomeIcon
+                                                          icon={faNode}
+                                                      />{' '}
+                                                      Node.js
+                                                  </div>
+                                                  <div className="text-gray-500">
+                                                      <FontAwesomeIcon
+                                                          icon={faServer}
+                                                      />{' '}
+                                                      Express.js
+                                                  </div>
+                                                  <div className="text-green-500">
+                                                      <FontAwesomeIcon
+                                                          icon={faLeaf}
+                                                      />{' '}
+                                                      MongoDB
+                                                  </div>
+                                              </div>
+                                              <div className="flex flex-col gap-2 mb-5">
+                                                  <p>
+                                                      • Engineered and{' '}
+                                                      <span className="font-bold bg-gradient-to-r from-teal-400 to-yellow-200 bg-clip-text text-transparent">
+                                                          migrated legacy
+                                                          codebase
+                                                      </span>{' '}
+                                                      to a MERN-stack website
+                                                      for{' '}
+                                                      <span className="font-bold bg-gradient-to-r from-pink-500 to-rose-500 bg-clip-text text-transparent">
+                                                          1200+ soccer students
+                                                      </span>
+                                                      , reducing admin workload
+                                                      on attendance, tuition,
+                                                      and student management by{' '}
+                                                      <span className="font-bold bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent">
+                                                          80%
+                                                      </span>{' '}
+                                                      and saving{' '}
+                                                      <span className="font-bold bg-gradient-to-r from-fuchsia-500 to-pink-500 bg-clip-text text-transparent">
+                                                          $1000+
+                                                      </span>{' '}
+                                                      monthly.
+                                                  </p>
+                                                  <p>
+                                                      • Constructed{' '}
+                                                      <span className="font-bold bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent">
+                                                          45+
+                                                      </span>{' '}
+                                                      RESTful APIs and JWT auth
+                                                      for 3 roles using Node.js
+                                                      and Express, led migration
+                                                      of{' '}
+                                                      <span className="font-bold bg-gradient-to-r from-teal-200 to-teal-500 bg-clip-text text-transparent">
+                                                          2.9k+
+                                                      </span>{' '}
+                                                      documents to a new schema
+                                                      via scripting and
+                                                      algorithms, and integrated{' '}
+                                                      <span className="font-bold bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent">
+                                                          Cloudinary
+                                                      </span>{' '}
+                                                      for secure media storage.
+                                                  </p>
+                                                  <p>
+                                                      • Automated daily
+                                                      attendance tracking via
+                                                      MongoDB aggregation
+                                                      pipelines, saving{' '}
+                                                      <span className="font-bold bg-gradient-to-r from-lime-400 to-lime-500 bg-clip-text text-transparent">
+                                                          25+ hours/month
+                                                      </span>{' '}
+                                                      at{' '}
+                                                      <span className="font-bold bg-gradient-to-r from-fuchsia-500 to-pink-500 bg-clip-text text-transparent">
+                                                          99.9%
+                                                      </span>{' '}
+                                                      accuracy, and streamlined
+                                                      tuition reporting process
+                                                      by{' '}
+                                                      <span className="font-bold bg-gradient-to-r from-fuchsia-500 to-cyan-500 bg-clip-text text-transparent">
+                                                          90%
+                                                      </span>{' '}
+                                                      via responsive and
+                                                      filterable dashboard.
+                                                  </p>
+                                              </div>
+                                              <div>
+                                                  <p className="text-sm">
+                                                      <span className="font-bold">
+                                                          Skills learned and
+                                                          used:{' '}
+                                                      </span>{' '}
+                                                      System Design • Database
+                                                      Optimization • Process
+                                                      Automation • Cost
+                                                      Efficiency • Scalability •
+                                                      Problem-Solving with
+                                                      Algorithms • Project
+                                                      Leadership • Full-Stack
+                                                      Engineering • Corporate
+                                                      Collaboration
+                                                  </p>
+                                              </div>
+                                              <Image
+                                                  src="/nanikids/TapThe.webp"
+                                                  alt=""
+                                                  className="mb-4 w-full rounded-lg"
+                                              />
+                                              <div className="columns-1 md:columns-3 gap-4">
+                                                  <Image
+                                                      src="/nanikids/cup15.webp"
+                                                      alt=""
+                                                      className="mb-4 w-full rounded-lg"
+                                                      isBlurred
+                                                  />
+                                                  <Image
+                                                      src="/nanikids/DSC_4085.webp"
+                                                      alt=""
+                                                      className="mb-4 w-full rounded-lg"
+                                                      isBlurred
+                                                  />
+                                                  <Image
+                                                      src="/nanikids/dsc00257.webp"
+                                                      alt=""
+                                                      className="mb-4 w-full rounded-lg"
+                                                      isBlurred
+                                                  />
+                                                  <Image
+                                                      src="/nanikids/HY_00682.webp"
+                                                      alt=""
+                                                      className="mb-4 w-full rounded-lg"
+                                                      isBlurred
+                                                  />
+                                                  <Image
+                                                      src="/nanikids/dsc08099.webp"
+                                                      alt=""
+                                                      className="mb-4 w-full rounded-lg"
+                                                      isBlurred
+                                                  />
+                                                  <Image
+                                                      src="/nanikids/full-field-3.webp"
+                                                      alt=""
+                                                      className="mb-4 w-full rounded-lg"
+                                                      isBlurred
+                                                  />
+                                                  <Image
+                                                      src="/nanikids/DSC01331.webp"
+                                                      alt=""
+                                                      className="mb-4 w-full rounded-lg"
+                                                      isBlurred
+                                                  />
+                                                  <Image
+                                                      src="/nanikids/AdminWeb1.webp"
+                                                      alt=""
+                                                      className="mb-4 w-full rounded-lg"
+                                                      isBlurred
+                                                  />
+                                                  <Image
+                                                      src="/nanikids/AdminWeb2.webp"
+                                                      alt=""
+                                                      className="mb-4 w-full rounded-lg"
+                                                      isBlurred
+                                                  />
+                                              </div>
+                                          </ModalBody>
+                                          <ModalFooter>
+                                              <Button
+                                                  color="danger"
+                                                  variant="light"
+                                                  onPress={onClose}
+                                              >
+                                                  Close
+                                              </Button>
+                                          </ModalFooter>
+                                      </>
+                                  )}
+                              </ModalContent>
+                          </Modal>
+
+                          {/* Google Student */}
+                          <Card
+                              className="border-1 border-gray-600 hover:scale-105 transition-transform duration-200 py-3 px-1 z-2"
+                              radius="none"
+                              isHoverable={true}
+                              isPressable={true}
+                              isBlurred={true}
+                              onPress={() => setIsOpen('gdsc')}
+                          >
+                              <CardBody className="grid grid-cols-3 justify-center items-center">
+                                  <div className="justify-self-center">
+                                      <Image
+                                          src="GDSC.png"
+                                          alt=""
+                                          isBlurred
+                                          width={90}
+                                          radius="full"
+                                      />
+                                  </div>
+                                  <div className="col-span-2 flex flex-col justify-center">
+                                      <div className="flex flex-col mb-4">
+                                          <h2 className="text-gray-400 text-sm">
+                                              July 2025 - Present
+                                          </h2>
+                                          <h1 className="text-xl font-bold">
+                                              Project Lead
+                                          </h1>
+                                          <h2 className="text-gray-400 text-sm">
+                                              Google Student Developer Club
+                                          </h2>
+                                      </div>
+                                      <div className="flex flex-col text-[0.8125rem] mb-2">
+                                          <p>
+                                              Project & Team Management;
+                                              Technical Workshops & Mentorship
+                                              for 40+ students; Web Development
+                                              (HTML/CSS, React.js, Node.js);
+                                              Real-world Project Guidance.
+                                          </p>
+                                      </div>
+                                  </div>
+                              </CardBody>
+                          </Card>
+                          <Modal
+                              isOpen={isOpen === 'gdsc'}
+                              onOpenChange={() => setIsOpen(null)}
+                              size="4xl"
+                              backdrop="blur"
+                              placement="center"
+                              scrollBehavior="inside"
+                          >
+                              <ModalContent>
+                                  {(onClose) => (
+                                      <>
+                                          <ModalHeader className="flex flex-row gap-4 items-center">
+                                              <img
+                                                  src="GDSC.png"
+                                                  alt=""
+                                                  className="w-8 rounded-full"
+                                              />
+                                              Google Student Developer Club -
+                                              Project Lead
+                                          </ModalHeader>
+                                          <ModalBody>
+                                              <div className="text-sm text-gray-400 flex flex-row justify-center items-center gap-10 mb-1">
+                                                  <div className="text-orange-500">
+                                                      <FontAwesomeIcon
+                                                          icon={faHtml5}
+                                                      />{' '}
+                                                      HTML
+                                                  </div>
+                                                  <div className="text-blue-500">
+                                                      <FontAwesomeIcon
+                                                          icon={faCss}
+                                                      />{' '}
+                                                      CSS
+                                                  </div>
+                                                  <div className="text-blue-500">
+                                                      <FontAwesomeIcon
+                                                          icon={faReact}
+                                                      />{' '}
+                                                      React.js
+                                                  </div>
+                                                  <div className="text-green-500">
+                                                      <FontAwesomeIcon
+                                                          icon={faNode}
+                                                      />{' '}
+                                                      Node.js
+                                                  </div>
+                                              </div>
+                                              <div className="flex flex-col gap-2 mb-5">
+                                                  <p>
+                                                      • Led end-to-end planning
+                                                      and execution of software
+                                                      projects and tech
+                                                      initiatives and managed
+                                                      team workflows.
+                                                  </p>
+                                                  <p>
+                                                      • Facilitated technical
+                                                      workshops and guided 40+
+                                                      students in mastering web
+                                                      technologies (HTML/CSS,
+                                                      React.js, Node.js),
+                                                      enabling them to build
+                                                      real-world projects and
+                                                      strengthen coding skills.
+                                                  </p>
+                                              </div>
+                                              <div>
+                                                  <p className="text-sm">
+                                                      <span className="font-bold">
+                                                          Skills learned and
+                                                          used:{' '}
+                                                      </span>
+                                                      Cross-Functional
+                                                      Collaboration & Team
+                                                      Coordination • Project
+                                                      planning and execution •
+                                                      Team leadership •
+                                                      Technical mentoring •
+                                                      Workshop facilitation •
+                                                      Curriculum design
+                                                  </p>
+                                              </div>
+                                              <Image
+                                                  src="/nanikids/TapThe.webp"
+                                                  alt=""
+                                                  className="mb-4 w-full rounded-lg"
+                                              />
+                                          </ModalBody>
+                                          <ModalFooter>
+                                              <Button
+                                                  color="danger"
+                                                  variant="light"
+                                                  onPress={onClose}
+                                              >
+                                                  Close
+                                              </Button>
+                                              <Button
+                                                  color="primary"
+                                                  variant="light"
+                                                  onPress={() =>
+                                                      window.open(
+                                                          'https://gdg.community.dev/gdg-on-campus-truman-state-university-kirksville-united-states/',
+                                                          '_blank'
+                                                      )
+                                                  }
+                                              >
+                                                  GDG Website
+                                              </Button>
+                                          </ModalFooter>
+                                      </>
+                                  )}
+                              </ModalContent>
+                          </Modal>
+
+                          {/* BillyMan Game Dev */}
+                          <Card
+                              className="border-1 border-gray-600 hover:scale-105 transition-transform duration-200 py-3 px-1 z-1"
+                              radius="none"
+                              isHoverable={true}
+                              isPressable={true}
+                              isBlurred={true}
+                              onPress={() => setIsOpen('billy')}
+                          >
+                              <CardBody className="grid grid-cols-3 justify-center items-center">
+                                  <div className="justify-self-center">
+                                      <Image
+                                          src="billy150x150.png"
+                                          alt=""
+                                          isBlurred
+                                          width={90}
+                                          radius="full"
+                                      />
+                                  </div>
+                                  <div className="col-span-2 flex flex-col justify-center">
+                                      <div className="flex flex-col mb-4">
+                                          <h2 className="text-gray-400 text-sm">
+                                              June 2019 - Present
+                                          </h2>
+                                          <h1 className="text-xl font-bold">
+                                              Founder - Developer
+                                          </h1>
+                                          <h2 className="text-gray-400 text-sm">
+                                              BillyMan Game Dev
+                                          </h2>
+                                      </div>
+                                      <div className="flex flex-col text-[0.8125rem] mb-2">
+                                          <p>
+                                              Game Development & Release (Unity,
+                                              C#, GMS2, Blender); YouTube
+                                              Tutorials & Community Growth;
+                                              Competitive Game Jam
+                                              Participation.
+                                          </p>
+                                      </div>
+                                  </div>
+                              </CardBody>
+                          </Card>
+                          <Modal
+                              isOpen={isOpen === 'billy'}
+                              onOpenChange={() => setIsOpen(null)}
+                              size="4xl"
+                              backdrop="blur"
+                              placement="center"
+                              scrollBehavior="inside"
+                          >
+                              <ModalContent>
+                                  {(onClose) => (
+                                      <>
+                                          <ModalHeader className="flex flex-row gap-4 items-center">
+                                              <img
+                                                  src="billy150x150.png"
+                                                  alt=""
+                                                  className="w-8 rounded-full"
+                                              />
+                                              BillyMan Game Dev - Founder &
+                                              Developer
+                                          </ModalHeader>
+                                          <ModalBody>
+                                              <div className="text-sm text-gray-400 flex flex-row justify-center items-center gap-10 mb-1">
+                                                  <div className="text-orange-500">
+                                                      <FontAwesomeIcon
+                                                          icon={faHashtag}
+                                                      />{' '}
+                                                      C#
+                                                  </div>
+                                                  <div className="text-blue-500">
+                                                      <FontAwesomeIcon
+                                                          icon={faUnity}
+                                                      />{' '}
+                                                      Unity
+                                                  </div>
+                                                  <div className="text-blue-500">
+                                                      <FontAwesomeIcon
+                                                          icon={faVideo}
+                                                      />{' '}
+                                                      Premiere Pro
+                                                  </div>
+                                                  <div className="text-blue-500">
+                                                      <FontAwesomeIcon
+                                                          icon={faCubes}
+                                                      />{' '}
+                                                      Blender
+                                                  </div>
+                                                  <div className="text-blue-500">
+                                                      <FontAwesomeIcon
+                                                          icon={faYoutube}
+                                                      />{' '}
+                                                      Content Creation
+                                                  </div>
+                                                  <div className="text-green-500">
+                                                      <FontAwesomeIcon
+                                                          icon={faGamepad}
+                                                      />{' '}
+                                                      Game Jams
+                                                  </div>
+                                              </div>
+                                              <div className="flex flex-col gap-2 mb-5">
+                                                  <p>
+                                                      • Built and scaled a game
+                                                      development channel by
+                                                      producing 30+ tutorials
+                                                      and development videos,
+                                                      attracting 85k+ views, and
+                                                      growing a community of
+                                                      700+ subscribers.
+                                                  </p>
+                                                  <p>
+                                                      • Designed and released
+                                                      multiple games on Itch.io
+                                                      using Unity, C#, GMS 2 and
+                                                      Blender, earning 4,800+
+                                                      views and 2,200+ plays and
+                                                      securing multiple Top-10
+                                                      finishes in competitive
+                                                      international Game Jams.
+                                                  </p>
+                                              </div>
+                                              <div>
+                                                  <p className="text-sm">
+                                                      <span className="font-bold">
+                                                          Skills learned and
+                                                          used:{' '}
+                                                      </span>{' '}
+                                                      Game Design, Development &
+                                                      Testing • Collaborative
+                                                      Teamwork & Agile
+                                                      Development •
+                                                      High-Pressure Game Jam
+                                                      Experience (2–3 Day
+                                                      Sprints) • Content
+                                                      Creation & Video
+                                                      Production • Community
+                                                      Building & Engagement
+                                                  </p>
+                                              </div>
+                                              <Image
+                                                  src="/nanikids/TapThe.webp"
+                                                  alt=""
+                                                  className="mb-4 w-full rounded-lg"
+                                              />
+                                          </ModalBody>
+                                          <ModalFooter>
+                                              <Button
+                                                  color="danger"
+                                                  variant="light"
+                                                  onPress={onClose}
+                                              >
+                                                  Close
+                                              </Button>
+                                          </ModalFooter>
+                                      </>
+                                  )}
+                              </ModalContent>
+                          </Modal>
+
+                          <Card
+                              className="rounded-b-2xl border-1 border-gray-600 hover:scale-105 transition-transform duration-200 py-3 px-1 z-1"
+                              radius="none"
+                              isHoverable={true}
+                              isPressable={true}
+                              isBlurred={true}
+                              onPress={() => setIsOpen('billy')}
+                          >
+                              <CardBody className="grid grid-cols-3 justify-center items-center">
+                                  <div className="justify-self-center">
+                                      <Image
+                                          src="63TRon.jpg"
+                                          alt=""
+                                          isBlurred
+                                          width={90}
+                                          radius="full"
+                                      />
+                                  </div>
+                                  <div className="col-span-2 flex flex-col justify-center">
+                                      <div className="flex flex-col mb-4">
+                                          <h2 className="text-gray-400 text-sm">
+                                              October 2022 - May 2025
+                                          </h2>
+                                          <h1 className="text-xl font-bold">
+                                              Co-Head of Media
+                                          </h1>
+                                          <h2 className="text-gray-400 text-sm">
+                                              63 Cassette
+                                          </h2>
+                                      </div>
+                                      <div className="flex flex-col text-[0.8125rem] mb-2">
+                                          <p>
+                                              Video Production & Photography
+                                              (Team Leadership, Post-Production
+                                              Workflow); Event Content Creation
+                                              & Sponsorships; Social Media
+                                              Growth & Analytics.
+                                          </p>
+                                      </div>
+                                  </div>
+                              </CardBody>
+                          </Card>
+                          <Modal
+                              isOpen={isOpen === 'billy'}
+                              onOpenChange={() => setIsOpen(null)}
+                              size="4xl"
+                              backdrop="blur"
+                              placement="center"
+                              scrollBehavior="inside"
+                          >
+                              <ModalContent>
+                                  {(onClose) => (
+                                      <>
+                                          <ModalHeader className="flex flex-row gap-4 items-center">
+                                              <img
+                                                  src="billy150x150.png"
+                                                  alt=""
+                                                  className="w-8 rounded-full"
+                                              />
+                                              BillyMan Game Dev - Founder &
+                                              Developer
+                                          </ModalHeader>
+                                          <ModalBody>
+                                              <div className="text-sm text-gray-400 flex flex-row justify-center items-center gap-10 mb-1">
+                                                  <div className="text-orange-500">
+                                                      <FontAwesomeIcon
+                                                          icon={faHashtag}
+                                                      />{' '}
+                                                      C#
+                                                  </div>
+                                                  <div className="text-blue-500">
+                                                      <FontAwesomeIcon
+                                                          icon={faUnity}
+                                                      />{' '}
+                                                      Unity
+                                                  </div>
+                                                  <div className="text-blue-500">
+                                                      <FontAwesomeIcon
+                                                          icon={faVideo}
+                                                      />{' '}
+                                                      Premiere Pro
+                                                  </div>
+                                                  <div className="text-blue-500">
+                                                      <FontAwesomeIcon
+                                                          icon={faCubes}
+                                                      />{' '}
+                                                      Blender
+                                                  </div>
+                                                  <div className="text-blue-500">
+                                                      <FontAwesomeIcon
+                                                          icon={faYoutube}
+                                                      />{' '}
+                                                      Content Creation
+                                                  </div>
+                                                  <div className="text-green-500">
+                                                      <FontAwesomeIcon
+                                                          icon={faGamepad}
+                                                      />{' '}
+                                                      Game Jams
+                                                  </div>
+                                              </div>
+                                              <div className="flex flex-col gap-2 mb-5">
+                                                  <p>
+                                                      • Built and scaled a game
+                                                      development channel by
+                                                      producing 30+ tutorials
+                                                      and development videos,
+                                                      attracting 85k+ views, and
+                                                      growing a community of
+                                                      700+ subscribers.
+                                                  </p>
+                                                  <p>
+                                                      • Designed and released
+                                                      multiple games on Itch.io
+                                                      using Unity, C#, GMS 2 and
+                                                      Blender, earning 4,800+
+                                                      views and 2,200+ plays and
+                                                      securing multiple Top-10
+                                                      finishes in competitive
+                                                      international Game Jams.
+                                                  </p>
+                                              </div>
+                                              <div>
+                                                  <p className="text-sm">
+                                                      <span className="font-bold">
+                                                          Skills learned and
+                                                          used:{' '}
+                                                      </span>{' '}
+                                                      Game Design, Development &
+                                                      Testing • Collaborative
+                                                      Teamwork & Agile
+                                                      Development •
+                                                      High-Pressure Game Jam
+                                                      Experience (2–3 Day
+                                                      Sprints) • Content
+                                                      Creation & Video
+                                                      Production • Community
+                                                      Building & Engagement
+                                                  </p>
+                                              </div>
+                                              <Image
+                                                  src="/nanikids/TapThe.webp"
+                                                  alt=""
+                                                  className="mb-4 w-full rounded-lg"
+                                              />
+                                          </ModalBody>
+                                          <ModalFooter>
+                                              <Button
+                                                  color="danger"
+                                                  variant="light"
+                                                  onPress={onClose}
+                                              >
+                                                  Close
+                                              </Button>
+                                          </ModalFooter>
+                                      </>
+                                  )}
+                              </ModalContent>
+                          </Modal>
                       </div>
-                      <div className="flex flex-col gap-2 mb-5">
-                            <p>
-                            • Engineered and <span className="font-bold bg-gradient-to-r from-teal-400 to-yellow-200 bg-clip-text text-transparent">migrated legacy codebase</span> to a MERN-stack website for <span className="font-bold bg-gradient-to-r from-pink-500 to-rose-500 bg-clip-text text-transparent">1200+ soccer students</span>, reducing
-                            admin workload on attendance, tuition, and student management by <span className="font-bold bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent">80%</span> and saving <span className="font-bold bg-gradient-to-r from-fuchsia-500 to-pink-500 bg-clip-text text-transparent">$1000+</span> monthly.
-                            </p>
-                            <p>
-                          • Constructed <span className="font-bold bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent">45+</span> RESTful APIs and JWT auth for 3 roles using Node.js and Express, led migration of <span className="font-bold bg-gradient-to-r from-teal-200 to-teal-500 bg-clip-text text-transparent">2.9k+</span> documents to a new schema via scripting and algorithms, 
-                          and integrated <span className="font-bold bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent">Cloudinary</span> for secure media storage.
-                          </p>
-                          <p>
-                          • Automated daily attendance tracking via MongoDB aggregation pipelines, saving <span className="font-bold bg-gradient-to-r from-lime-400 to-lime-500 bg-clip-text text-transparent">25+ hours/month</span> at <span className="font-bold bg-gradient-to-r from-fuchsia-500 to-pink-500 bg-clip-text text-transparent">99.9%</span> accuracy, 
-                          and streamlined tuition reporting process by <span className="font-bold bg-gradient-to-r from-fuchsia-500 to-cyan-500 bg-clip-text text-transparent">90%</span> via responsive and filterable dashboard.
-                          </p>
-                      </div>
+                  </Tab>
+                  <Tab
+                      key="education"
+                      title={
+                          <>
+                              <FontAwesomeIcon icon={faGraduationCap} />{' '}
+                              Education
+                          </>
+                      }
+                  >
                       <div>
-                        <p className="text-sm"><span className="font-bold">Skills learned and used: </span> System Design • Database Optimization • Process Automation • Cost Efficiency • Scalability • Problem-Solving with Algorithms • Project Leadership • Full-Stack Engineering • Corporate Collaboration</p>
+                          <Card
+                              className="rounded-t-2xl border-1 border-gray-600 py-3 px-1 z-2"
+                              radius="none"
+                              isBlurred={true}
+                              onPress={() => setIsOpen('gdsc')}
+                          >
+                              <CardBody className="grid grid-cols-3 justify-center items-center">
+                                  <div className="justify-self-center">
+                                      <Image
+                                          src="truman.png"
+                                          alt=""
+                                          isBlurred
+                                          width={90}
+                                          radius="full"
+                                      />
+                                  </div>
+                                  <div className="col-span-2 flex flex-col justify-center">
+                                      <div className="flex flex-col mb-4">
+                                          <h2 className="text-gray-400 text-sm">
+                                              August 2025 - May 2029
+                                          </h2>
+                                          <h1 className="text-xl font-bold">
+                                              Truman State University
+                                          </h1>
+                                          <h2 className="text-gray-400 text-[0.8125rem]">
+                                              Bachelor of Science in Computer
+                                              Science, Minor in Data Science
+                                          </h2>
+                                      </div>
+                                      <div className="flex flex-col text-[0.8125rem] mb-2 gap-2">
+                                          <p>
+                                              • Relevant courseworks:
+                                              Foundations of CS I, Foundations
+                                              of CS II (OOP, Data Structures),
+                                              Computing Structures (Discrete
+                                              Math, Algorithms), Calculus I,
+                                              Calculus II
+                                          </p>
+                                          <p>• SAT: 1510/1600</p>
+                                      </div>
+                                  </div>
+                              </CardBody>
+                          </Card>
+                          <Card
+                              className="rounded-b-2xl border-1 border-gray-600 py-3 px-1 z-2"
+                              radius="none"
+                              isBlurred={true}
+                              onPress={() => setIsOpen('gdsc')}
+                          >
+                              <CardBody className="grid grid-cols-3 justify-center items-center">
+                                  <div className="justify-self-center">
+                                      <Image
+                                          src="truman.png"
+                                          alt=""
+                                          isBlurred
+                                          width={90}
+                                          radius="full"
+                                      />
+                                  </div>
+                                  <div className="col-span-2 flex flex-col justify-center">
+                                      <div className="flex flex-col mb-4">
+                                          <h2 className="text-gray-400 text-sm">
+                                              August 2025 - May 2029
+                                          </h2>
+                                          <h1 className="text-xl font-bold">
+                                              Truman State University
+                                          </h1>
+                                          <h2 className="text-gray-400 text-[0.8125rem]">
+                                              Bachelor of Science in Computer
+                                              Science, Minor in Data Science
+                                          </h2>
+                                      </div>
+                                      <div className="flex flex-col text-[0.8125rem] mb-2 gap-2">
+                                          <p>
+                                              • Relevant courseworks:
+                                              Foundations of CS I, Foundations
+                                              of CS II (OOP, Data Structures),
+                                              Computing Structures (Discrete
+                                              Math, Algorithms), Calculus I,
+                                              Calculus II
+                                          </p>
+                                          <p>• SAT: 1510/1600</p>
+                                      </div>
+                                  </div>
+                              </CardBody>
+                          </Card>
                       </div>
-                      <Image src="/nanikids/TapThe.webp" alt="" className="mb-4 w-full rounded-lg" />
-                      <div className="columns-1 md:columns-3 gap-4">
-                      <Image src="/nanikids/cup15.webp" alt="" className="mb-4 w-full rounded-lg" isBlurred />
-                      <Image src="/nanikids/DSC_4085.webp" alt="" className="mb-4 w-full rounded-lg" isBlurred />
-                      <Image src="/nanikids/dsc00257.webp" alt="" className="mb-4 w-full rounded-lg" isBlurred />
-                      <Image src="/nanikids/HY_00682.webp" alt="" className="mb-4 w-full rounded-lg" isBlurred />
-                      <Image src="/nanikids/dsc08099.webp" alt="" className="mb-4 w-full rounded-lg" isBlurred />
-                      <Image src="/nanikids/full-field-3.webp" alt="" className="mb-4 w-full rounded-lg" isBlurred />
-                      <Image src="/nanikids/DSC01331.webp" alt="" className="mb-4 w-full rounded-lg" isBlurred />
-                      <Image src="/nanikids/AdminWeb1.webp" alt="" className="mb-4 w-full rounded-lg" isBlurred />
-                      <Image src="/nanikids/AdminWeb2.webp" alt="" className="mb-4 w-full rounded-lg" isBlurred />
-                    </div>
-
-                    </ModalBody>
-                    <ModalFooter>
-                      <Button color="danger" variant="light" onPress={onClose}>
-                        Close
-                      </Button>
-                    </ModalFooter>
-                  </>
-                )}
-              </ModalContent>
-            </Modal>
-
-              {/* Google Student */}
-              <Card className="border-1 border-gray-600 hover:scale-105 transition-transform duration-200 py-3 px-1 z-2" radius="none"
-                isHoverable={true} isPressable={true} isBlurred={true} onPress={() => setIsOpen("gdsc")}>
-                <CardBody className="grid grid-cols-3 justify-center items-center" >
-                  <div className="justify-self-center">
-                  <Image src="GDSC.png" alt="" isBlurred width={90} radius="full"/>
-                  </div>
-                  <div className="col-span-2 flex flex-col justify-center">
-                    <div className="flex flex-col mb-4">
-                      <h2 className="text-gray-400 text-sm">July 2025 - Present</h2>
-                      <h1 className="text-xl font-bold">Project Lead</h1>
-                      <h2 className="text-gray-400 text-sm">Google Student Developer Club</h2>
-                    </div>
-                    <div className="flex flex-col text-[0.8125rem] mb-2">
-                      <p>Project & Team Management; Technical Workshops & Mentorship for 40+ students; Web Development (HTML/CSS, React.js, Node.js); Real-world Project Guidance.</p>
-                    </div>
-                  </div>
-                </CardBody>
-              </Card>
-              <Modal isOpen={isOpen === "gdsc"} onOpenChange={() => setIsOpen(null)} size="4xl" backdrop="blur" placement="center" scrollBehavior="inside">
-              <ModalContent>
-                {(onClose) => (
-                  <>
-                    <ModalHeader className="flex flex-row gap-4 items-center">
-                      <img src="GDSC.png" alt="" className="w-8 rounded-full"/>
-                      Google Student Developer Club - Project Lead</ModalHeader>
-                    <ModalBody>
-                      <div className="text-sm text-gray-400 flex flex-row justify-center items-center gap-10 mb-1">
-                        <div className="text-orange-500"><FontAwesomeIcon icon={faHtml5} /> HTML</div>
-                        <div className="text-blue-500"><FontAwesomeIcon icon={faCss} /> CSS</div>
-                        <div className="text-blue-500"><FontAwesomeIcon icon={faReact} /> React.js</div>
-                        <div className="text-green-500"><FontAwesomeIcon icon={faNode} /> Node.js</div>
-                        
-                      </div>
-                      <div className="flex flex-col gap-2 mb-5">
-                            <p>
-                            • Led end-to-end planning and execution of software projects and tech initiatives and managed team workflows.
-                            </p>
-                            <p>
-                          • Facilitated technical workshops and guided 40+ students in mastering web technologies (HTML/CSS, React.js,
-                            Node.js), enabling them to build real-world projects and strengthen coding skills.
-                            </p>
-                      </div>
-                      <div>
-                        <p className="text-sm"><span className="font-bold">Skills learned and used: </span>Cross-Functional Collaboration & Team Coordination • Project planning and execution • Team leadership • Technical mentoring • Workshop facilitation • Curriculum design</p>
-                      </div>
-                      <Image src="/nanikids/TapThe.webp" alt="" className="mb-4 w-full rounded-lg" />
-
-                    </ModalBody>
-                    <ModalFooter>
-                      <Button color="danger" variant="light" onPress={onClose}>
-                        Close
-                      </Button>
-                    </ModalFooter>
-                  </>
-                )}
-              </ModalContent>
-            </Modal>
-
-                {/* BillyMan Game Dev */}
-              <Card className="border-1 border-gray-600 hover:scale-105 transition-transform duration-200 py-3 px-1 z-1" radius="none"
-                isHoverable={true} isPressable={true} isBlurred={true} onPress={() => setIsOpen("billy")}>
-                <CardBody className="grid grid-cols-3 justify-center items-center" >
-                <div className="justify-self-center">
-                  <Image src="billy150x150.png" alt="" isBlurred width={90} radius="full"/>
-                  </div>
-                  <div className="col-span-2 flex flex-col justify-center">
-                    <div className="flex flex-col mb-4">
-                      <h2 className="text-gray-400 text-sm">June 2019 - Present</h2>
-                      <h1 className="text-xl font-bold">Founder - Developer</h1>
-                      <h2 className="text-gray-400 text-sm">BillyMan Game Dev</h2>
-                    </div>
-                    <div className="flex flex-col text-[0.8125rem] mb-2">
-                      <p>Game Development & Release (Unity, C#, GMS2, Blender); YouTube Tutorials & Community Growth; Competitive Game Jam Participation.</p>
-                    </div>
-                  </div>
-                </CardBody>
-              </Card>
-              <Modal isOpen={isOpen === "billy"} onOpenChange={() => setIsOpen(null)} size="4xl" backdrop="blur" placement="center" scrollBehavior="inside">
-              <ModalContent>
-                {(onClose) => (
-                  <>
-                    <ModalHeader className="flex flex-row gap-4 items-center">
-                      <img src="billy150x150.png" alt="" className="w-8 rounded-full"/>
-                      BillyMan Game Dev - Founder & Developer</ModalHeader>
-                    <ModalBody>
-                      <div className="text-sm text-gray-400 flex flex-row justify-center items-center gap-10 mb-1">
-                        <div className="text-orange-500"><FontAwesomeIcon icon={faHashtag} /> C#</div>
-                        <div className="text-blue-500"><FontAwesomeIcon icon={faUnity} /> Unity</div>
-                        <div className="text-blue-500"><FontAwesomeIcon icon={faVideo} /> Premiere Pro</div>
-                        <div className="text-blue-500"><FontAwesomeIcon icon={faCubes} /> Blender</div>
-                        <div className="text-blue-500"><FontAwesomeIcon icon={faYoutube} /> Content Creation</div>
-                        <div className="text-green-500"><FontAwesomeIcon icon={faGamepad} /> Game Jams</div>
-                        
-                      </div>
-                      <div className="flex flex-col gap-2 mb-5">
-                            <p>
-                            • Built and scaled a game development channel by producing 30+ tutorials and development videos, attracting
-                            85k+ views, and growing a community of 700+ subscribers.
-                            </p>
-                            <p>
-                          • Designed and released multiple games on Itch.io using Unity, C#, GMS 2 and Blender, earning 4,800+ views and
-                          2,200+ plays and securing multiple Top-10 finishes in competitive international Game Jams.
-                            </p>
-                      </div>
-                      <div>
-                        <p className="text-sm"><span className="font-bold">Skills learned and used: </span> Game Design, Development & Testing • Collaborative Teamwork & Agile Development • High-Pressure Game Jam Experience (2–3 Day Sprints) • Content Creation & Video Production • Community Building & Engagement</p>
-                      </div>
-                      <Image src="/nanikids/TapThe.webp" alt="" className="mb-4 w-full rounded-lg" />
-                      
-                    </ModalBody>
-                    <ModalFooter>
-                      <Button color="danger" variant="light" onPress={onClose}>
-                        Close
-                      </Button>
-                    </ModalFooter>
-                  </>
-                )}
-              </ModalContent>
-            </Modal>
-
-
-            <Card className="rounded-b-2xl border-1 border-gray-600 hover:scale-105 transition-transform duration-200 py-3 px-1 z-1" radius="none"
-                isHoverable={true} isPressable={true} isBlurred={true} onPress={() => setIsOpen("billy")}>
-                <CardBody className="grid grid-cols-3 justify-center items-center" >
-                <div className="justify-self-center">
-                  <Image src="63TRon.jpg" alt="" isBlurred width={90} radius="full"/>
-                  </div>
-                  <div className="col-span-2 flex flex-col justify-center">
-                    <div className="flex flex-col mb-4">
-                      <h2 className="text-gray-400 text-sm">October 2022 - May 2025</h2>
-                      <h1 className="text-xl font-bold">Co-Head of Media</h1>
-                      <h2 className="text-gray-400 text-sm">63 Cassette</h2>
-                    </div>
-                    <div className="flex flex-col text-[0.8125rem] mb-2">
-                      <p>Video Production & Photography (Team Leadership, Post-Production Workflow); Event Content Creation & Sponsorships; Social Media Growth & Analytics.</p>
-                    </div>
-                  </div>
-                </CardBody>
-              </Card>
-              <Modal isOpen={isOpen === "billy"} onOpenChange={() => setIsOpen(null)} size="4xl" backdrop="blur" placement="center" scrollBehavior="inside">
-              <ModalContent>
-                {(onClose) => (
-                  <>
-                    <ModalHeader className="flex flex-row gap-4 items-center">
-                      <img src="billy150x150.png" alt="" className="w-8 rounded-full"/>
-                      BillyMan Game Dev - Founder & Developer</ModalHeader>
-                    <ModalBody>
-                      <div className="text-sm text-gray-400 flex flex-row justify-center items-center gap-10 mb-1">
-                        <div className="text-orange-500"><FontAwesomeIcon icon={faHashtag} /> C#</div>
-                        <div className="text-blue-500"><FontAwesomeIcon icon={faUnity} /> Unity</div>
-                        <div className="text-blue-500"><FontAwesomeIcon icon={faVideo} /> Premiere Pro</div>
-                        <div className="text-blue-500"><FontAwesomeIcon icon={faCubes} /> Blender</div>
-                        <div className="text-blue-500"><FontAwesomeIcon icon={faYoutube} /> Content Creation</div>
-                        <div className="text-green-500"><FontAwesomeIcon icon={faGamepad} /> Game Jams</div>
-                        
-                      </div>
-                      <div className="flex flex-col gap-2 mb-5">
-                            <p>
-                            • Built and scaled a game development channel by producing 30+ tutorials and development videos, attracting
-                            85k+ views, and growing a community of 700+ subscribers.
-                            </p>
-                            <p>
-                          • Designed and released multiple games on Itch.io using Unity, C#, GMS 2 and Blender, earning 4,800+ views and
-                          2,200+ plays and securing multiple Top-10 finishes in competitive international Game Jams.
-                            </p>
-                      </div>
-                      <div>
-                        <p className="text-sm"><span className="font-bold">Skills learned and used: </span> Game Design, Development & Testing • Collaborative Teamwork & Agile Development • High-Pressure Game Jam Experience (2–3 Day Sprints) • Content Creation & Video Production • Community Building & Engagement</p>
-                      </div>
-                      <Image src="/nanikids/TapThe.webp" alt="" className="mb-4 w-full rounded-lg" />
-                      
-                    </ModalBody>
-                    <ModalFooter>
-                      <Button color="danger" variant="light" onPress={onClose}>
-                        Close
-                      </Button>
-                    </ModalFooter>
-                  </>
-                )}
-              </ModalContent>
-            </Modal>
-              </div>              
-              </Tab>
-              <Tab key="education" title={<><FontAwesomeIcon icon={faGraduationCap} /> Education</>}>
-              <div>
-              <Card className="rounded-t-2xl border-1 border-gray-600 py-3 px-1 z-2" radius="none"
-                 isBlurred={true} onPress={() => setIsOpen("gdsc")}>
-                <CardBody className="grid grid-cols-3 justify-center items-center" >
-                  <div className="justify-self-center">
-                  <Image src="truman.png" alt="" isBlurred width={90} radius="full"/>
-                  </div>
-                  <div className="col-span-2 flex flex-col justify-center">
-                    <div className="flex flex-col mb-4">
-                      <h2 className="text-gray-400 text-sm">August 2025 - May 2029</h2>
-                      <h1 className="text-xl font-bold">Truman State University</h1>
-                      <h2 className="text-gray-400 text-[0.8125rem]">Bachelor of Science in Computer Science, Minor in Data Science</h2>
-                    </div>
-                    <div className="flex flex-col text-[0.8125rem] mb-2 gap-2">
-                    <p>
-                            • Relevant courseworks: Foundations of CS I, Foundations of CS II (OOP, Data Structures), Computing
-                            Structures (Discrete Math, Algorithms), Calculus I, Calculus II
-                            </p>
-                            <p>
-                            • SAT: 1510/1600
-                            </p>
-                    </div>
-                  </div>
-                </CardBody>
-              </Card>
-              <Card className="rounded-b-2xl border-1 border-gray-600 py-3 px-1 z-2" radius="none"
-                 isBlurred={true} onPress={() => setIsOpen("gdsc")}>
-                <CardBody className="grid grid-cols-3 justify-center items-center" >
-                  <div className="justify-self-center">
-                  <Image src="truman.png" alt="" isBlurred width={90} radius="full"/>
-                  </div>
-                  <div className="col-span-2 flex flex-col justify-center">
-                    <div className="flex flex-col mb-4">
-                      <h2 className="text-gray-400 text-sm">August 2025 - May 2029</h2>
-                      <h1 className="text-xl font-bold">Truman State University</h1>
-                      <h2 className="text-gray-400 text-[0.8125rem]">Bachelor of Science in Computer Science, Minor in Data Science</h2>
-                    </div>
-                    <div className="flex flex-col text-[0.8125rem] mb-2 gap-2">
-                    <p>
-                            • Relevant courseworks: Foundations of CS I, Foundations of CS II (OOP, Data Structures), Computing
-                            Structures (Discrete Math, Algorithms), Calculus I, Calculus II
-                            </p>
-                            <p>
-                            • SAT: 1510/1600
-                            </p>
-                    </div>
-                  </div>
-                </CardBody>
-              </Card>
-              
-              </div>
-              </Tab>
-            </Tabs>
+                  </Tab>
+              </Tabs>
           </section>
 
           <section className="flex flex-col gap-4 py-8 md:py-10 z-10">
-            <h1 className="text-3xl font-bold mb-2 self-baseline">Projects</h1>
-            
+              <h1 className="text-3xl font-bold mb-2 self-baseline">
+                  Projects
+              </h1>
+              <div className="flex flex-col gap-5 justify-center items-center">
+                  <Card
+                      isFooterBlurred
+                      className="w-full col-span-12 sm:col-span-7
+              hover:scale-103 transition-all duration-150"
+                  >
+                      <Image
+                          removeWrapper
+                          alt="Relaxing app background"
+                          className="z-0 w-full h-full object-cover"
+                          src="/nanikids/AdminWeb1.webp"
+                      />
+                      <CardFooter className="absolute bg-black/60 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
+                          <div className="w-full flex flex-row justify-between items-center">
+                              <div className="flex flex-col gap-3">
+                                  <h1 className="text-xl font-bold">AI GLOW</h1>
+                                  <div className="flex grow gap-4 items-center text-sm">
+                                      <div>
+                                          <FontAwesomeIcon icon={faReact} />{' '}
+                                          React.js
+                                      </div>
+                                      <div>
+                                          <FontAwesomeIcon icon={faNode} />{' '}
+                                          Node.js
+                                      </div>
+                                      <div>
+                                          <FontAwesomeIcon icon={faServer} />{' '}
+                                          Express.js
+                                      </div>
+                                      <div>
+                                          <FontAwesomeIcon icon={faLeaf} />{' '}
+                                          Firebase
+                                      </div>
+                                      <div>
+                                          <FontAwesomeIcon icon={faDatabase} />{' '}
+                                          Redis
+                                      </div>
+                                  </div>
+                              </div>
+                              <Button isDisabled radius="full" size="md">
+                                  Work In Progress
+                              </Button>
+                          </div>
+                      </CardFooter>
+                  </Card>
+
+                  <Card
+                      isFooterBlurred
+                      className="w-full col-span-12 sm:col-span-7
+            hover:scale-103 transition-all duration-150"
+                  >
+                      <Image
+                          removeWrapper
+                          alt="Relaxing app background"
+                          className="z-0 w-full h-full object-cover"
+                          src="/nanikids/AdminWeb1.webp"
+                      />
+                      <CardFooter className="absolute bg-black/60 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
+                          <div className="w-full flex flex-row justify-between items-center">
+                              <div className="flex flex-col gap-3">
+                                  <h1 className="text-xl font-bold">
+                                      GRADVISOR
+                                  </h1>
+                                  <div className="flex grow gap-4 items-center text-sm">
+                                      <div>
+                                          <FontAwesomeIcon icon={faReact} />{' '}
+                                          React.js
+                                      </div>
+                                      <div>
+                                          <FontAwesomeIcon icon={faNode} />{' '}
+                                          Node.js
+                                      </div>
+                                      <div>
+                                          <FontAwesomeIcon icon={faServer} />{' '}
+                                          Express.js
+                                      </div>
+                                      <div>
+                                          <FontAwesomeIcon icon={faLeaf} />{' '}
+                                          MongoDB
+                                      </div>
+                                      <div>
+                                          <FontAwesomeIcon icon={faRobot} />{' '}
+                                          ChatBot
+                                      </div>
+                                  </div>
+                              </div>
+                              <Button radius="full" size="md">
+                                  Click for Demo
+                              </Button>
+                          </div>
+                      </CardFooter>
+                  </Card>
+              </div>
           </section>
-          </>
+      </>
   );
 }
