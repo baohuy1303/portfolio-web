@@ -27,6 +27,7 @@ import {
     faCamera,
     faCubes,
     faEnvelope,
+    faExternalLink,
     faExternalLinkAlt,
     faFileImage,
     faFilm,
@@ -347,13 +348,14 @@ export default function IndexPage() {
                               isBlurred={true}
                               onPress={() => setIsOpen('nanikids')}
                           >
-                              <CardBody className="grid grid-cols-3 justify-center items-center">
+                              <CardBody className="grid grid-cols-3 gap-2 md:gap-0 justify-center items-center">
                                   <div className="justify-self-center">
                                       <Image
                                           src="Logo_2_PNG.png"
                                           alt=""
                                           isBlurred
                                           width={80}
+                                          className="w-17 md:w-full"
                                       />
                                   </div>
                                   <div className="col-span-2 flex flex-col justify-center">
@@ -402,7 +404,7 @@ export default function IndexPage() {
                                               Engineer
                                           </ModalHeader>
                                           <ModalBody>
-                                              <div className="text-sm text-gray-400 flex flex-row justify-center items-center gap-10 mb-1">
+                                              <div className="text-sm text-gray-400 flex flex-row justify-center items-center gap-5 md:gap-10 mb-1">
                                                   <div className="text-blue-500">
                                                       <FontAwesomeIcon
                                                           icon={faReact}
@@ -428,6 +430,7 @@ export default function IndexPage() {
                                                       MongoDB
                                                   </div>
                                               </div>
+                                              <Divider orientation="horizontal" />
                                               <div className="flex flex-col gap-2 mb-5">
                                                   <p>
                                                       • Engineered and{' '}
@@ -607,7 +610,7 @@ export default function IndexPage() {
                               isBlurred={true}
                               onPress={() => setIsOpen('gdsc')}
                           >
-                              <CardBody className="grid grid-cols-3 justify-center items-center">
+                              <CardBody className="grid grid-cols-3 justify-center items-center gap-2 md:gap-0">
                                   <div className="justify-self-center">
                                       <Image
                                           src="GDSC.png"
@@ -615,6 +618,7 @@ export default function IndexPage() {
                                           isBlurred
                                           width={90}
                                           radius="full"
+                                          className="w-18 md:w-full"
                                       />
                                   </div>
                                   <div className="col-span-2 flex flex-col justify-center">
@@ -662,7 +666,7 @@ export default function IndexPage() {
                                               Project Lead
                                           </ModalHeader>
                                           <ModalBody>
-                                              <div className="text-sm text-gray-400 flex flex-row justify-center items-center gap-10 mb-1">
+                                              <div className="text-sm text-gray-400 flex flex-row justify-center items-center gap-5 md:gap-10 mb-1">
                                                   <div className="text-orange-500">
                                                       <FontAwesomeIcon
                                                           icon={faHtml5}
@@ -688,6 +692,7 @@ export default function IndexPage() {
                                                       Node.js
                                                   </div>
                                               </div>
+                                              <Divider orientation="horizontal" />
                                               <div className="flex flex-col gap-2 mb-5">
                                                   <p>
                                                       • Led end-to-end planning
@@ -776,7 +781,7 @@ export default function IndexPage() {
                               isBlurred={true}
                               onPress={() => setIsOpen('billy')}
                           >
-                              <CardBody className="grid grid-cols-3 justify-center items-center">
+                              <CardBody className="grid grid-cols-3 justify-center items-center gap-2 md:gap-0">
                                   <div className="justify-self-center">
                                       <Image
                                           src="billy150x150.png"
@@ -784,6 +789,7 @@ export default function IndexPage() {
                                           isBlurred
                                           width={90}
                                           radius="full"
+                                          className="w-18 md:w-full"
                                       />
                                   </div>
                                   <div className="col-span-2 flex flex-col justify-center">
@@ -831,7 +837,7 @@ export default function IndexPage() {
                                               Developer
                                           </ModalHeader>
                                           <ModalBody>
-                                              <div className="text-sm text-gray-400 flex flex-row justify-center items-center gap-10 mb-1">
+                                              <div className="text-sm text-gray-400 flex flex-row justify-center items-center gap-5 md:gap-10 mb-1">
                                                   <div className="text-purple-500">
                                                       <FontAwesomeIcon
                                                           icon={faHashtag}
@@ -856,19 +862,9 @@ export default function IndexPage() {
                                                       />{' '}
                                                       Blender
                                                   </div>
-                                                  <div className="text-blue-500">
-                                                      <FontAwesomeIcon
-                                                          icon={faYoutube}
-                                                      />{' '}
-                                                      Content Creation
-                                                  </div>
-                                                  <div className="text-green-500">
-                                                      <FontAwesomeIcon
-                                                          icon={faGamepad}
-                                                      />{' '}
-                                                      Game Jams
-                                                  </div>
+
                                               </div>
+                                              <Divider orientation="horizontal" />
                                               <div className="flex flex-col gap-2 mb-5">
                                                   <p>
                                                       • Built and scaled a game
@@ -975,7 +971,7 @@ export default function IndexPage() {
                               isBlurred={true}
                               onPress={() => setIsOpen('63')}
                           >
-                              <CardBody className="grid grid-cols-3 justify-center items-center">
+                              <CardBody className="grid grid-cols-3 justify-center items-center gap-2 md:gap-0">
                                   <div className="justify-self-center">
                                       <Image
                                           src="63TRon.jpg"
@@ -983,6 +979,7 @@ export default function IndexPage() {
                                           isBlurred
                                           width={90}
                                           radius="full"
+                                          className="w-18 md:w-full"
                                       />
                                   </div>
                                   <div className="col-span-2 flex flex-col justify-center">
@@ -1029,7 +1026,7 @@ export default function IndexPage() {
                                               63 Cassette - Co-Head of Media
                                           </ModalHeader>
                                           <ModalBody>
-                                              <div className="text-sm text-gray-400 flex flex-row justify-center items-center gap-10 mb-1">
+                                              <div className="text-sm text-gray-400 flex flex-row justify-center items-center gap-5 md:gap-10 mb-1">
                                                   <div className="text-purple-500">
                                                       <FontAwesomeIcon
                                                           icon={faVideo}
@@ -1055,6 +1052,7 @@ export default function IndexPage() {
                                                       Lightroom
                                                   </div>
                                               </div>
+                                              <Divider orientation="horizontal" />
                                               <div className="flex flex-col gap-2 mb-5">
                                                   <p>
                                                       • Co-led video production and photography for school events, managing a student media team of <span className="font-bold bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent">5 members</span> and
@@ -1171,7 +1169,7 @@ export default function IndexPage() {
                               isBlurred={true}
                               onPress={() => setIsOpen('gdsc')}
                           >
-                              <CardBody className="grid grid-cols-3 justify-center items-center">
+                              <CardBody className="grid grid-cols-3 justify-center items-center gap-2 md:gap-0">
                                   <div className="justify-self-center">
                                       <Image
                                           src="truman.png"
@@ -1179,6 +1177,7 @@ export default function IndexPage() {
                                           isBlurred
                                           width={90}
                                           radius="full"
+                                          className="w-18 md:w-full"
                                       />
                                   </div>
                                   <div className="col-span-2 flex flex-col justify-center">
@@ -1196,14 +1195,14 @@ export default function IndexPage() {
                                       </div>
                                       <div className="flex flex-col text-[0.8125rem] mb-2 gap-2">
                                           <p>
-                                              • Relevant courseworks:
-                                              Foundations of CS I, Foundations
+                                              • <span className="font-bold">Relevant courseworks:</span> Foundations of CS I, Foundations
                                               of CS II (OOP, Data Structures),
                                               Computing Structures (Discrete
                                               Math, Algorithms), Calculus I,
                                               Calculus II
                                           </p>
-                                          <p>• SAT: 1510/1600</p>
+                                          <p>• <span className="font-bold">SAT:</span> 1510/1600</p>
+                                          <p>• <span className="font-bold">Awarded Presidential Honorary Scholarship (80% tuition)</span></p>
                                       </div>
                                   </div>
                               </CardBody>
@@ -1214,39 +1213,30 @@ export default function IndexPage() {
                               isBlurred={true}
                               onPress={() => setIsOpen('gdsc')}
                           >
-                              <CardBody className="grid grid-cols-3 justify-center items-center">
+                              <CardBody className="grid grid-cols-3 justify-center items-center gap-2 md:gap-0">
                                   <div className="justify-self-center">
                                       <Image
-                                          src="truman.png"
+                                          src="hht.webp"
                                           alt=""
                                           isBlurred
                                           width={90}
                                           radius="full"
+                                          className="w-18 md:w-full"
                                       />
                                   </div>
                                   <div className="col-span-2 flex flex-col justify-center">
                                       <div className="flex flex-col mb-4">
                                           <h2 className="text-gray-400 text-sm">
-                                              August 2025 - May 2029
+                                              September 2022 - May 2025
                                           </h2>
                                           <h1 className="text-xl font-bold">
-                                              Truman State University
+                                              Hoang Hoa Tham High School
                                           </h1>
-                                          <h2 className="text-gray-400 text-[0.8125rem]">
-                                              Bachelor of Science in Computer
-                                              Science, Minor in Data Science
-                                          </h2>
                                       </div>
                                       <div className="flex flex-col text-[0.8125rem] mb-2 gap-2">
-                                          <p>
-                                              • Relevant courseworks:
-                                              Foundations of CS I, Foundations
-                                              of CS II (OOP, Data Structures),
-                                              Computing Structures (Discrete
-                                              Math, Algorithms), Calculus I,
-                                              Calculus II
-                                          </p>
-                                          <p>• SAT: 1510/1600</p>
+                                        <p>• <span className="font-bold">Varsity Team:</span> <br />Soccer, Volleyball</p>
+                                        <p>• <span className="font-bold">Clubs:</span> <br />Soccer, Volleyball, Media, Hoa Phuong Do - Volunteering Club</p>
+                                        <p>• <span className="font-bold">Awards:</span> <br /> <span className="font-bold">Bronze Medal</span> – The XXVIII Olympic 30/4 Contest, Regional Level (2024) • <span className="font-bold">1st Place</span> – English Debate Contest, School Level (2024) • <span className="font-bold">1st Place</span> – Olympic English Debate Contest, Municipal Level (2023) • <span className="font-bold">1st Place</span> – GenZ Xu Quang General Knowledge Questionnaire & Presentation (2023) • <span className="font-bold">1st Place</span> – City-Level Excellence Award in English (2022) • <span className="font-bold">3rd Place</span> – Engineering Science Contest, Municipal Level (2022) • <span className="font-bold">Awarded</span> – Le Van Hien Scholarship (2021–2022)</p>
                                       </div>
                                   </div>
                               </CardBody>
@@ -1270,41 +1260,48 @@ export default function IndexPage() {
                           removeWrapper
                           alt="Relaxing app background"
                           className="z-0 w-full h-full object-cover"
-                          src="/nanikids/AdminWeb1.webp"
+                          src="/projs/Glow3.webp"
                       />
+                      
                       <CardFooter className="absolute bg-black/60 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
-                          <div className="w-full flex flex-row justify-between items-center">
+                          <div className="w-full flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
                               <div className="flex flex-col gap-3">
-                                  <h1 className="text-xl font-bold">AI GLOW</h1>
+                                  <h1 className="md:block hidden text-xl font-bold">AI GLOW</h1>
                                   <div className="flex grow gap-4 items-center text-sm">
-                                      <div>
+                                      <div className="flex flex-col md:flex-row items-center gap-0 md:gap-1">
                                           <FontAwesomeIcon icon={faReact} />{' '}
                                           React.js
                                       </div>
-                                      <div>
+                                      <div className="flex flex-col md:flex-row items-center gap-0 md:gap-1">
                                           <FontAwesomeIcon icon={faNode} />{' '}
                                           Node.js
                                       </div>
-                                      <div>
+                                      <div className="flex flex-col md:flex-row items-center gap-0 md:gap-1">
                                           <FontAwesomeIcon icon={faServer} />{' '}
                                           Express.js
                                       </div>
-                                      <div>
-                                          <FontAwesomeIcon icon={faLeaf} />{' '}
+                                      <div className="flex flex-col md:flex-row items-center gap-0 md:gap-1">
+                                          <FontAwesomeIcon icon={faFire} />{' '}
                                           Firebase
                                       </div>
-                                      <div>
+                                      <div className="flex flex-col md:flex-row items-center gap-0 md:gap-1">
                                           <FontAwesomeIcon icon={faDatabase} />{' '}
                                           Redis
                                       </div>
                                   </div>
                               </div>
-                              <Button isDisabled radius="full" size="md">
+                              <Button isDisabled radius="full" size="md" className="md:block hidden"> 
                                   Work In Progress
                               </Button>
                           </div>
                       </CardFooter>
                   </Card>
+                  <div className="md:hidden flex flex-row justify-between items-center w-[80%] gap-3 mb-10">
+                        <h1 className="text-xl font-bold">AI GLOW</h1>
+                        <Button isDisabled radius="full" size="md"> 
+                                  Work In Progress
+                        </Button>         
+                  </div>
 
                   <Card
                       isFooterBlurred
@@ -1315,43 +1312,54 @@ export default function IndexPage() {
                           removeWrapper
                           alt="Relaxing app background"
                           className="z-0 w-full h-full object-cover"
-                          src="/nanikids/AdminWeb1.webp"
+                          src="/projs/Thumb.webp"
                       />
                       <CardFooter className="absolute bg-black/60 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
-                          <div className="w-full flex flex-row justify-between items-center">
+                          <div className="w-full flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
                               <div className="flex flex-col gap-3">
-                                  <h1 className="text-xl font-bold">
+                                  <h1 className="text-xl font-bold md:block hidden">
                                       GRADVISOR
                                   </h1>
-                                  <div className="flex grow gap-4 items-center text-sm">
-                                      <div>
+                                  <div className="flex grow gap-4 items-center text-sm ">
+                                      <div className="flex flex-col md:flex-row items-center gap-0 md:gap-1">
                                           <FontAwesomeIcon icon={faReact} />{' '}
                                           React.js
                                       </div>
-                                      <div>
+                                      <div className="flex flex-col md:flex-row items-center gap-0 md:gap-1">
                                           <FontAwesomeIcon icon={faNode} />{' '}
                                           Node.js
                                       </div>
-                                      <div>
+                                      <div className="flex flex-col md:flex-row items-center gap-0 md:gap-1">
                                           <FontAwesomeIcon icon={faServer} />{' '}
                                           Express.js
                                       </div>
-                                      <div>
+                                      <div className="flex flex-col md:flex-row items-center gap-0 md:gap-1">
                                           <FontAwesomeIcon icon={faLeaf} />{' '}
                                           MongoDB
                                       </div>
-                                      <div>
+                                      <div className="flex flex-col md:flex-row items-center gap-0 md:gap-1">
                                           <FontAwesomeIcon icon={faRobot} />{' '}
                                           ChatBot
                                       </div>
                                   </div>
                               </div>
-                              <Button radius="full" size="md">
+                              <Button radius="full" size="md" onClick={() => window.open('https://score-aim-results-tracker.onrender.com/', '_blank')}
+                                className="md:block hidden">
                                   Click for Demo
                               </Button>
                           </div>
                       </CardFooter>
                   </Card>
+                  <div className="md:hidden flex flex-row justify-between items-center w-[80%] gap-3 mb-10">
+                    <h1 className="text-xl font-bold">GRADVISOR</h1>
+                    <Button radius="full" size="md" onClick={() => window.open('https://score-aim-results-tracker.onrender.com/', '_blank')}>
+                      Click for Demo
+                    </Button>
+                  </div>
+
+                  <Button radius="sm" size="md" variant="ghost" onClick={() => window.open('https://score-aim-results-tracker.onrender.com/', '_blank')}>
+                    View more projects <FontAwesomeIcon icon={faExternalLink} />
+                  </Button>
               </div>
           </section>
       </>
