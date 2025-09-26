@@ -1069,16 +1069,7 @@ export default function IndexPage() {
                                                           Skills learned and
                                                           used:{' '}
                                                       </span>{' '}
-                                                      Game Design, Development &
-                                                      Testing • Collaborative
-                                                      Teamwork & Agile
-                                                      Development •
-                                                      High-Pressure Game Jam
-                                                      Experience (2–3 Day
-                                                      Sprints) • Content
-                                                      Creation & Video
-                                                      Production • Community
-                                                      Building & Engagement
+                                                      Video Production & Photography (Team Leadership, Post-Production Workflow); Event Content Creation & Sponsorships; Social Media Growth & Analytics.
                                                   </p>
                                               </div>
                                               <div className="columns-1 md:columns-3 gap-4">
