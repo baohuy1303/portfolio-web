@@ -178,7 +178,7 @@ export default function ProjectDetailPage() {
 
   return (
     <>
-      <section className="flex flex-col gap-4 py-8 md:pb-10 md:pt-2">
+      <section className="flex flex-col gap-4 py-8 md:pb-5 md:pt-2">
         <h1 className="text-3xl font-bold mb-3 self-baseline">{project.title}</h1>
         <div className="flex grow gap-4 items-center text-sm">
             {project.techStack.map((tech, idx) => (
@@ -196,7 +196,7 @@ export default function ProjectDetailPage() {
         </div>
       </section>
 
-      <section className="flex flex-col gap-4 py-5">
+      <section className="flex flex-col gap-4 py-5 mb-10">
         <h2 className="text-2xl font-bold mb-3 self-baseline">Gallery</h2>
         <div className="columns-1 md:columns-2 gap-4">
           {project.images.map((src, idx) => (

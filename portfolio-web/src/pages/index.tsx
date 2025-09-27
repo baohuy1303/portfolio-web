@@ -1283,7 +1283,7 @@ export default function IndexPage() {
                                       </div>
                                   </div>
                               </div>
-                              <Button isDisabled radius="full" size="md" className="md:block hidden"> 
+                              <Button onPress={() => navigate('/projects/glow')} radius="full" size="md" className="md:block hidden hover:bg-blue-500 transition-all duration-150"> 
                                   Work In Progress
                               </Button>
                           </div>
@@ -1291,7 +1291,7 @@ export default function IndexPage() {
                   </Card>
                   <div className="md:hidden flex flex-row justify-between items-center w-[80%] gap-3 mb-10">
                         <h1 className="text-xl font-bold">AI GLOW</h1>
-                        <Button isDisabled radius="full" size="md"> 
+                        <Button onPress={() => navigate('/projects/glow')} radius="full" size="md" className="hover:bg-blue-500 transition-all duration-150"> 
                                   Work In Progress
                         </Button>         
                   </div>
@@ -1336,21 +1336,21 @@ export default function IndexPage() {
                                       </div>
                                   </div>
                               </div>
-                              <Button radius="full" size="md" onClick={() => window.open('https://score-aim-results-tracker.onrender.com/', '_blank')}
-                                className="md:block hidden">
-                                  Click for Demo
+                              <Button radius="full" size="md" onPress={() => navigate('/projects/gradvisor')}
+                                className="md:block hidden hover:bg-blue-500 transition-all duration-150">
+                                  More details
                               </Button>
                           </div>
                       </CardFooter>
                   </Card>
                   <div className="md:hidden flex flex-row justify-between items-center w-[80%] gap-3 mb-10">
                     <h1 className="text-xl font-bold">GRADVISOR</h1>
-                    <Button radius="full" size="md" onClick={() => window.open('https://score-aim-results-tracker.onrender.com/', '_blank')}>
-                      Click for Demo
+                    <Button radius="full" size="md" onPress={() => navigate('/projects/gradvisor')} className="hover:bg-blue-500 transition-all duration-150">
+                      More details
                     </Button>
                   </div>
 
-                  <Button radius="sm" size="md" variant="ghost" onClick={() => navigate('/projects')}>
+                  <Button radius="sm" size="md" variant="ghost" onPress={() => navigate('/projects')}>
                     View more projects <FontAwesomeIcon icon={faExternalLink} />
                   </Button>
               </div>

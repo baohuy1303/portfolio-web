@@ -56,7 +56,7 @@ export default function ProjectsPage() {
                                       </div>
                                   </div>
                               </div>
-                              <Button isDisabled radius="full" size="md" className="md:block hidden"> 
+                              <Button onPress={() => navigate('/projects/glow')} radius="full" size="md" className="md:block hidden hover:bg-blue-500 transition-all duration-150"> 
                                   Work In Progress
                               </Button>
                           </div>
@@ -64,7 +64,7 @@ export default function ProjectsPage() {
                   </Card>
                   <div className="md:hidden flex flex-row justify-between items-center w-[80%] gap-3 mb-10">
                         <h1 className="text-xl font-bold">AI GLOW</h1>
-                        <Button isDisabled radius="full" size="md"> 
+                        <Button onPress={() => navigate('/projects/glow')} radius="full" size="md" className="hover:bg-blue-500 transition-all duration-150"> 
                                   Work In Progress
                         </Button>         
                   </div>
@@ -109,17 +109,17 @@ export default function ProjectsPage() {
                                       </div>
                                   </div>
                               </div>
-                              <Button radius="full" size="md" onClick={() => window.open('https://score-aim-results-tracker.onrender.com/', '_blank')}
-                                className="md:block hidden">
-                                  Click for Demo
+                              <Button radius="full" size="md" onPress={() => navigate('/projects/gradvisor')}
+                                className="md:block hidden hover:bg-blue-500 transition-all duration-150">
+                                  More details
                               </Button>
                           </div>
                       </CardFooter>
                   </Card>
                   <div className="md:hidden flex flex-row justify-between items-center w-[80%] gap-3 mb-10">
                     <h1 className="text-xl font-bold">GRADVISOR</h1>
-                    <Button radius="full" size="md" onClick={() => window.open('https://score-aim-results-tracker.onrender.com/', '_blank')}>
-                      Click for Demo
+                    <Button radius="full" size="md" onPress={() => navigate('/projects/gradvisor')} className="hover:bg-blue-500 transition-all duration-150">
+                      More details
                     </Button>
                   </div>
 
@@ -155,17 +155,17 @@ export default function ProjectsPage() {
                                       </div>
                                   </div>
                               </div>
-                              <Button radius="full" size="md" onClick={() => window.open('https://reactjs-football-pract.vercel.app/', '_blank')}
-                                className="md:block hidden">
-                                  Click for Demo
+                              <Button radius="full" size="md" onPress={() => navigate('/projects/soccerstats')}
+                                className="md:block hidden hover:bg-blue-500 transition-all duration-150">
+                                  More details
                               </Button>
                           </div>
                       </CardFooter>
                   </Card>
                   <div className="md:hidden flex flex-row justify-between items-center w-[80%] gap-3 mb-10">
                     <h1 className="text-xl font-bold">Soccer Stats Explorer</h1>
-                    <Button radius="full" size="md" onClick={() => window.open('https://reactjs-football-pract.vercel.app/', '_blank')}>
-                      Click for Demo
+                    <Button radius="full" size="md" onPress={() => navigate('/projects/soccerstats')} className="hover:bg-blue-500 transition-all duration-150">
+                      More details
                     </Button>
                   </div>
 
@@ -202,17 +202,17 @@ export default function ProjectsPage() {
                                       </div>
                                   </div>
                               </div>
-                              <Button radius="full" size="md" onClick={() => window.open('https://billyman.itch.io/will-you-squid', '_blank')}
-                                className="md:block hidden">
-                                  Click for Demo
+                              <Button radius="full" size="md" onPress={() => navigate('/projects/wys')}
+                                className="md:block hidden hover:bg-blue-500 transition-all duration-150">
+                                  More details
                               </Button>
                           </div>
                       </CardFooter>
                   </Card>
                   <div className="md:hidden flex flex-row justify-between items-center w-[80%] gap-3 mb-10">
                     <h1 className="text-xl font-bold">Will You Squid</h1>
-                    <Button radius="full" size="md" onClick={() => window.open('https://billyman.itch.io/will-you-squid', '_blank')}>
-                      Click for Demo
+                    <Button radius="full" size="md" onPress={() => navigate('/projects/wys')} className="hover:bg-blue-500 transition-all duration-150">
+                      More details
                     </Button>
                   </div>
 
@@ -256,17 +256,17 @@ export default function ProjectsPage() {
                                       </div>
                                   </div>
                               </div>
-                              <Button radius="full" size="md" onClick={() => window.open('https://billyman.itch.io/', '_blank')}
-                                className="md:block hidden">
-                                  Itch.io Page
+                              <Button radius="full" size="md" onPress={() => navigate('/projects/allpublicgames')}
+                                className="md:block hidden hover:bg-blue-500 transition-all duration-150">
+                                  More details
                               </Button>
                           </div>
                       </CardFooter>
                   </Card>
                   <div className="md:hidden flex flex-row justify-between items-center w-[80%] gap-3 mb-10">
                     <h1 className="text-xl font-bold">All Public Games</h1>
-                    <Button radius="full" size="md" onClick={() => window.open('https://billyman.itch.io/', '_blank')}>
-                      Itch.io Page
+                    <Button radius="full" size="md" onPress={() => navigate('/projects/allpublicgames')} className="hover:bg-blue-500 transition-all duration-150">
+                      More details
                     </Button>
                   </div>
 
