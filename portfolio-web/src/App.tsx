@@ -5,6 +5,7 @@ import ProjectsPage from "@/pages/projects";
 import About from "@/pages/about";
 import DefaultLayout from "./layouts/default";
 import ResumePage from "@/pages/resume";
+import ProjectDetail from "@/pages/projectDetail";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Route element={<IndexPage />} path="/" />
       <Route element={<About />} path="/about" />
       <Route element={<ProjectsPage />} path="/projects" />
+      <Route element={<ProjectDetail />} path="/projects/:id" />
       <Route element={<ResumePage />} path="/resume" />
     </Routes>
     </DefaultLayout>

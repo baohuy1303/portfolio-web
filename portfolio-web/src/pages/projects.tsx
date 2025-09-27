@@ -2,8 +2,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button, Card, CardFooter, Image } from "@heroui/react";
 import { faServer, faFire, faDatabase, faLeaf, faRobot, faCodeCompare, faCodeCommit, faHashtag, faPaintBrush, faGamepad, faCamera } from "@fortawesome/free-solid-svg-icons";
 import { faReact, faNode, faUnity } from "@fortawesome/free-brands-svg-icons";
+import { useNavigate } from "react-router-dom";
 
 export default function ProjectsPage() {
+
+  const navigate = useNavigate();
 
   return (
     <>
@@ -16,12 +19,14 @@ export default function ProjectsPage() {
                       isFooterBlurred
                       className="w-full col-span-12 sm:col-span-7
               hover:scale-103 transition-all duration-150"
+
                   >
                       <Image
                           removeWrapper
                           alt="Relaxing app background"
-                          className="z-0 w-full h-full object-cover"
+                          className="z-0 w-full h-full object-cover cursor-pointer"
                           src="/projs/Glow3.webp"
+                          onClick={() => navigate('/projects/glow')}
                       />
                       
                       <CardFooter className="absolute bg-black/60 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
@@ -150,7 +155,7 @@ export default function ProjectsPage() {
                                       </div>
                                   </div>
                               </div>
-                              <Button radius="full" size="md" onClick={() => window.open('https://score-aim-results-tracker.onrender.com/', '_blank')}
+                              <Button radius="full" size="md" onClick={() => window.open('https://reactjs-football-pract.vercel.app/', '_blank')}
                                 className="md:block hidden">
                                   Click for Demo
                               </Button>
@@ -159,7 +164,7 @@ export default function ProjectsPage() {
                   </Card>
                   <div className="md:hidden flex flex-row justify-between items-center w-[80%] gap-3 mb-10">
                     <h1 className="text-xl font-bold">Soccer Stats Explorer</h1>
-                    <Button radius="full" size="md" onClick={() => window.open('https://score-aim-results-tracker.onrender.com/', '_blank')}>
+                    <Button radius="full" size="md" onClick={() => window.open('https://reactjs-football-pract.vercel.app/', '_blank')}>
                       Click for Demo
                     </Button>
                   </div>
@@ -197,7 +202,7 @@ export default function ProjectsPage() {
                                       </div>
                                   </div>
                               </div>
-                              <Button radius="full" size="md" onClick={() => window.open('https://score-aim-results-tracker.onrender.com/', '_blank')}
+                              <Button radius="full" size="md" onClick={() => window.open('https://billyman.itch.io/will-you-squid', '_blank')}
                                 className="md:block hidden">
                                   Click for Demo
                               </Button>
@@ -206,7 +211,7 @@ export default function ProjectsPage() {
                   </Card>
                   <div className="md:hidden flex flex-row justify-between items-center w-[80%] gap-3 mb-10">
                     <h1 className="text-xl font-bold">Will You Squid</h1>
-                    <Button radius="full" size="md" onClick={() => window.open('https://score-aim-results-tracker.onrender.com/', '_blank')}>
+                    <Button radius="full" size="md" onClick={() => window.open('https://billyman.itch.io/will-you-squid', '_blank')}>
                       Click for Demo
                     </Button>
                   </div>
@@ -251,7 +256,7 @@ export default function ProjectsPage() {
                                       </div>
                                   </div>
                               </div>
-                              <Button radius="full" size="md" onClick={() => window.open('https://score-aim-results-tracker.onrender.com/', '_blank')}
+                              <Button radius="full" size="md" onClick={() => window.open('https://billyman.itch.io/', '_blank')}
                                 className="md:block hidden">
                                   Itch.io Page
                               </Button>
@@ -260,7 +265,7 @@ export default function ProjectsPage() {
                   </Card>
                   <div className="md:hidden flex flex-row justify-between items-center w-[80%] gap-3 mb-10">
                     <h1 className="text-xl font-bold">All Public Games</h1>
-                    <Button radius="full" size="md" onClick={() => window.open('https://score-aim-results-tracker.onrender.com/', '_blank')}>
+                    <Button radius="full" size="md" onClick={() => window.open('https://billyman.itch.io/', '_blank')}>
                       Itch.io Page
                     </Button>
                   </div>

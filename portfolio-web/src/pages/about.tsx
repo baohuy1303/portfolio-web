@@ -23,7 +23,7 @@ export default function About() {
       </section>
       <section className="flex flex-col gap-4 py-8 md:py-10">
         <h1 className="text-3xl font-bold mb-3 self-baseline">
-            Me and my hobbies
+            Me and my other hobbies
         </h1>
         <div className="columns-1 md:columns-2 gap-4">
           <Image
