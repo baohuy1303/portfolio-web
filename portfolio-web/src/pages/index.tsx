@@ -19,7 +19,8 @@ import {
 import {Avatar} from "@heroui/react";
 import { Image } from "@heroui/react";
 
-import { useState } from "react";
+import { useState} from "react";
+import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faBlender,
@@ -74,6 +75,7 @@ import {  Modal,  ModalContent,  ModalHeader,  ModalBody,  ModalFooter} from "@h
 
 export default function IndexPage() {
 
+  const navigate = useNavigate();
   const [clicked, setClick] = useState(false);
   const [copied, setCopied] = useState(false);
   const [selected, setSelected] = useState<string>("experience");
@@ -137,7 +139,7 @@ export default function IndexPage() {
 
   return (
       <>
-          <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+          <section className="flex flex-col items-center justify-center gap-4 py-8 md:pb-10 md:pt-2">
               {/* <div className="inline-block max-w-lg text-center justify-center">
           <span className={title()}>Make&nbsp;</span>
           <span className={title({ color: "violet" })}>beautiful&nbsp;</span>
@@ -1348,11 +1350,13 @@ export default function IndexPage() {
                     </Button>
                   </div>
 
-                  <Button radius="sm" size="md" variant="ghost" onClick={() => window.open('https://score-aim-results-tracker.onrender.com/', '_blank')}>
+                  <Button radius="sm" size="md" variant="ghost" onClick={() => navigate('/projects')}>
                     View more projects <FontAwesomeIcon icon={faExternalLink} />
                   </Button>
               </div>
           </section>
+
+          
       </>
   );
 }

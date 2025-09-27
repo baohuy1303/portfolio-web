@@ -1,11 +1,9 @@
-import { title } from "@/components/primitives";
-import DefaultLayout from "@/layouts/default";
 import { Image } from "@heroui/react";
 
-export default function DocsPage() {
+export default function About() {
   return (
     <>
-      <section className="flex flex-col gap-4 py-8 md:py-10">
+      <section className="flex flex-col gap-4 py-8 md:pb-10 md:pt-2">
               <h1 className="text-3xl font-bold mb-3 self-baseline">
                   About me
               </h1>
