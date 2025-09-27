@@ -155,7 +155,7 @@ export default function ProjectsPage() {
                                       </div>
                                   </div>
                               </div>
-                              <Button radius="full" size="md" onPress={() => navigate('/projects/soccerstats')}
+                              <Button radius="full" size="md" onPress={() => navigate('/projects/soccer-stats')}
                                 className="md:block hidden hover:bg-blue-500 transition-all duration-150">
                                   More details
                               </Button>
@@ -164,7 +164,7 @@ export default function ProjectsPage() {
                   </Card>
                   <div className="md:hidden flex flex-row justify-between items-center w-[80%] gap-3 mb-10">
                     <h1 className="text-xl font-bold">Soccer Stats Explorer</h1>
-                    <Button radius="full" size="md" onPress={() => navigate('/projects/soccerstats')} className="hover:bg-blue-500 transition-all duration-150">
+                    <Button radius="full" size="md" onPress={() => navigate('/projects/soccer-stats')} className="hover:bg-blue-500 transition-all duration-150">
                       More details
                     </Button>
                   </div>
@@ -256,7 +256,7 @@ export default function ProjectsPage() {
                                       </div>
                                   </div>
                               </div>
-                              <Button radius="full" size="md" onPress={() => navigate('/projects/allpublicgames')}
+                              <Button radius="full" size="md" onPress={() => navigate('/projects/all-games')}
                                 className="md:block hidden hover:bg-blue-500 transition-all duration-150">
                                   More details
                               </Button>
@@ -265,7 +265,7 @@ export default function ProjectsPage() {
                   </Card>
                   <div className="md:hidden flex flex-row justify-between items-center w-[80%] gap-3 mb-10">
                     <h1 className="text-xl font-bold">All Public Games</h1>
-                    <Button radius="full" size="md" onPress={() => navigate('/projects/allpublicgames')} className="hover:bg-blue-500 transition-all duration-150">
+                    <Button radius="full" size="md" onPress={() => navigate('/projects/all-games')} className="hover:bg-blue-500 transition-all duration-150">
                       More details
                     </Button>
                   </div>
