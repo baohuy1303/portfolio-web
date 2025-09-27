@@ -72,7 +72,7 @@ export default function ProjectDetailPage() {
       demoLink: (
         <>
         <Button radius="full" size="md" onClick={() => window.open('https://gradvisor.onrender.com/', '_blank')}
-          className="md:block hidden">
+          className="">
             Click for Demo
         </Button>
         </>
@@ -100,7 +100,7 @@ export default function ProjectDetailPage() {
       demoLink: (
         <>
         <Button radius="full" size="md" onClick={() => window.open('https://reactjs-football-pract.vercel.app/', '_blank')}
-          className="md:block hidden">
+          className="">
             Click for Demo
         </Button>
         </>
@@ -127,7 +127,7 @@ export default function ProjectDetailPage() {
       demoLink: (
         <>
         <Button radius="full" size="md" onClick={() => window.open('https://billyman.itch.io/will-you-squid', '_blank')}
-          className="md:block hidden">
+          className="">
             Click for Demo
         </Button>
         
@@ -164,7 +164,7 @@ export default function ProjectDetailPage() {
       demoLink: (
         <>
         <Button radius="full" size="md" onClick={() => window.open('https://billyman.itch.io/', '_blank')}
-          className="md:block hidden">
+          className="">
             Click for Demo
         </Button>
         </>
@@ -186,10 +186,6 @@ export default function ProjectDetailPage() {
     images: [],
     demoLink: (
       <>
-      <Button radius="full" size="md" onClick={() => window.open('https://all-public-games.itch.io/all-public-games', '_blank')}
-        className="md:block hidden">
-          Click for Demo
-      </Button>
       </>
     )
   };
