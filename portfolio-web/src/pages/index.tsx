@@ -159,7 +159,7 @@ export default function IndexPage() {
                   isHoverable={!clicked}
                   isPressable={true}
                   className="border-1 focus:ring-0 focus:ring-offset-0 border-gray-600 md:grid md:grid-cols-[1fr_auto_2fr] flex flex-col 
-              justify-center gap-5 p-5 md:w-xl"
+              justify-center md:gap-5 gap-1 p-5 md:w-xl"
                   onClick={() => {
                       setClick(true);
                   }}
