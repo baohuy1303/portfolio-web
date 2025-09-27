@@ -1,9 +1,8 @@
-import { Image } from "@heroui/react";
-import { useParams } from "react-router-dom";
+import { faNode, faReact, faUnity } from "@fortawesome/free-brands-svg-icons";
+import { faCamera, faCodeCommit, faCodeCompare, faDatabase, faFire, faGamepad, faHashtag, faLeaf, faPaintBrush, faRobot, faServer } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon, FontAwesomeIconProps } from "@fortawesome/react-fontawesome";
-import { faServer, faFire, faDatabase, faCodeCompare, faLeaf, faRobot, faCodeCommit, faHashtag, faPaintBrush, faGamepad, faCamera } from "@fortawesome/free-solid-svg-icons";
-import { faReact, faNode, faUnity, faGit } from "@fortawesome/free-brands-svg-icons";
-import { Button } from "@heroui/react";
+import { Button, Image } from "@heroui/react";
+import { useParams } from "react-router-dom";
 
 export default function ProjectDetailPage() {
   const { id } = useParams<{ id: string }>();
@@ -200,7 +199,7 @@ export default function ProjectDetailPage() {
       <section className="flex flex-col gap-4 py-8 md:pb-5 md:pt-2">
         <h1 className="text-3xl font-bold mb-1 self-baseline">{project.title}</h1>
         <div className="flex grow gap-4 items-center text-sm mb-5">
-            {project.techStack.map((tech, idx) => (
+            {project.techStack.map((tech) => (
               <div className="flex flex-col md:flex-row items-center gap-0 md:gap-1">
                 <FontAwesomeIcon icon={tech.icon} />
                 {tech.name}

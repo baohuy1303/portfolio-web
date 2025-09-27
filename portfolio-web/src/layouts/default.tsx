@@ -1,12 +1,11 @@
-import { Link } from "@heroui/link";
-import {Tabs, Tab, Card, CardBody, Button} from "@heroui/react";
-import { Navbar } from "@/components/navbar";
-import { useLocation } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faFile, faHome, faLaptop, faUser } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "@heroui/link";
+import { Card, CardBody, Tab, Tabs } from "@heroui/react";
 import { addToast } from "@heroui/toast";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 export default function DefaultLayout({
   children,
@@ -14,7 +13,6 @@ export default function DefaultLayout({
   children: React.ReactNode;
 }) {
   const {pathname} = useLocation();
-  const [copied, setCopied] = useState(false);
 
   const handleCopy = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault(); // prevent default link behavior
@@ -27,10 +25,7 @@ export default function DefaultLayout({
       radius: 'full',
       color: 'success'
     });
-    navigator.clipboard.writeText("huynhbaohuy130333@gmail.com").then(() => {
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    });
+    navigator.clipboard.writeText("huynhbaohuy130333@gmail.com");
   };
 
   useEffect(() => {

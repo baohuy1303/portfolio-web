@@ -1,29 +1,20 @@
-import { Link } from "@heroui/link";
-import { Snippet } from "@heroui/snippet";
-import { Code } from "@heroui/code";
-import { button as buttonStyles } from "@heroui/theme";
 
-import { siteConfig } from "@/config/site";
-import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
-import DefaultLayout from "@/layouts/default";
 import {
+    Avatar,
     Button,
     Card,
     CardBody,
-    Divider,
-    Tabs,
     CardFooter,
-    CardHeader,
+    Divider,
+    Image,
+    Tabs,
 } from '@heroui/react';
-import {Avatar} from "@heroui/react";
-import { Image } from "@heroui/react";
 
-import { useState} from "react";
-import { useNavigate } from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-    faBlender,
+    faBootstrap, faCss, faGitAlt, faGithub, faHtml5, faJava, faJs, faMicrosoft, faNode,
+    faPython, faReact, faSquareLinkedin, faUnity
+} from '@fortawesome/free-brands-svg-icons';
+import {
     faBriefcase,
     faCamera,
     faCubes,
@@ -32,52 +23,35 @@ import {
     faExternalLinkAlt,
     faFileImage,
     faFilm,
-    faGamepad,
     faGraduationCap,
     faHashtag,
     faLocationDot,
-    faLocationPin,
-    faMapPin,
     faRobot,
     faServer,
     faVideo,
 } from '@fortawesome/free-solid-svg-icons';
-import {faCss, faHtml5, faSquareLinkedin, faYoutube } from '@fortawesome/free-brands-svg-icons';
-import { 
-  faJs, 
-  faReact, 
-  faNode, 
-  faPython, 
-  faJava, 
-  faGithub, 
-  faGitAlt, 
-  faBootstrap, 
-  faUnity, 
-  faWordpress, 
-  faMicrosoft 
-} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-import { 
-  faDatabase, 
-  faCode, 
-  faCloud, 
-  faBolt, 
-  faFire, 
-  faV, 
-  faLeaf, 
-  faWind 
+import {
+    faCode,
+    faDatabase,
+    faFire,
+    faLeaf,
+    faV,
+    faWind
 } from "@fortawesome/free-solid-svg-icons";
 import { addToast } from "@heroui/react";
 
-import {Chip} from "@heroui/chip";
-import {Tab} from "@heroui/react";
-import {  Modal,  ModalContent,  ModalHeader,  ModalBody,  ModalFooter} from "@heroui/modal";
+import { Chip } from "@heroui/chip";
+import { Modal, ModalBody, ModalContent, ModalFooter, ModalHeader } from "@heroui/modal";
+import { Tab } from "@heroui/react";
 
 export default function IndexPage() {
 
   const navigate = useNavigate();
   const [clicked, setClick] = useState(false);
-  const [copied, setCopied] = useState(false);
   const [selected, setSelected] = useState<string>("experience");
   const email = "huynhbaohuy130333@gmail.com";
   const [isOpen, setIsOpen] = useState<string | null>(null);
@@ -131,10 +105,7 @@ export default function IndexPage() {
       radius: 'full',
       color: 'success'
     });
-    navigator.clipboard.writeText(email).then(() => {
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    });
+    navigator.clipboard.writeText(email)
   };
 
   return (
