@@ -1,0 +1,18 @@
+<!-- h-logo-3.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="140" height="140" role="img" aria-labelledby="title-h3">
+  <title id="title-h3">H logo — diagonal gradient</title>
+  <defs>
+    <linearGradient id="g2" x1="0" x2="1">
+      <stop offset="0" stop-color="#f97316"/>
+      <stop offset="1" stop-color="#f43f5e"/>
+    </linearGradient>
+    <clipPath id="clipH">
+      <!-- H shape path created by two verticals and a connecting bar -->
+      <path d="M18 18 H36 V58 H56 V18 H76 V122 H56 V82 H36 V122 H18 Z" />
+    </clipPath>
+  </defs>
+
+  <rect width="140" height="140" rx="18" fill="url(#g2)" clip-path="url(#clipH)"/>
+  <!-- diagonal accent -->
+  <polygon points="10,120 130,10 140,20 20,130" fill="#ffffff22"/>
+</svg>
