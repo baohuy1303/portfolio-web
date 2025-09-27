@@ -71,7 +71,7 @@ export default function ProjectDetailPage() {
       images: ["/projs/Thumb.webp", "/projs/ss3.webp", "/projs/ss8.webp", "/projs/ss1.webp", ], 
       demoLink: (
         <>
-        <Button radius="full" size="md" onClick={() => window.open('https://gradvisor.onrender.com/', '_blank')}
+        <Button radius="full" size="md" onClick={() => window.open('https://score-aim-results-tracker.onrender.com/', '_blank')}
           className="">
             Click for Demo
         </Button>
