@@ -44,7 +44,7 @@ export default function ProjectDetailPage() {
         {icon: faServer, name: "Express.js"},
         {icon: faLeaf, name: "MongoDB"},
       ],
-      images: ["/wiwi/WIWI1.webp", "/wiwi/WIWI2.webp", "/wiwi/WIWI3.jfif", "/wiwi/WIWI4.webp", "/wiwi/WIWI5.jfif.webp", "/wiwi/WIWI5.webp"],
+      images: ["/wiwi/WIWI1.webp", "/wiwi/WIWI2.webp", "/wiwi/WIWI3.jfif.webp", "/wiwi/WIWI4.webp", "/wiwi/WIWI5.jfif.webp", "/wiwi/WIWI5.webp"],
       demoLink: (
         <>
         <Button radius="full" size="md" onClick={() => window.open('https://github.com/baohuy1303/wiwi-main', '_blank')}
