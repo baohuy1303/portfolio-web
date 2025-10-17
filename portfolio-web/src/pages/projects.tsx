@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button, Card, CardFooter, Image } from "@heroui/react";
 import { faServer, faFire, faDatabase, faLeaf, faRobot, faCodeCompare, faCodeCommit, faHashtag, faPaintBrush, faGamepad, faCamera } from "@fortawesome/free-solid-svg-icons";
-import { faReact, faNode, faUnity, faAws, faPython, faJs } from "@fortawesome/free-brands-svg-icons";
+import { faReact, faNode, faUnity, faAws, faPython } from "@fortawesome/free-brands-svg-icons";
 import { useNavigate } from "react-router-dom";
 
 export default function ProjectsPage() {
