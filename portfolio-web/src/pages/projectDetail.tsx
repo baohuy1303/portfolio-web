@@ -10,7 +10,7 @@ export default function ProjectDetailPage() {
   const PROJECTS: Record<string, { title: string; highlights: JSX.Element; techStack: {icon: FontAwesomeIconProps['icon']; name: string}[]; images: string[]; demoLink: JSX.Element }> = {
     
     "wiwi": {
-      title: "WIWI",
+      title: "WIWI - HackMidwest 2025",
       highlights: (
         <>
         <p>
