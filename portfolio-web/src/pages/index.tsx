@@ -11,10 +11,12 @@ import {
 } from '@heroui/react';
 
 import {
+    faAws,
     faBootstrap, faCss, faGitAlt, faGithub, faHtml5, faJava, faJs, faMicrosoft, faNode,
     faPython, faReact, faSquareLinkedin, faUnity
 } from '@fortawesome/free-brands-svg-icons';
 import {
+    faBoltLightning,
     faBriefcase,
     faCamera,
     faCubes,
@@ -72,8 +74,8 @@ export default function IndexPage() {
       // Frameworks & Libraries
       { name: "React.js", icon: faReact, textCol: "text-blue-400" },
       { name: "Vite", icon: faV, textCol: "text-yellow-300" }, // swap for custom
+      { name: "FastAPI", icon: faBoltLightning, textCol: "text-green-600" },
       { name: "Node.js", icon: faNode, textCol: "text-green-400" },
-      { name: "ASP.NET Core", icon: faMicrosoft, textCol: "text-blue-600" },
       { name: "Express.js", icon: faServer, textCol: "text-gray-400" },
       { name: "TailwindCSS", icon: faWind, textCol: "text-teal-400" }, // custom
       { name: "jQuery", icon: faCode, textCol: "text-blue-500" },
@@ -84,6 +86,7 @@ export default function IndexPage() {
       // Technologies
       { name: "Git", icon: faGitAlt, textCol: "text-red-500" },
       { name: "GitHub", icon: faGithub, textCol: "text-gray-300" },
+      { name: "AWS Strands Agents", icon: faAws, textCol: "text-blue-500" },
       { name: "MongoDB", icon: faLeaf, textCol: "text-green-500" }, // custom
       { name: "PostgreSQL", icon: faDatabase, textCol: "text-blue-500" },
       { name: "Firebase", icon: faFire, textCol: "text-yellow-500" }, // custom
@@ -768,7 +771,7 @@ export default function IndexPage() {
                                   <div className="col-span-2 flex flex-col justify-center">
                                       <div className="flex flex-col mb-4">
                                           <h2 className="text-gray-400 text-sm">
-                                              June 2019 - Present
+                                              June 2019 - June 2024
                                           </h2>
                                           <h1 className="text-xl font-bold">
                                               Founder - Developer
@@ -1214,6 +1217,59 @@ export default function IndexPage() {
               <h1 className="text-3xl font-bold mb-2 self-baseline">
                   Projects
               </h1>
+
+              <Card
+                      isFooterBlurred
+                      className="w-full col-span-12 sm:col-span-7
+              hover:scale-103 transition-all duration-150"
+                  >
+                      <Image
+                          removeWrapper
+                          alt="Relaxing app background"
+                          className="z-0 w-full h-full object-cover"
+                          src="/wiwi/WIWI3.jfif.webp"
+                      />
+                      
+                      <CardFooter className="absolute bg-black/60 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
+                          <div className="w-full flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
+                              <div className="flex flex-col gap-3">
+                                  <h1 className="md:block hidden text-xl font-bold">WIWI</h1>
+                                  <div className="flex grow gap-4 items-center text-sm">
+                                      <div className="flex flex-col md:flex-row items-center gap-0 md:gap-1">
+                                          <FontAwesomeIcon icon={faReact} />{' '}
+                                          React.js
+                                      </div>
+                                      <div className="flex flex-col md:flex-row items-center gap-0 md:gap-1">
+                                          <FontAwesomeIcon icon={faPython} />{' '}
+                                          Python
+                                      </div>
+                                      <div className="flex flex-col md:flex-row items-center gap-0 md:gap-1">
+                                          <FontAwesomeIcon icon={faAws} />{' '}
+                                          AWS
+                                      </div>
+                                      <div className="flex flex-col md:flex-row items-center gap-0 md:gap-1">
+                                          <FontAwesomeIcon icon={faServer} />{' '}
+                                          Express.js
+                                      </div>
+                                      <div className="flex flex-col md:flex-row items-center gap-0 md:gap-1">
+                                          <FontAwesomeIcon icon={faLeaf} />{' '}
+                                          MongoDB
+                                      </div>
+                                  </div>
+                              </div>
+                              <Button onPress={() => navigate('/projects/wiwi')} radius="full" size="md" className="md:block hidden hover:bg-blue-500 transition-all duration-150"> 
+                                More details
+                              </Button>
+                          </div>
+                      </CardFooter>
+                  </Card>
+                  <div className="md:hidden flex flex-row justify-between items-center w-[80%] gap-3 mb-10">
+                        <h1 className="text-xl font-bold">WIWI</h1>
+                        <Button onPress={() => navigate('/projects/wiwi')} radius="full" size="md" className="hover:bg-blue-500 transition-all duration-150"> 
+                                  More details
+                        </Button>         
+                  </div>
+
               <div className="flex flex-col gap-5 justify-center items-center">
                   <Card
                       isFooterBlurred

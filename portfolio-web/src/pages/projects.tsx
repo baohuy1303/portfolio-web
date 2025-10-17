@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button, Card, CardFooter, Image } from "@heroui/react";
 import { faServer, faFire, faDatabase, faLeaf, faRobot, faCodeCompare, faCodeCommit, faHashtag, faPaintBrush, faGamepad, faCamera } from "@fortawesome/free-solid-svg-icons";
-import { faReact, faNode, faUnity } from "@fortawesome/free-brands-svg-icons";
+import { faReact, faNode, faUnity, faAws, faPython, faJs } from "@fortawesome/free-brands-svg-icons";
 import { useNavigate } from "react-router-dom";
 
 export default function ProjectsPage() {
@@ -14,6 +14,59 @@ export default function ProjectsPage() {
               <h1 className="text-3xl font-bold mb-3 self-baseline">
                   Projects
               </h1>
+              <Card
+                      isFooterBlurred
+                      className="w-full col-span-12 sm:col-span-7
+              hover:scale-103 transition-all duration-150"
+                  >
+                      <Image
+                          removeWrapper
+                          alt="Relaxing app background"
+                          className="z-0 w-full h-full object-cover"
+                          src="/wiwi/WIWI3.jfif.webp"
+                      />
+                      
+                      <CardFooter className="absolute bg-black/60 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
+                          <div className="w-full flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
+                              <div className="flex flex-col gap-3">
+                                  <h1 className="md:block hidden text-xl font-bold">WIWI</h1>
+                                  <div className="flex grow gap-4 items-center text-sm">
+                                      <div className="flex flex-col md:flex-row items-center gap-0 md:gap-1">
+                                          <FontAwesomeIcon icon={faReact} />{' '}
+                                          React.js
+                                      </div>
+                                      <div className="flex flex-col md:flex-row items-center gap-0 md:gap-1">
+                                          <FontAwesomeIcon icon={faPython} />{' '}
+                                          Python
+                                      </div>
+                                      <div className="flex flex-col md:flex-row items-center gap-0 md:gap-1">
+                                          <FontAwesomeIcon icon={faAws} />{' '}
+                                          AWS
+                                      </div>
+                                      <div className="flex flex-col md:flex-row items-center gap-0 md:gap-1">
+                                          <FontAwesomeIcon icon={faServer} />{' '}
+                                          Express.js
+                                      </div>
+                                      <div className="flex flex-col md:flex-row items-center gap-0 md:gap-1">
+                                          <FontAwesomeIcon icon={faLeaf} />{' '}
+                                          MongoDB
+                                      </div>
+                                  </div>
+                              </div>
+                              <Button onPress={() => navigate('/projects/wiwi')} radius="full" size="md" className="md:block hidden hover:bg-blue-500 transition-all duration-150"> 
+                                More details
+                              </Button>
+                          </div>
+                      </CardFooter>
+                  </Card>
+                  <div className="md:hidden flex flex-row justify-between items-center w-[80%] gap-3 mb-10">
+                        <h1 className="text-xl font-bold">WIWI</h1>
+                        <Button onPress={() => navigate('/projects/wiwi')} radius="full" size="md" className="hover:bg-blue-500 transition-all duration-150"> 
+                                  More details
+                        </Button>         
+                  </div>
+
+
               <div className="flex flex-col gap-10 justify-center items-center">
                   <Card
                       isFooterBlurred

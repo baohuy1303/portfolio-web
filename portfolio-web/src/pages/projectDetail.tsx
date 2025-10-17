@@ -1,4 +1,4 @@
-import { faNode, faReact, faUnity } from "@fortawesome/free-brands-svg-icons";
+import { faAws, faPython, faJs, faNode, faReact, faUnity } from "@fortawesome/free-brands-svg-icons";
 import { faCamera, faCodeCommit, faCodeCompare, faDatabase, faFire, faGamepad, faHashtag, faLeaf, faPaintBrush, faRobot, faServer } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon, FontAwesomeIconProps } from "@fortawesome/react-fontawesome";
 import { Button, Image } from "@heroui/react";
@@ -8,6 +8,52 @@ export default function ProjectDetailPage() {
   const { id } = useParams<{ id: string }>();
 
   const PROJECTS: Record<string, { title: string; highlights: JSX.Element; techStack: {icon: FontAwesomeIconProps['icon']; name: string}[]; images: string[]; demoLink: JSX.Element }> = {
+    
+    "wiwi": {
+      title: "WIWI",
+      highlights: (
+        <>
+        <p>
+  • Led a team of <span className="font-bold bg-gradient-to-r from-lime-400 to-green-500 bg-clip-text text-transparent">4</span> to develop an <span className="font-bold bg-gradient-to-r from-pink-500 to-rose-500 bg-clip-text text-transparent">AI-powered resale and raffle marketplace</span> in 
+  <span className="font-bold bg-gradient-to-r from-amber-300 to-yellow-400 bg-clip-text text-transparent"> 24 hours</span>, combining 
+  <span className="font-bold bg-gradient-to-r from-sky-400 to-blue-500 bg-clip-text text-transparent"> Node + FastAPI + AWS Bedrock </span> 
+  to let users profit from used items while 
+  <span className="font-bold bg-gradient-to-r from-teal-300 to-emerald-400 bg-clip-text text-transparent"> 70% </span> 
+  of overflow revenue goes to charity.
+</p>
+
+<p>
+  • Created <span className="font-bold bg-gradient-to-r from-violet-500 to-purple-500 bg-clip-text text-transparent">multi-agent AWS Strands pipelines </span> 
+  for product verification, autofill, and chatbot automation (image checks, EXIF/web validation, dynamic pricing, trust scoring), cutting manual review by 
+  <span className="font-bold bg-gradient-to-r from-fuchsia-500 to-pink-600 bg-clip-text text-transparent"> 90%+</span>.
+</p>
+
+<p>
+  • Delivered a scalable MVP with <span className="font-bold bg-gradient-to-r from-orange-400 to-amber-500 bg-clip-text text-transparent">Stripe</span> payments, 
+  <span className="font-bold bg-gradient-to-r from-cyan-300 to-teal-400 bg-clip-text text-transparent"> AWS S3 </span>media storage, and 
+  <span className="font-bold bg-gradient-to-r from-yellow-300 to-lime-400 bg-clip-text text-transparent"> cron-based</span> raffle automation, showcasing end-to-end AI orchestration, cloud scalability, and full-stack execution under pressure.
+</p>
+        </>
+      ),
+      techStack: [
+        {icon: faJs, name: "TypeScript"},
+        {icon: faReact, name: "React.js"},
+        {icon: faPython, name: "Python"},
+        {icon: faAws, name: "AWS"},
+        {icon: faNode, name: "Node.js"},
+        {icon: faServer, name: "Express.js"},
+        {icon: faLeaf, name: "MongoDB"},
+      ],
+      images: ["/wiwi/WIWI1.webp", "/wiwi/WIWI2.webp", "/wiwi/WIWI3.jfif", "/wiwi/WIWI4.webp", "/wiwi/WIWI5.jfif.webp", "/wiwi/WIWI5.webp"],
+      demoLink: (
+        <>
+        <Button radius="full" size="md" onClick={() => window.open('https://github.com/baohuy1303/wiwi-main', '_blank')}
+          className="">
+            Click for GitHub  
+        </Button>
+        </>
+      )
+    },
     "glow": {
       title: "AI GLOW",
       highlights: (
