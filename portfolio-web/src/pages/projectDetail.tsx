@@ -240,7 +240,7 @@ export default function ProjectDetailPage() {
     <>
       <section className="flex flex-col gap-4 py-8 md:pb-5 md:pt-2">
         <h1 className="text-3xl font-bold mb-1 self-baseline">{project.title}</h1>
-        <div className="flex grow gap-4 items-center text-sm mb-5">
+        <div className="flex grow gap-4 items-center text-sm mb-5 flex-wrap">
             {project.techStack.map((tech) => (
               <div className="flex flex-col md:flex-row items-center gap-0 md:gap-1">
                 <FontAwesomeIcon icon={tech.icon} />
