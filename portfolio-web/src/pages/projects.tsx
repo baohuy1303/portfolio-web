@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button, Card, CardFooter, Image } from "@heroui/react";
-import { faServer, faFire, faDatabase, faLeaf, faRobot, faCodeCompare, faCodeCommit, faHashtag, faPaintBrush, faGamepad, faCamera, faCrow, faBoltLightning } from "@fortawesome/free-solid-svg-icons";
+import { faServer, faFire, faDatabase, faLeaf, faRobot, faCodeCompare, faCodeCommit, faHashtag, faPaintBrush, faGamepad, faCamera, faCrow } from "@fortawesome/free-solid-svg-icons";
 import { faReact, faNode, faUnity, faAws, faPython } from "@fortawesome/free-brands-svg-icons";
 import { useNavigate } from "react-router-dom";
 
