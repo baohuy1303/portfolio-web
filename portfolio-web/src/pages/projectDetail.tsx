@@ -1,5 +1,5 @@
 import { faAws, faPython, faJs, faNode, faReact, faUnity } from "@fortawesome/free-brands-svg-icons";
-import { faCamera, faCodeCommit, faCodeCompare, faDatabase, faFire, faGamepad, faHashtag, faLeaf, faPaintBrush, faRobot, faServer } from "@fortawesome/free-solid-svg-icons";
+import { faBoltLightning, faCamera, faCodeCommit, faCodeCompare, faCrow, faDatabase, faFire, faGamepad, faHashtag, faLeaf, faPaintBrush, faRobot, faServer } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon, FontAwesomeIconProps } from "@fortawesome/react-fontawesome";
 import { Button, Image } from "@heroui/react";
 import { useParams } from "react-router-dom";
@@ -59,20 +59,22 @@ export default function ProjectDetailPage() {
       highlights: (
         <>
         <p>
-        • Built a <span className="font-bold bg-gradient-to-r from-pink-500 to-rose-500 bg-clip-text text-transparent">full-stack SAT practice platform</span> with autosave and randomized test generation, enabling students to
-        complete timed/untimed full-length or section tests in <span className="font-bold bg-gradient-to-r from-teal-200 to-teal-500 bg-clip-text text-transparent">&lt;3 clicks</span> with <span className="font-bold bg-gradient-to-r from-amber-200 to-yellow-400 bg-clip-text text-transparent">100% </span>progress recovery across sessions.
-        </p>
-        <p>
-        • Integrated AI explanations via <span className="font-bold bg-gradient-to-r from-blue-200 to-blue-500 bg-clip-text text-transparent">OpenAI API + Redis caching</span>, delivering instant feedback, estimated to reduce
-        repeated-query latency by <span className="font-bold bg-gradient-to-r from-fuchsia-600 to-pink-600 bg-clip-text text-transparent">∼85%</span>, and added <span className="font-bold bg-gradient-to-r from-lime-400 to-lime-500 bg-clip-text text-transparent">Chart.js </span>dashboards for score trends.
-        </p>
-        <p>
-        • Developed admin workflows with <span className="font-bold bg-gradient-to-r from-violet-500 to-purple-500 bg-clip-text text-transparent">Firebase Auth</span> and parsing for Image/PDF/Word via <span className="font-bold bg-gradient-to-r from-pink-500 to-rose-500 bg-clip-text text-transparent">tesseract.js</span> and
-        <span className="font-bold bg-gradient-to-r from-teal-400 to-yellow-200 bg-clip-text text-transparent"> pdf-parse</span>, supporting <span className="font-bold bg-gradient-to-r from-lime-400 to-lime-500 bg-clip-text text-transparent">∼1000 questions</span> per import, removing duplicates, and cutting manual entry by <span className="font-bold bg-gradient-to-r from-blue-200 to-cyan-200 bg-clip-text text-transparent">∼90%</span>.
-        </p>
+• Built an <span className="font-bold bg-gradient-to-r from-pink-500 to-rose-500 bg-clip-text text-transparent">AI-powered SAT platform</span> with <span className="font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">LangChain, GPT-5, and FastAPI</span>, achieving <span className="font-bold bg-gradient-to-r from-amber-300 to-yellow-400 bg-clip-text text-transparent">95%+</span> accurate 
+question extraction from PDFs/images using Pydantic schemas and LangChain document loaders.
+</p>
+<p>
+• Integrated Redis caching for AI response sharing, rate limiting, and query filtering, cutting latency and OpenAI/Firebase costs by <span className="font-bold bg-gradient-to-r from-fuchsia-600 to-pink-600 bg-clip-text text-transparent">∼65%</span> through TTL-based reuse and semantic cache hits.
+</p>
+<p>
+• Developed an intelligent question classification engine supporting <span className="font-bold bg-gradient-to-r from-lime-400 to-lime-500 bg-clip-text text-transparent">70+</span> SAT skills with semantic <span className="font-bold bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">vector embeddings</span>, enabling automated difficulty estimation, skill tagging, and duplicate detection.
+</p>
+
         </>
       ),
       techStack: [
+        {icon: faCrow, name: "Langchain"},
+        {icon: faPython, name: "Python"},
+        {icon: faBoltLightning, name: "FastAPI"},
         {icon: faReact, name: "React.js"},
         {icon: faNode, name: "Node.js"},
         {icon: faServer, name: "Express.js"},

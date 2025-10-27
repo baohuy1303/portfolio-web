@@ -19,6 +19,7 @@ import {
     faBoltLightning,
     faBriefcase,
     faCamera,
+    faCrow,
     faCubes,
     faEnvelope,
     faExternalLink,
@@ -74,7 +75,8 @@ export default function IndexPage() {
       // Frameworks & Libraries
       { name: "React.js", icon: faReact, textCol: "text-blue-400" },
       { name: "Vite", icon: faV, textCol: "text-yellow-300" }, // swap for custom
-      { name: "FastAPI", icon: faBoltLightning, textCol: "text-green-600" },
+      { name: "FastAPI", icon: faBoltLightning, textCol: "text-green-500" },
+      { name: "LangChain", icon: faCrow, textCol: "text-gray-400" },
       { name: "Node.js", icon: faNode, textCol: "text-green-400" },
       { name: "Express.js", icon: faServer, textCol: "text-gray-400" },
       { name: "TailwindCSS", icon: faWind, textCol: "text-teal-400" }, // custom
@@ -1288,13 +1290,13 @@ export default function IndexPage() {
                               <div className="flex flex-col gap-3">
                                   <h1 className="md:block hidden text-xl font-bold">AI GLOW</h1>
                                   <div className="flex grow gap-4 items-center text-sm">
+                                    <div className="flex flex-col md:flex-row items-center gap-0 md:gap-1">
+                                            <FontAwesomeIcon icon={faCrow} />{' '}
+                                            LangChain
+                                        </div>
                                       <div className="flex flex-col md:flex-row items-center gap-0 md:gap-1">
                                           <FontAwesomeIcon icon={faReact} />{' '}
                                           React.js
-                                      </div>
-                                      <div className="flex flex-col md:flex-row items-center gap-0 md:gap-1">
-                                          <FontAwesomeIcon icon={faNode} />{' '}
-                                          Node.js
                                       </div>
                                       <div className="flex flex-col md:flex-row items-center gap-0 md:gap-1">
                                           <FontAwesomeIcon icon={faServer} />{' '}

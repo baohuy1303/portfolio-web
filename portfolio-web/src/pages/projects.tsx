@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button, Card, CardFooter, Image } from "@heroui/react";
-import { faServer, faFire, faDatabase, faLeaf, faRobot, faCodeCompare, faCodeCommit, faHashtag, faPaintBrush, faGamepad, faCamera } from "@fortawesome/free-solid-svg-icons";
+import { faServer, faFire, faDatabase, faLeaf, faRobot, faCodeCompare, faCodeCommit, faHashtag, faPaintBrush, faGamepad, faCamera, faCrow, faBoltLightning } from "@fortawesome/free-solid-svg-icons";
 import { faReact, faNode, faUnity, faAws, faPython } from "@fortawesome/free-brands-svg-icons";
 import { useNavigate } from "react-router-dom";
 
@@ -87,13 +87,13 @@ export default function ProjectsPage() {
                               <div className="flex flex-col gap-3">
                                   <h1 className="md:block hidden text-xl font-bold">AI GLOW</h1>
                                   <div className="flex grow gap-4 items-center text-sm">
+                                    <div className="flex flex-col md:flex-row items-center gap-0 md:gap-1">
+                                            <FontAwesomeIcon icon={faCrow} />{' '}
+                                            LangChain
+                                        </div>
                                       <div className="flex flex-col md:flex-row items-center gap-0 md:gap-1">
                                           <FontAwesomeIcon icon={faReact} />{' '}
                                           React.js
-                                      </div>
-                                      <div className="flex flex-col md:flex-row items-center gap-0 md:gap-1">
-                                          <FontAwesomeIcon icon={faNode} />{' '}
-                                          Node.js
                                       </div>
                                       <div className="flex flex-col md:flex-row items-center gap-0 md:gap-1">
                                           <FontAwesomeIcon icon={faServer} />{' '}
