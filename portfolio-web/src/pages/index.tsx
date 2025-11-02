@@ -31,7 +31,10 @@ import {
     faLocationDot,
     faRobot,
     faServer,
+    faBarsStaggered,
     faVideo,
+    faFireFlameSimple,
+    faFaceLaughBeam,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from "react";
@@ -317,6 +320,129 @@ export default function IndexPage() {
                       }
                   >
                       <div className="flex flex-col">
+
+                      <Card
+                              className="border-1 border-gray-600 hover:scale-105 transition-transform duration-200 py-3 px-1 z-1"
+                              radius="none"
+                              isHoverable={true}
+                              isPressable={true}
+                              isBlurred={true}
+                              onPress={() => setIsOpen('research')}
+                          >
+                              <CardBody className="grid grid-cols-3 justify-center items-center gap-2 md:gap-0">
+                                  <div className="justify-self-center">
+                                      <Image
+                                          src="truman.png"
+                                          alt=""
+                                          isBlurred
+                                          width={90}
+                                          radius="full"
+                                          className="w-18 md:w-full"
+                                      />
+                                  </div>
+                                  <div className="col-span-2 flex flex-col justify-center">
+                                      <div className="flex flex-col mb-4">
+                                          <h2 className="text-gray-400 text-sm">
+                                              October 2025 - Present
+                                          </h2>
+                                          <h1 className="text-xl font-bold">
+                                              Undergraduate Research Assistant
+                                          </h1>
+                                          <h2 className="text-gray-400 text-sm">
+                                              Truman State University
+                                          </h2>
+                                      </div>
+                                      <div className="flex flex-col text-[0.8125rem] mb-2">
+                                          <p>
+                                          Natural Language to First Order Logic for robotics planning, reasoning, and decision-making; ; Python, pandas, PyTorch, Hugging Face (RoBERTa-large-MNLI).
+                                          </p>
+                                      </div>
+                                  </div>
+                              </CardBody>
+                          </Card>
+                          <Modal
+                              isOpen={isOpen === 'research'}
+                              onOpenChange={() => setIsOpen(null)}
+                              size="4xl"
+                              backdrop="blur"
+                              placement="center"
+                              scrollBehavior="inside"
+                          >
+                              <ModalContent>
+                                  {(onClose) => (
+                                      <>
+                                          <ModalHeader className="flex flex-row gap-4 items-center">
+                                              <img
+                                                  src="truman.png"
+                                                  alt=""
+                                                  className="w-8 rounded-full"
+                                              />
+                                              Truman State University - Undergraduate Research Assistant
+                                          </ModalHeader>
+                                          <ModalBody>
+                                              <div className="text-sm text-gray-400 flex flex-row justify-center items-center gap-5 md:gap-10 mb-1">
+                                                  <div className="text-yellow-400">
+                                                      <FontAwesomeIcon
+                                                          icon={faPython}
+                                                      />{' '}
+                                                      Python
+                                                  </div>
+                                                  <div className="text-gray-300">
+                                                      <FontAwesomeIcon
+                                                          icon={faBarsStaggered}
+                                                      />{' '}
+                                                      pandas
+                                                  </div>
+                                                  <div className="text-red-500">
+                                                      <FontAwesomeIcon
+                                                          icon={faFireFlameSimple}
+                                                      />{' '}
+                                                      PyTorch
+                                                  </div>
+                                                  <div className="text-orange-500">
+                                                      <FontAwesomeIcon
+                                                          icon={faFaceLaughBeam}
+                                                      />{' '}
+                                                      Hugging Face Transformers
+                                                  </div>
+
+                                              </div>
+                                              <Divider orientation="horizontal" />
+                                              <div className="flex flex-col gap-2 mb-5">
+                                                  <p>
+                                                      • Developed upon a <span className="font-bold bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent">natural-language-to-FOL reasoning pipeline</span>, leveraging <span className="font-bold bg-gradient-to-r from-fuchsia-500 to-cyan-500 bg-clip-text text-transparent">Python, pandas, PyTorch, and Hugging Face Transformers (RoBERTa-large-MNLI)</span> to convert natural language into formal logic representations for robotic planning tasks.
+                                                  </p>
+                                                  <p>
+                                                      • Implemented <span className="font-bold bg-gradient-to-r from-teal-400 to-yellow-200 bg-clip-text text-transparent">data validation, aggregation, and reproducible I/O workflows</span>, improving experiment reliability, logical form accuracy, and downstream reasoning consistency.
+                                                  </p>
+                                              </div>
+                                              <div className="mb-5">
+                                                  <p className="text-sm">
+                                                      <span className="font-bold">
+                                                          Skills learned and
+                                                          used:{' '}
+                                                      </span>{' '}
+                                                      Python, pandas & PyTorch Development • NLP Model Integration (Hugging Face, RoBERTa-large-MNLI) • Natural Language → Formal Logic Conversion • Data Validation & Automation • Reproducible Research Pipelines • Logical Reasoning for Robotic Planning
+                                                  </p>
+                                              </div>
+                                          </ModalBody>
+                                          <ModalFooter>
+                                              <Button
+                                                  color="danger"
+                                                  variant="light"
+                                                  radius="sm"
+                                                  onPress={onClose}
+                                                  className="hover:scale-110 transition-transform duration-100"
+                                              >
+                                                  Close
+                                              </Button>
+                                              
+                                          </ModalFooter>
+                                      </>
+                                  )}
+                              </ModalContent>
+                          </Modal>
+
                           {/* NaNi Kids */}
                           <Card
                               className="rounded-t-2xl border-1 border-gray-600 hover:scale-105 transition-transform duration-200 py-3 px-1 z-3"
