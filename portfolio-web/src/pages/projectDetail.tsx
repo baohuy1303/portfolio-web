@@ -108,15 +108,25 @@ export default function ProjectDetailPage() {
       highlights: (
         <>
         <p>
-• Built an <span className="font-bold bg-gradient-to-r from-pink-500 to-rose-500 bg-clip-text text-transparent">AI-powered SAT platform</span> with <span className="font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">LangChain, GPT-5, and FastAPI</span>, achieving <span className="font-bold bg-gradient-to-r from-amber-300 to-yellow-400 bg-clip-text text-transparent">95%+</span> accurate 
-question extraction from PDFs/images using Pydantic schemas and LangChain document loaders.
+  • Built an 
+  <span className="font-bold bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent"> AI-powered SAT platform </span> 
+  with 
+  <span className="font-bold bg-gradient-to-r from-teal-300 to-cyan-500 bg-clip-text text-transparent"> LangChain, Pydantic, and FastAPI </span> 
+  for automated difficulty estimation and 
+  <span className="font-bold bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text text-transparent"> 70+ </span> 
+  skill tagging, cutting manual work by 
+  <span className="font-bold bg-gradient-to-r from-amber-400 to-yellow-500 bg-clip-text text-transparent"> 95% </span> 
+  through automated multi-page PDF extraction.
 </p>
+
 <p>
-• Integrated Redis caching for AI response sharing, rate limiting, and query filtering, cutting latency and OpenAI/Firebase costs by <span className="font-bold bg-gradient-to-r from-fuchsia-600 to-pink-600 bg-clip-text text-transparent">∼65%</span> through TTL-based reuse and semantic cache hits.
+  • Developed a 
+  <span className="font-bold bg-gradient-to-r from-sky-400 to-blue-600 bg-clip-text text-transparent"> React, Express, FastAPI, Redis, and Firebase Auth </span> 
+  microservice stack with 
+  <span className="font-bold bg-gradient-to-r from-pink-400 to-rose-500 bg-clip-text text-transparent"> caching </span> 
+  (future AI-response caching) and batch Firestore writes, enhancing speed, scalability, and reliability.
 </p>
-<p>
-• Developed an intelligent question classification engine supporting <span className="font-bold bg-gradient-to-r from-lime-400 to-lime-500 bg-clip-text text-transparent">70+</span> SAT skills with semantic <span className="font-bold bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">vector embeddings</span>, enabling automated difficulty estimation, skill tagging, and duplicate detection.
-</p>
+
 
         </>
       ),
