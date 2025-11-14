@@ -23,7 +23,7 @@ export default function ProjectsPage() {
                           removeWrapper
                           alt="Relaxing app background"
                           className="z-0 w-full h-full object-cover"
-                          src="/prosj/TruDegree4.webp"
+                          src="/projs/TruDegree4.webp"
                       />
                       
                       <CardFooter className="absolute bg-black/60 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
