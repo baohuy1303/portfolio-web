@@ -35,6 +35,7 @@ import {
     faVideo,
     faFireFlameSimple,
     faFaceLaughBeam,
+    faScrewdriverWrench,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from "react";
@@ -96,6 +97,7 @@ export default function IndexPage() {
       { name: "PostgreSQL", icon: faDatabase, textCol: "text-blue-500" },
       { name: "Firebase", icon: faFire, textCol: "text-yellow-500" }, // custom
       { name: "Redis", icon: faDatabase, textCol: "text-red-500" },
+      { name: "Selenium", icon: faScrewdriverWrench, textCol: "text-green-500" },
       { name: "Visual Studio", icon: faMicrosoft, textCol: "text-blue-500" },
 /*       { name: "Vercel", icon: faV, textCol: "text-white" }, // custom
       { name: "Render", icon: faCloud, textCol: "text-indigo-400" },
@@ -322,7 +324,7 @@ export default function IndexPage() {
                       <div className="flex flex-col">
 
                       <Card
-                              className="border-1 border-gray-600 hover:scale-105 transition-transform duration-200 py-3 px-1 z-1"
+                              className="rounded-t-2xl border-1 border-gray-600 hover:scale-105 transition-transform duration-200 py-3 px-1 z-1"
                               radius="none"
                               isHoverable={true}
                               isPressable={true}
@@ -336,7 +338,7 @@ export default function IndexPage() {
                                           alt=""
                                           isBlurred
                                           width={90}
-                                          radius="full"
+                                          radius="none"
                                           className="w-18 md:w-full"
                                       />
                                   </div>
@@ -445,7 +447,7 @@ export default function IndexPage() {
 
                           {/* NaNi Kids */}
                           <Card
-                              className="rounded-t-2xl border-1 border-gray-600 hover:scale-105 transition-transform duration-200 py-3 px-1 z-3"
+                              className="border-1 border-gray-600 hover:scale-105 transition-transform duration-200 py-3 px-1 z-3"
                               radius="none"
                               isHoverable={true}
                               isPressable={true}
@@ -840,6 +842,18 @@ export default function IndexPage() {
                                               />
                                               <Image
                                                   src="/gdg/Sponsors.webp"
+                                                  alt=""
+                                                  className="mb-4 rounded-lg"
+                                                  width={500}
+                                              />
+                                              <Image
+                                                  src="/gdg/1.webp"
+                                                  alt=""
+                                                  className="mb-4 rounded-lg"
+                                                  width={500}
+                                              />
+                                              <Image
+                                                  src="/gdg/2.webp"
                                                   alt=""
                                                   className="mb-4 rounded-lg"
                                                   width={500}
@@ -1345,6 +1359,58 @@ export default function IndexPage() {
               <h1 className="text-3xl font-bold mb-2 self-baseline">
                   Projects
               </h1>
+
+              <Card
+                      isFooterBlurred
+                      className="w-full col-span-12 sm:col-span-7
+              hover:scale-103 transition-all duration-150"
+                  >
+                      <Image
+                          removeWrapper
+                          alt="Relaxing app background"
+                          className="z-0 w-full h-full object-cover"
+                          src="/prosj/TruDegree4.webp"
+                      />
+                      
+                      <CardFooter className="absolute bg-black/60 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
+                          <div className="w-full flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
+                              <div className="flex flex-col gap-3">
+                                  <h1 className="md:block hidden text-xl font-bold">TruDegree - ACM Hackathon 2025</h1>
+                                  <div className="flex grow gap-4 items-center text-sm">
+                                      <div className="flex flex-col md:flex-row items-center gap-0 md:gap-1">
+                                          <FontAwesomeIcon icon={faPython} />{' '}
+                                          Python
+                                      </div>
+                                      <div className="flex flex-col md:flex-row items-center gap-0 md:gap-1">
+                                          <FontAwesomeIcon icon={faReact} />{' '}
+                                          React.js
+                                      </div>
+                                      <div className="flex flex-col md:flex-row items-center gap-0 md:gap-1">
+                                          <FontAwesomeIcon icon={faCrow} />{' '}
+                                          LangGraph
+                                      </div>
+                                      <div className="flex flex-col md:flex-row items-center gap-0 md:gap-1">
+                                          <FontAwesomeIcon icon={faBoltLightning} />{' '}
+                                          FastAPI
+                                      </div>
+                                      <div className="flex flex-col md:flex-row items-center gap-0 md:gap-1">
+                                          <FontAwesomeIcon icon={faScrewdriverWrench} />{' '}
+                                          Selenium
+                                      </div>
+                                  </div>
+                              </div>
+                              <Button onPress={() => navigate('/projects/trudegree')} radius="full" size="md" className="md:block hidden hover:bg-blue-500 transition-all duration-150"> 
+                                More details
+                              </Button>
+                          </div>
+                      </CardFooter>
+                  </Card>
+                  <div className="md:hidden flex flex-row justify-between items-center w-[80%] gap-3 mb-10">
+                        <h1 className="text-xl font-bold">TruDegree - ACM Hackathon 2025</h1>
+                        <Button onPress={() => navigate('/projects/trudegree')} radius="full" size="md" className="hover:bg-blue-500 transition-all duration-150"> 
+                                  More details
+                        </Button>         
+                  </div>
 
               <Card
                       isFooterBlurred

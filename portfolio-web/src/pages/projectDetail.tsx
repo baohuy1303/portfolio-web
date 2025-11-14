@@ -1,5 +1,5 @@
 import { faAws, faPython, faJs, faNode, faReact, faUnity } from "@fortawesome/free-brands-svg-icons";
-import { faBoltLightning, faCamera, faCodeCommit, faCodeCompare, faCrow, faDatabase, faFire, faGamepad, faHashtag, faLeaf, faPaintBrush, faRobot, faServer } from "@fortawesome/free-solid-svg-icons";
+import { faBoltLightning, faCamera, faCodeCommit, faCodeCompare, faCrow, faDatabase, faFire, faGamepad, faHashtag, faLeaf, faPaintBrush, faRobot, faScrewdriverWrench, faServer } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon, FontAwesomeIconProps } from "@fortawesome/react-fontawesome";
 import { Button, Image } from "@heroui/react";
 import { useParams } from "react-router-dom";
@@ -8,7 +8,56 @@ export default function ProjectDetailPage() {
   const { id } = useParams<{ id: string }>();
 
   const PROJECTS: Record<string, { title: string; highlights: JSX.Element; techStack: {icon: FontAwesomeIconProps['icon']; name: string}[]; images: string[]; demoLink: JSX.Element }> = {
-    
+    "trudegree": {
+      title: "TruDegree - ACM Hackathon 2025",
+      highlights: (
+        <>
+        <p>
+  • <span className="font-bold bg-gradient-to-r from-rose-400 to-pink-600 bg-clip-text text-transparent">Won 2nd place </span> 
+  by engineering an 
+  <span className="font-bold bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent"> agentic AI academic advisor </span> 
+  using 
+  <span className="font-bold bg-gradient-to-r from-teal-300 to-cyan-500 bg-clip-text text-transparent"> LangGraph’s ReAct + GPT-5-mini </span>, 
+  enabling dynamic tool use, prerequisite validation, and course sequencing, cutting degree planning time by 
+  <span className="font-bold bg-gradient-to-r from-amber-400 to-yellow-500 bg-clip-text text-transparent"> 98%</span>.
+</p>
+
+<p>
+  • Integrated web scraping for 
+  <span className="font-bold bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text text-transparent"> 90+ </span> 
+  Truman sample plans using 
+  <span className="font-bold bg-gradient-to-r from-fuchsia-400 to-pink-500 bg-clip-text text-transparent"> Selenium, regex, and Beautiful Soup </span>, 
+  enabling the agent to analyze live course data and generate personalized, data-driven plans while reducing LLM token use.
+</p>
+
+<p>
+  • Achieved high accuracy across 
+  <span className="font-bold bg-gradient-to-r from-sky-400 to-blue-600 bg-clip-text text-transparent"> 458 web-scraped </span> 
+  course requirements using a 
+  <span className="font-bold bg-gradient-to-r from-orange-400 to-amber-500 bg-clip-text text-transparent"> 1,500-line </span> 
+  reasoning framework with recursive validation and structured PDF-to-JSON parsing via LangChain + Pydantic.
+</p>
+
+        </>
+      ),
+      techStack: [
+        {icon: faJs, name: "TypeScript"},
+        {icon: faPython, name: "Python"},
+        {icon: faReact, name: "React.js"},
+        {icon: faCrow, name: "LangGraph"},
+        {icon: faBoltLightning, name: "FastAPI"},
+        {icon: faScrewdriverWrench, name: "Selenium"},
+      ],
+      images: ["/projs/TruDegree1.webp", "/projs/TruDegree2.webp", "/projs/TruDegree3.webp", "/projs/TruDegree4.webp", "/projs/TruDegree5.webp"],
+      demoLink: (
+        <>
+        <Button radius="full" size="md" onClick={() => window.open('https://github.com/baohuy1303/trudegree', '_blank')}
+          className="">
+            Click for GitHub  
+        </Button>
+        </>
+      )
+    },
     "wiwi": {
       title: "WIWI - HackMidwest 2025",
       highlights: (
