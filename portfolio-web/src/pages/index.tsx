@@ -11,6 +11,7 @@ import {
 } from '@heroui/react';
 
 import {
+    faAngular,
     faAws,
     faBootstrap, faCss, faGitAlt, faGithub, faHtml5, faJava, faJs, faMicrosoft, faNode,
     faPython, faReact, faSquareLinkedin, faUnity
@@ -36,6 +37,7 @@ import {
     faFireFlameSimple,
     faFaceLaughBeam,
     faScrewdriverWrench,
+    faPersonRays,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from "react";
@@ -735,7 +737,7 @@ export default function IndexPage() {
                                   <div className="col-span-2 flex flex-col justify-center">
                                       <div className="flex flex-col mb-4">
                                           <h2 className="text-gray-400 text-sm">
-                                              July 2025 - Present
+                                              August 2025 - Present
                                           </h2>
                                           <h1 className="text-xl font-bold">
                                               Project Lead
@@ -802,6 +804,12 @@ export default function IndexPage() {
                                                       />{' '}
                                                       Node.js
                                                   </div>
+                                                  <div className="text-blue-500">
+                                                      <FontAwesomeIcon
+                                                          icon={faPersonRays}
+                                                      />{' '}
+                                                      Leadership
+                                                  </div>
                                               </div>
                                               <Divider orientation="horizontal" />
                                               <div className="flex flex-col gap-2 mb-5">
@@ -817,6 +825,167 @@ export default function IndexPage() {
                                                       real-world projects and
                                                       strengthen coding skills.
                                                   </p>
+                                              </div>
+                                              <div className="mb-5 ">
+                                                  <p className="text-sm">
+                                                      <span className="font-bold">
+                                                          Skills learned and
+                                                          used:{' '}
+                                                      </span>
+                                                      Cross-Functional
+                                                      Collaboration & Team
+                                                      Coordination • Project
+                                                      planning and execution •
+                                                      Team leadership •
+                                                      Technical mentoring •
+                                                      Workshop facilitation •
+                                                      Curriculum design
+                                                  </p>
+                                              </div>
+                                              <div className="flex flex-col justify-center items-center">
+                                                  <Image
+                                                      src="/gdg/GDGTruman.webp"
+                                                      alt=""
+                                                      className="mb-4 rounded-lg"
+                                                  width={500}
+                                              />
+                                              <Image
+                                                  src="/gdg/Sponsors.webp"
+                                                  alt=""
+                                                  className="mb-4 rounded-lg"
+                                                  width={500}
+                                              />
+                                              <Image
+                                                  src="/gdg/1.webp"
+                                                  alt=""
+                                                  className="mb-4 rounded-lg"
+                                                  width={500}
+                                              />
+                                              <Image
+                                                  src="/gdg/2.webp"
+                                                  alt=""
+                                                  className="mb-4 rounded-lg"
+                                                  width={500}
+                                              />
+                                              </div>
+                                          </ModalBody>
+                                          <ModalFooter>
+                                              <Button
+                                                  color="danger"
+                                                  variant="light"
+                                                  onPress={onClose}
+                                                  className="hover:scale-110 transition-transform duration-100"
+                                                  radius="sm"
+                                              >
+                                                  Close
+                                              </Button>
+                                              <Button
+                                                  color="primary"
+                                                  variant="solid"
+                                                  onPress={() =>
+                                                      window.open(
+                                                          'https://gdg.community.dev/gdg-on-campus-truman-state-university-kirksville-united-states/',
+                                                          '_blank'
+                                                      )
+                                                  }
+                                                  className="hover:scale-110 transition-transform duration-100"
+                                                  radius="sm"
+                                              >
+                                                  GDG Website <FontAwesomeIcon icon={faExternalLinkAlt} />
+                                              </Button>
+                                          </ModalFooter>
+                                      </>
+                                  )}
+                              </ModalContent>
+                          </Modal>
+
+                          {/* ACM */}
+                          <Card
+                              className="border-1 border-gray-600 hover:scale-105 transition-transform duration-200 py-3 px-1 z-2"
+                              radius="none"
+                              isHoverable={true}
+                              isPressable={true}
+                              isBlurred={true}
+                              onPress={() => setIsOpen('acm')}
+                          >
+                              <CardBody className="grid grid-cols-3 justify-center items-center gap-2 md:gap-0">
+                                  <div className="justify-self-center">
+                                      <Image
+                                          src="Association_for_Computing_Machinery_(ACM)_logo.svg.png"
+                                          alt=""
+                                          isBlurred
+                                          width={90}
+                                          radius="full"
+                                          className="w-18 md:w-full"
+                                      />
+                                  </div>
+                                  <div className="col-span-2 flex flex-col justify-center">
+                                      <div className="flex flex-col mb-4">
+                                          <h2 className="text-gray-400 text-sm">
+                                              August 2025 - Present
+                                          </h2>
+                                          <h1 className="text-xl font-bold">
+                                              Webmaster
+                                          </h1>
+                                          <h2 className="text-gray-400 text-sm">
+                                              Association for Computing Machinery
+                                          </h2>
+                                      </div>
+                                      <div className="flex flex-col text-[0.8125rem] mb-2">
+                                          <p>
+                                              Project & Team Management;  
+Technical Event Planning & Promotion for 100+ members; Web Development  
+(Angular, HTML/CSS, React.js, Node.js);  
+Hackathon Coordination & Student Engagement.
+                                          </p>
+                                      </div>
+                                  </div>
+                              </CardBody>
+                          </Card>
+                          <Modal
+                              isOpen={isOpen === 'acm'}
+                              onOpenChange={() => setIsOpen(null)}
+                              size="4xl"
+                              backdrop="blur"
+                              placement="center"
+                              scrollBehavior="inside"
+                          >
+                              <ModalContent>
+                                  {(onClose) => (
+                                      <>
+                                          <ModalHeader className="flex flex-row gap-4 items-center">
+                                              <img
+                                                  src="Association_for_Computing_Machinery_(ACM)_logo.svg.png"
+                                                  alt=""
+                                                  className="w-8 rounded-full"
+                                              />
+                                              Association for Computing Machinery -
+                                              Webmaster
+                                          </ModalHeader>
+                                          <ModalBody>
+                                              <div className="text-sm text-gray-400 flex flex-row justify-center items-center gap-5 md:gap-10 mb-1">
+                                                  <div className="text-orange-500">
+                                                      <FontAwesomeIcon
+                                                          icon={faAngular}
+                                                      />{' '}
+                                                      Angular
+                                                  </div>
+                                                  <div className="text-blue-500">
+                                                      <FontAwesomeIcon
+                                                          icon={faPersonRays}
+                                                      />{' '}
+                                                      Leadership
+                                                  </div>
+                                              </div>
+                                              <Divider orientation="horizontal" />
+                                              <div className="flex flex-col gap-2 mb-5">
+                                                  <p>
+                                                      • Boosted engagement by leading hackathon participation, promoting events, and technical initiatives.
+                                                  </p>
+                                                  <p>
+                                                      • Developed a new <span className="font-bold bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent">Angular</span> website, improving visibility for <span className="font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">100+</span> members and prospective students.
+                                                  </p>
+
                                               </div>
                                               <div className="mb-5 ">
                                                   <p className="text-sm">
@@ -1408,7 +1577,7 @@ export default function IndexPage() {
                   </Card>
                   <div className="md:hidden flex flex-row justify-between items-center w-[80%] gap-3 mb-10">
                         <h1 className="text-xl font-bold">TruDegree - ACM Hackathon 2025</h1>
-                        <Button onPress={() => navigate('/projects/trudegree')} radius="full" size="md" className="hover:bg-blue-500 transition-all duration-150"> 
+                        <Button onPress={() => navigate('/projects/trudegree')} radius="full" size="md" className="hover:bg-blue-500 transition-all duration-150 p-7"> 
                                   More details
                         </Button>         
                   </div>
@@ -1460,7 +1629,7 @@ export default function IndexPage() {
                   </Card>
                   <div className="md:hidden flex flex-row justify-between items-center w-[80%] gap-3 mb-10">
                         <h1 className="text-xl font-bold">WIWI - HackMidwest 2025</h1>
-                        <Button onPress={() => navigate('/projects/wiwi')} radius="full" size="md" className="hover:bg-blue-500 transition-all duration-150"> 
+                        <Button onPress={() => navigate('/projects/wiwi')} radius="full" size="md" className="hover:bg-blue-500 transition-all duration-150 p-7"> 
                                   More details
                         </Button>         
                   </div>

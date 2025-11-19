@@ -61,7 +61,7 @@ export default function ProjectsPage() {
                   </Card>
                   <div className="md:hidden flex flex-row justify-between items-center w-[80%] gap-3 mb-10">
                         <h1 className="text-xl font-bold">TruDegree - ACM Hackathon 2025</h1>
-                        <Button onPress={() => navigate('/projects/trudegree')} radius="full" size="md" className="hover:bg-blue-500 transition-all duration-150"> 
+                        <Button onPress={() => navigate('/projects/trudegree')} radius="full" size="md" className="hover:bg-blue-500 transition-all duration-150 p-7"> 
                                   More details
                         </Button>         
                   </div>
@@ -112,7 +112,7 @@ export default function ProjectsPage() {
                   </Card>
                   <div className="md:hidden flex flex-row justify-between items-center w-[80%] gap-3 mb-10">
                         <h1 className="text-xl font-bold">WIWI - HackMidwest 2025</h1>
-                        <Button onPress={() => navigate('/projects/wiwi')} radius="full" size="md" className="hover:bg-blue-500 transition-all duration-150"> 
+                        <Button onPress={() => navigate('/projects/wiwi')} radius="full" size="md" className="hover:bg-blue-500 transition-all duration-150 p-7"> 
                                   More details
                         </Button>         
                   </div>
