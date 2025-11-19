@@ -983,7 +983,7 @@ Hackathon Coordination & Student Engagement.
                                                       • Boosted engagement by leading hackathon participation, promoting events, and technical initiatives.
                                                   </p>
                                                   <p>
-                                                      • Developed a new <span className="font-bold bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent">Angular</span> website, improving visibility for <span className="font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">100+</span> members and prospective students.
+                                                      • Developing a new <span className="font-bold bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent">Angular</span> website, improving visibility for <span className="font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">100+</span> members and prospective students.
                                                   </p>
 
                                               </div>
@@ -1039,6 +1039,15 @@ Hackathon Coordination & Student Engagement.
                                                   radius="sm"
                                               >
                                                   Close
+                                              </Button>
+                                              <Button
+                                                  color="primary"
+                                                  variant="solid"
+                                                  isDisabled
+                                                  radius="sm"
+                                                  className="cursor-not-allowed"
+                                              >
+                                                  Developing in Angular
                                               </Button>
                                           </ModalFooter>
                                       </>
