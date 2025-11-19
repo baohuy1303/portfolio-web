@@ -84,6 +84,7 @@ export default function IndexPage() {
       { name: "Node.js", icon: faNode, textCol: "text-green-400" },
       { name: "Express.js", icon: faServer, textCol: "text-gray-400" },
       { name: "TailwindCSS", icon: faWind, textCol: "text-teal-400" }, // custom
+      { name: "React Native", icon: faReact, textCol: "text-blue-400" },
       { name: "jQuery", icon: faCode, textCol: "text-blue-500" },
       { name: "EJS", icon: faCode, textCol: "text-gray-500" },
       { name: "Bootstrap", icon: faBootstrap, textCol: "text-purple-500" },
@@ -417,6 +418,10 @@ export default function IndexPage() {
                                                   <p>
                                                       • Implemented <span className="font-bold bg-gradient-to-r from-teal-400 to-yellow-200 bg-clip-text text-transparent">data validation, aggregation, and reproducible I/O workflows</span>, improving experiment reliability, logical form accuracy, and downstream reasoning consistency.
                                                   </p>
+                                                  <p>
+                                                      • Built a <span className="font-bold bg-gradient-to-r from-purple-500 to-pink-400 bg-clip-text text-transparent">React Native</span> mobile app with multi-stop planning, leveraging <span className="font-bold bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">Google Maps API</span> for robotics navigation to optimize route planning and path execution.
+                                                  </p>
+                                                  
                                               </div>
                                               <div className="mb-5">
                                                   <p className="text-sm">
@@ -801,11 +806,7 @@ export default function IndexPage() {
                                               <Divider orientation="horizontal" />
                                               <div className="flex flex-col gap-2 mb-5">
                                                   <p>
-                                                      • Led end-to-end planning
-                                                      and execution of software
-                                                      projects and tech
-                                                      initiatives and managed
-                                                      team workflows.
+                                                      • Led software and tech initiatives, including a <span className="font-bold bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent">React.js</span> hackathon website and an escape room for <span className="font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">5+ teams</span>.
                                                   </p>
                                                   <p>
                                                       • Facilitated technical
