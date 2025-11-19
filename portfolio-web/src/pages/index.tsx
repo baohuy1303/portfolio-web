@@ -1005,25 +1005,25 @@ Hackathon Coordination & Student Engagement.
                                               </div>
                                               <div className="flex flex-col justify-center items-center">
                                                   <Image
-                                                      src="/gdg/GDGTruman.webp"
+                                                      src="/acm/1.webp"
                                                       alt=""
                                                       className="mb-4 rounded-lg"
                                                   width={500}
                                               />
                                               <Image
-                                                  src="/gdg/Sponsors.webp"
+                                                  src="/acm/2.webp"
                                                   alt=""
                                                   className="mb-4 rounded-lg"
                                                   width={500}
                                               />
                                               <Image
-                                                  src="/gdg/1.webp"
+                                                  src="/acm/3.webp"
                                                   alt=""
                                                   className="mb-4 rounded-lg"
                                                   width={500}
                                               />
                                               <Image
-                                                  src="/gdg/2.webp"
+                                                  src="/acm/4.webp"
                                                   alt=""
                                                   className="mb-4 rounded-lg"
                                                   width={500}
@@ -1039,20 +1039,6 @@ Hackathon Coordination & Student Engagement.
                                                   radius="sm"
                                               >
                                                   Close
-                                              </Button>
-                                              <Button
-                                                  color="primary"
-                                                  variant="solid"
-                                                  onPress={() =>
-                                                      window.open(
-                                                          'https://gdg.community.dev/gdg-on-campus-truman-state-university-kirksville-united-states/',
-                                                          '_blank'
-                                                      )
-                                                  }
-                                                  className="hover:scale-110 transition-transform duration-100"
-                                                  radius="sm"
-                                              >
-                                                  GDG Website <FontAwesomeIcon icon={faExternalLinkAlt} />
                                               </Button>
                                           </ModalFooter>
                                       </>
