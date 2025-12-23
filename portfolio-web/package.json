@@ -27,7 +27,7 @@
     "@heroui/switch": "2.2.23",
     "@heroui/system": "2.4.22",
     "@heroui/tabs": "^2.2.23",
-    "@heroui/theme": "2.4.22",
+    "@heroui/theme": "^2.4.25",
     "@heroui/use-theme": "2.1.10",
     "@react-aria/visually-hidden": "3.8.27",
     "@react-pdf-viewer/core": "^3.12.0",
