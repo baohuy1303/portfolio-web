@@ -13,7 +13,7 @@ import {
 import {
     faAngular,
     faAws,
-    faBootstrap, faCss, faGitAlt, faGithub, faHtml5, faJava, faJs, faMicrosoft, faNode,
+    faBootstrap, faCss, faGitAlt, faGithub, faHtml5, faJava, faJs, faLinux, faMicrosoft, faNode,
     faPython, faReact, faSquareLinkedin, faUnity
 } from '@fortawesome/free-brands-svg-icons';
 import {
@@ -69,8 +69,7 @@ export default function IndexPage() {
 
   const techSkills = [
     // Languages
-    { name: "JavaScript", icon: faJs, textCol: "text-yellow-400" },
-    { name: "TypeScript", icon: faJs, textCol: "text-blue-500" },
+    { name: "TypeScript/JavaScript", icon: faJs, textCol: "text-blue-400" },
     { name: "Java", icon: faJava, textCol: "text-red-500" },
     { name: "Python", icon: faPython, textCol: "text-yellow-400" },
     { name: "C#", icon: faHashtag, textCol: "text-purple-500" }, // custom icon likely
@@ -95,7 +94,7 @@ export default function IndexPage() {
       // Technologies
       { name: "Git", icon: faGitAlt, textCol: "text-red-500" },
       { name: "GitHub", icon: faGithub, textCol: "text-gray-300" },
-      { name: "AWS Strands Agents", icon: faAws, textCol: "text-blue-500" },
+      { name: "AWS", icon: faAws, textCol: "text-blue-500" },
       { name: "MongoDB", icon: faLeaf, textCol: "text-green-500" }, // custom
       { name: "PostgreSQL", icon: faDatabase, textCol: "text-blue-500" },
       { name: "Firebase", icon: faFire, textCol: "text-yellow-500" }, // custom
@@ -415,15 +414,17 @@ export default function IndexPage() {
                                               <Divider orientation="horizontal" />
                                               <div className="flex flex-col gap-2 mb-5">
                                                   <p>
-                                                      • Developed upon a <span className="font-bold bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent">natural-language-to-FOL reasoning pipeline</span>, leveraging <span className="font-bold bg-gradient-to-r from-fuchsia-500 to-cyan-500 bg-clip-text text-transparent">Python, pandas, PyTorch, and Hugging Face Transformers (RoBERTa-large-MNLI)</span> to convert natural language into formal logic representations for robotic planning tasks.
-                                                  </p>
+                                                      • Extended an  <span className="font-bold bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent">open-source NL2FOL</span>, leveraging <span className="font-bold bg-gradient-to-r from-fuchsia-500 to-cyan-500 bg-clip-text text-transparent">Python, pandas, PyTorch, and Hugging Face Transformers (RoBERTa-large-MNLI)</span> to convert natural language into First-Order Logic for robotic planning tasks.</p>
+                                                  
                                                   <p>
                                                       • Implemented <span className="font-bold bg-gradient-to-r from-teal-400 to-yellow-200 bg-clip-text text-transparent">data validation, aggregation, and reproducible I/O workflows</span>, improving experiment reliability, logical form accuracy, and downstream reasoning consistency.
                                                   </p>
                                                   <p>
-                                                      • Built a <span className="font-bold bg-gradient-to-r from-purple-500 to-pink-400 bg-clip-text text-transparent">React Native</span> mobile app with multi-stop planning, leveraging <span className="font-bold bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">Google Maps API</span> for robotics navigation to optimize route planning and path execution.
+                                                      • Built a <span className="font-bold bg-gradient-to-r from-purple-500 to-pink-400 bg-clip-text text-transparent">React Native</span> mobile app for <span className="font-bold bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">IOS/Android</span> with multi-stop planning, leveraging Google Maps API for robotics navigation to optimize route planning and path execution.
                                                   </p>
-                                                  
+                                                  <p>
+                                                      • Collaborated in an Agile research environment, participating in iterative development and clean code reviews.
+                                                  </p>
                                               </div>
                                               <div className="mb-5">
                                                   <p className="text-sm">
@@ -551,7 +552,7 @@ export default function IndexPage() {
                                                           migrated legacy
                                                           codebase
                                                       </span>{' '}
-                                                      to a MERN-stack website
+                                                      to a React/Node/Express/MongoDB website
                                                       for{' '}
                                                       <span className="font-bold bg-gradient-to-r from-pink-500 to-rose-500 bg-clip-text text-transparent">
                                                           1200+ soccer students
@@ -573,41 +574,27 @@ export default function IndexPage() {
                                                       <span className="font-bold bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent">
                                                           45+
                                                       </span>{' '}
-                                                      RESTful APIs and JWT auth
-                                                      for 3 roles using Node.js
-                                                      and Express, led migration
-                                                      of{' '}
-                                                      <span className="font-bold bg-gradient-to-r from-teal-200 to-teal-500 bg-clip-text text-transparent">
-                                                          2.9k+
-                                                      </span>{' '}
-                                                      documents to a new schema
-                                                      via scripting and
-                                                      algorithms, and integrated{' '}
+                                                      RESTful endpoints and JWT authentication for secure role-based access for 3 roles using
+                                                    Node.js and Express, and integrated{' '}
                                                       <span className="font-bold bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent">
                                                           Cloudinary
                                                       </span>{' '}
                                                       for secure media storage.
                                                   </p>
                                                   <p>
-                                                      • Automated daily
-                                                      attendance tracking via
-                                                      MongoDB aggregation
-                                                      pipelines, saving{' '}
+                                                      • Migrated and debugged {' '}
                                                       <span className="font-bold bg-gradient-to-r from-lime-400 to-lime-500 bg-clip-text text-transparent">
+                                                          3,000+
+                                                      </span>{' '}
+                                                      MongoDB documents to various new schemas and optimized aggregation pipelines
+                                                        to automate attendance and tuition workflows, saving{' '}
+                                                      <span className="font-bold bg-gradient-to-r from-fuchsia-500 to-pink-500 bg-clip-text text-transparent">
                                                           25+ hours/month
                                                       </span>{' '}
-                                                      at{' '}
-                                                      <span className="font-bold bg-gradient-to-r from-fuchsia-500 to-pink-500 bg-clip-text text-transparent">
-                                                          99.9%
-                                                      </span>{' '}
-                                                      accuracy, and streamlined
-                                                      tuition reporting process
-                                                      by{' '}
-                                                      <span className="font-bold bg-gradient-to-r from-fuchsia-500 to-cyan-500 bg-clip-text text-transparent">
-                                                          90%
-                                                      </span>{' '}
-                                                      via responsive and
-                                                      filterable dashboard.
+                                                      while ensuring data integrity.
+                                                  </p>
+                                                  <p>
+                                                      • Used Git/GitHub for version control, and followed Agile SDLC practices to deliver production-ready features.
                                                   </p>
                                               </div>
                                               <div>
@@ -810,17 +797,22 @@ export default function IndexPage() {
                                                       />{' '}
                                                       Leadership
                                                   </div>
+                                                  <div className="text-white">
+                                                      <FontAwesomeIcon
+                                                          icon={faLinux}
+                                                      />{' '}
+                                                      Linux
+                                                  </div>
                                               </div>
                                               <Divider orientation="horizontal" />
                                               <div className="flex flex-col gap-2 mb-5">
                                                   <p>
-                                                      • Led software and tech initiatives, including a <span className="font-bold bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent">React.js</span> hackathon website and an escape room for <span className="font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">5+ teams</span>.
+                                                      • Directed all major tech initiatives and cross-functional teams, including a <span className="font-bold bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent">Boeing-partnered</span> hackathon website deployed on <span className="font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">Linux/Apache</span>, reviewed by IT department for smooth production deployment..
                                                   </p>
                                                   <p>
                                                       • Facilitated technical
                                                       workshops and guided <span className="font-bold bg-gradient-to-r from-lime-400 to-lime-500 bg-clip-text text-transparent">40+</span> students in mastering web
-                                                      technologies <span className="font-bold bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent">(HTML/CSS,
-                                                      React.js, Node.js)</span>,
+                                                      technologies <span className="font-bold bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent">(HTML/CSS)</span>,
                                                       enabling them to build
                                                       real-world projects and
                                                       strengthen coding skills.
@@ -1475,6 +1467,7 @@ Hackathon Coordination & Student Engagement.
                                               Math, Algorithms), Calculus I,
                                               Calculus II
                                           </p>
+                                          <p>• <span className="font-bold">GPA:</span> 4.0/4.0</p>
                                           <p>• <span className="font-bold">SAT:</span> 1510/1600</p>
                                           <p>• <span className="font-bold">Awarded Presidential Honorary Scholarship (80% tuition)</span></p>
                                       </div>
