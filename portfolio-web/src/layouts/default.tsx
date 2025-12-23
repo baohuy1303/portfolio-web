@@ -49,12 +49,7 @@ export default function DefaultLayout({
     />
       {/* <Navbar /> */}
       <Tabs aria-label="Tabs variants" variant="underlined" className="w-full justify-center items-center mt-10 " size="lg" 
-      selectedKey={pathname} motionProps={{
-        initial: { opacity: 0, x: -10, scale: 0.9 },
-        animate: { opacity: 1, x: 0, scale: 1 },
-        exit: { opacity: 0, x: -10, scale: 0.9 },
-        transition: { duration: 0.3, ease: "easeInOut" }
-      }}>
+      selectedKey={pathname}>
         <Tab key="/" title="home" href="/" className="hover:scale-110 ease-in-out transition-all duration-150" />
         <Tab key="/about" title="about" href="/about" className="hover:scale-110 ease-in-out transition-all duration-150"/>
         <Tab key="/projects" title="projects" href="/projects" className="hover:scale-110 ease-in-out transition-all duration-150"/>
