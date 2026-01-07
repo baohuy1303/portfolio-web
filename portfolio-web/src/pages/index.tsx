@@ -45,11 +45,9 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import {
-    faCode,
     faDatabase,
     faFire,
     faLeaf,
-    faV,
     faWind
 } from "@fortawesome/free-solid-svg-icons";
 import { addToast } from "@heroui/react";
