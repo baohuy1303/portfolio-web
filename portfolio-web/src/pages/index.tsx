@@ -479,7 +479,7 @@ documented implementation and evaluation for reproducibility.
                                   <div className="col-span-2 flex flex-col justify-center">
                                       <div className="flex flex-col mb-4">
                                           <h2 className="text-gray-400 text-sm">
-                                              July 2025 - Present
+                                              June 2025 - Present
                                           </h2>
                                           <h1 className="text-xl font-bold">
                                               Software Engineer Intern
