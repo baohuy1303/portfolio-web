@@ -13,7 +13,7 @@ import {
 import {
     faAngular,
     faAws,
-    faBootstrap, faCss, faGitAlt, faGithub, faHtml5, faJava, faJs, faLinux, faMicrosoft, faNode,
+    faBootstrap, faCss, faDocker, faGitAlt, faGithub, faHtml5, faJava, faJs, faLinux, faMicrosoft, faNode,
     faPython, faReact, faSquareLinkedin, faUnity
 } from '@fortawesome/free-brands-svg-icons';
 import {
@@ -38,6 +38,7 @@ import {
     faFaceLaughBeam,
     faScrewdriverWrench,
     faPersonRays,
+    faC,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from "react";
@@ -69,32 +70,32 @@ export default function IndexPage() {
 
   const techSkills = [
     // Languages
-    { name: "TypeScript/JavaScript", icon: faJs, textCol: "text-blue-400" },
+    { name: "TypeScript", icon: faJs, textCol: "text-blue-400" },   
+    { name: "JavaScript", icon: faJs, textCol: "text-yellow-400" },
     { name: "Java", icon: faJava, textCol: "text-red-500" },
     { name: "Python", icon: faPython, textCol: "text-yellow-400" },
-    { name: "C#", icon: faHashtag, textCol: "text-purple-500" }, // custom icon likely
+    { name: "C#", icon: faHashtag, textCol: "text-purple-500" },
+    { name: "C/C++", icon: faC, textCol: "text-yellow-500" },
     { name: "SQL", icon: faDatabase, textCol: "text-orange-400" },
       { name: "HTML", icon: faHtml5, textCol: "text-orange-500" },
       { name: "CSS", icon: faCss, textCol: "text-blue-400" },
     
       // Frameworks & Libraries
       { name: "React.js", icon: faReact, textCol: "text-blue-400" },
-      { name: "Vite", icon: faV, textCol: "text-yellow-300" }, // swap for custom
       { name: "FastAPI", icon: faBoltLightning, textCol: "text-green-500" },
       { name: "LangChain", icon: faCrow, textCol: "text-gray-400" },
       { name: "Node.js", icon: faNode, textCol: "text-green-400" },
       { name: "Express.js", icon: faServer, textCol: "text-gray-400" },
-      { name: "TailwindCSS", icon: faWind, textCol: "text-teal-400" }, // custom
+      { name: "TailwindCSS", icon: faWind, textCol: "text-teal-400" },
       { name: "React Native", icon: faReact, textCol: "text-blue-400" },
-      { name: "jQuery", icon: faCode, textCol: "text-blue-500" },
-      { name: "EJS", icon: faCode, textCol: "text-gray-500" },
       { name: "Bootstrap", icon: faBootstrap, textCol: "text-purple-500" },
       { name: "Unity", icon: faUnity, textCol: "text-gray-400" },
     
       // Technologies
       { name: "Git", icon: faGitAlt, textCol: "text-red-500" },
-      { name: "GitHub", icon: faGithub, textCol: "text-gray-300" },
+      { name: "GitHub Actions", icon: faGithub, textCol: "text-gray-300" },
       { name: "AWS", icon: faAws, textCol: "text-blue-500" },
+      { name: "Docker", icon: faDocker, textCol: "text-blue-400" },
       { name: "MongoDB", icon: faLeaf, textCol: "text-green-500" }, // custom
       { name: "PostgreSQL", icon: faDatabase, textCol: "text-blue-500" },
       { name: "Firebase", icon: faFire, textCol: "text-yellow-500" }, // custom
@@ -220,7 +221,7 @@ export default function IndexPage() {
                   <CardBody className="flex flex-col items-center">
                       <h1 className="text-3xl font-bold mb-2">Huy B. Huynh</h1>
                       <h2 className="text-lg italic">
-                          Fullstack - Backend - Frontend
+                          AI Engineer - Fullstack - Backend
                       </h2>
                       <h3 className="text-gray-400 text-sm italic mb-5">
                           CS 29' Truman State University
@@ -231,7 +232,7 @@ export default function IndexPage() {
                               <span
                                   className={`ease-in-out transition-all duration-250 ${clicked ? `bg-clip-text text-transparent bg-gradient-to-r from-amber-500 to-pink-500` : `text-white`}`}
                               >
-                                  Full Stack Software Engineer
+                                  AI Software Engineer
                               </span>
                           </p>
                           <p>
@@ -239,7 +240,7 @@ export default function IndexPage() {
                               <span
                                   className={`ease-in-out transition-all duration-250 ${clicked ? `bg-gradient-to-r from-fuchsia-500 to-cyan-500 bg-clip-text text-transparent` : `text-white`}`}
                               >
-                                  web apps
+                                  websites/apps
                               </span>{' '}
                               that brings{' '}
                               <span
@@ -352,7 +353,7 @@ export default function IndexPage() {
                                       </div>
                                       <div className="flex flex-col text-[0.8125rem] mb-2">
                                           <p>
-                                          Natural Language to First Order Logic for robotics planning, reasoning, and decision-making; ; Python, pandas, PyTorch, Hugging Face (RoBERTa-large-MNLI).
+                                          Natural Language → First-Order Logic for Robotic Planning & Reasoning; NL2FOL Pipeline Extension; React Native Mobile Navigation App; HCI-Driven Accessible Design; Python, PyTorch, Hugging Face (RoBERTa-large-MNLI).
                                           </p>
                                       </div>
                                   </div>
@@ -403,6 +404,12 @@ export default function IndexPage() {
                                                       />{' '}
                                                       Hugging Face Transformers
                                                   </div>
+                                                  <div className="text-blue-400">
+                                                      <FontAwesomeIcon
+                                                          icon={faReact}
+                                                      />{' '}
+                                                      React Native
+                                                  </div>
 
                                               </div>
                                               <Divider orientation="horizontal" />
@@ -410,14 +417,17 @@ export default function IndexPage() {
                                                   <p>
                                                       • Extended an  <span className="font-bold bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent">open-source NL2FOL</span>, leveraging <span className="font-bold bg-gradient-to-r from-fuchsia-500 to-cyan-500 bg-clip-text text-transparent">Python, pandas, PyTorch, and Hugging Face Transformers (RoBERTa-large-MNLI)</span> to convert natural language into First-Order Logic for robotic planning tasks.</p>
                                                   
-                                                  <p>
-                                                      • Implemented <span className="font-bold bg-gradient-to-r from-teal-400 to-yellow-200 bg-clip-text text-transparent">data validation, aggregation, and reproducible I/O workflows</span>, improving experiment reliability, logical form accuracy, and downstream reasoning consistency.
-                                                  </p>
+                                                  
                                                   <p>
                                                       • Built a <span className="font-bold bg-gradient-to-r from-purple-500 to-pink-400 bg-clip-text text-transparent">React Native</span> mobile app for <span className="font-bold bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">IOS/Android</span> with multi-stop planning, leveraging Google Maps API for robotics navigation to optimize route planning and path execution.
                                                   </p>
                                                   <p>
-                                                      • Collaborated in an Agile research environment, participating in iterative development and clean code reviews.
+                                                      • Led HCI design for accessibility and low-cognitive-load, using clear visuals, minimal steps, and accessible routing
+with principles such as simplified flows and clear affordances, while logging token usage and runtime from the pipeline.
+                                                  </p>
+                                                  <p>
+                                                      • Collaborated in an Agile research environment: designed prototypes, contributed to iterative code reviews, and
+documented implementation and evaluation for reproducibility.
                                                   </p>
                                               </div>
                                               <div className="mb-5">
@@ -426,7 +436,7 @@ export default function IndexPage() {
                                                           Skills learned and
                                                           used:{' '}
                                                       </span>{' '}
-                                                      Python, pandas & PyTorch Development • NLP Model Integration (Hugging Face, RoBERTa-large-MNLI) • Natural Language → Formal Logic Conversion • Data Validation & Automation • Reproducible Research Pipelines • Logical Reasoning for Robotic Planning
+                                                      Python, pandas & PyTorch Development • NLP Model Integration (Hugging Face, RoBERTa-large-MNLI) • Natural Language → Formal Logic Conversion • Research Pipeline Extension & Evaluation • Data Validation & Automation • Reproducible Experiments • Human-Centered, Low-Cognitive-Load System Design • Logical Reasoning for Robotic Planning • Mobile App Development
                                                   </p>
                                               </div>
                                           </ModalBody>
@@ -472,7 +482,7 @@ export default function IndexPage() {
                                               July 2025 - Present
                                           </h2>
                                           <h1 className="text-xl font-bold">
-                                              Software Engineer
+                                              Software Engineer Intern
                                           </h1>
                                           <h2 className="text-gray-400 text-sm">
                                               NaNi Kids Futsal - Soccer Academy
@@ -480,12 +490,7 @@ export default function IndexPage() {
                                       </div>
                                       <div className="flex flex-col text-[0.8125rem] mb-2">
                                           <p>
-                                              MERN Stack Web Development; API
-                                              Design & Authentication; Database
-                                              Migration & Automation; Admin
-                                              Dashboard & Media Integration;
-                                              Attendance & Tuition Management
-                                              Optimization.
+                                              MERN Stack Full-Stack Engineering; React Frontend & Admin Dashboard; Secure REST APIs (JWT, Rate Limiting, Pagination); MongoDB Migration & Automation; CI/CD, Docker & AWS EC2 Deployment; Attendance & Tuition Systems.
                                           </p>
                                       </div>
                                   </div>
@@ -512,7 +517,7 @@ export default function IndexPage() {
                                               Engineer
                                           </ModalHeader>
                                           <ModalBody>
-                                              <div className="text-sm text-gray-400 flex flex-row justify-center items-center gap-5 md:gap-10 mb-1">
+                                              <div className="text-xs md:text-sm flex-wrap text-gray-400 flex flex-row justify-center items-center gap-5 lg:gap-10 mb-1">
                                                   <div className="text-blue-500">
                                                       <FontAwesomeIcon
                                                           icon={faReact}
@@ -537,6 +542,24 @@ export default function IndexPage() {
                                                       />{' '}
                                                       MongoDB
                                                   </div>
+                                                  <div className="text-blue-500">
+                                                      <FontAwesomeIcon
+                                                          icon={faAws}
+                                                      />{' '}
+                                                      AWS
+                                                  </div>
+                                                  <div className="text-blue-500">
+                                                      <FontAwesomeIcon
+                                                          icon={faGithub}
+                                                      />{' '}
+                                                      GitHub Actions
+                                                  </div>
+                                                  <div className="text-blue-500">
+                                                      <FontAwesomeIcon
+                                                          icon={faDocker}
+                                                      />{' '}
+                                                      Docker
+                                                  </div>
                                               </div>
                                               <Divider orientation="horizontal" />
                                               <div className="flex flex-col gap-2 mb-5">
@@ -546,10 +569,10 @@ export default function IndexPage() {
                                                           migrated legacy
                                                           codebase
                                                       </span>{' '}
-                                                      to a React/Node/Express/MongoDB website
+                                                      to a React + Node + Express + MongoDB website
                                                       for{' '}
                                                       <span className="font-bold bg-gradient-to-r from-pink-500 to-rose-500 bg-clip-text text-transparent">
-                                                          1200+ soccer students
+                                                          1,600+ soccer students
                                                       </span>
                                                       , reducing admin workload
                                                       on attendance, tuition,
@@ -566,17 +589,17 @@ export default function IndexPage() {
                                                   <p>
                                                       • Constructed{' '}
                                                       <span className="font-bold bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent">
-                                                          45+
+                                                          63+
                                                       </span>{' '}
-                                                      RESTful endpoints and JWT authentication for secure role-based access for 3 roles using
-                                                    Node.js and Express, and integrated{' '}
+                                                      endpoints with JWT role based authentication, rate limiting, paginated queries, and
+Cloudinary media storage, reducing payload sizes and improving performance by{' '}
                                                       <span className="font-bold bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent">
-                                                          Cloudinary
+                                                          150 times.
                                                       </span>{' '}
-                                                      for secure media storage.
+
                                                   </p>
                                                   <p>
-                                                      • Migrated and debugged {' '}
+                                                      • Refactored {' '}
                                                       <span className="font-bold bg-gradient-to-r from-lime-400 to-lime-500 bg-clip-text text-transparent">
                                                           3,000+
                                                       </span>{' '}
@@ -588,8 +611,18 @@ export default function IndexPage() {
                                                       while ensuring data integrity.
                                                   </p>
                                                   <p>
-                                                      • Used Git/GitHub for version control, and followed Agile SDLC practices to deliver production-ready features.
+                                                      • Designed a responsive, mobile-first frontend using React, Tailwind CSS, and Framer Motion with multi-language
+(English/Vietnamese) support for diverse users, following Git version control and Agile practices.
                                                   </p>
+                                                  <p>
+                                                      • Implemented{' '}
+                                                      <span className="font-bold bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent">
+                                                          CI/CD
+                                                      </span>{' '}
+                                                      pipelines using GitHub Actions and Docker containers, deployed on AWS EC2 server with Nginx
+reverse proxy, reducing deployment time and ensuring <span className="font-bold bg-gradient-to-r from-fuchsia-500 to-pink-500 bg-clip-text text-transparent">zero-downtime</span> in production.
+                                                  </p>
+
                                               </div>
                                               <div>
                                                   <p className="text-sm">
@@ -597,15 +630,7 @@ export default function IndexPage() {
                                                           Skills learned and
                                                           used:{' '}
                                                       </span>{' '}
-                                                      System Design • Database
-                                                      Optimization • Process
-                                                      Automation • Cost
-                                                      Efficiency • Scalability •
-                                                      Problem-Solving with
-                                                      Algorithms • Project
-                                                      Leadership • Full-Stack
-                                                      Engineering • Corporate
-                                                      Collaboration
+                                                      System Design & Architecture • Database Optimization & Data Integrity • Workflow Automation at Scale • Cost & Performance Optimization • Scalable Full-Stack Engineering • Secure API Design • CI/CD & Production Deployment • Cross-Functional & Corporate Collaboration • Technical Project Leadership
                                                   </p>
                                               </div>
                                               <Image
@@ -687,7 +712,7 @@ export default function IndexPage() {
                                                   radius="sm"
                                                   className="cursor-not-allowed"
                                               >
-                                                  Developing new landing page
+                                                  Finalizing landing page
                                               </Button>
                                           </ModalFooter>
                                       </>
@@ -1461,7 +1486,6 @@ Hackathon Coordination & Student Engagement.
                                               Math, Algorithms), Calculus I,
                                               Calculus II
                                           </p>
-                                          <p>• <span className="font-bold">GPA:</span> 4.0/4.0</p>
                                           <p>• <span className="font-bold">SAT:</span> 1510/1600</p>
                                           <p>• <span className="font-bold">Awarded Presidential Honorary Scholarship (80% tuition)</span></p>
                                       </div>
